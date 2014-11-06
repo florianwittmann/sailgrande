@@ -40,70 +40,55 @@ Page {
             id: column
             spacing: Theme.paddingSmall
 
-            Item {
-                width: parent.width
-                height:150
+            UserDetailBlock{}
+
+            Label {
+                id: incomingRelLabel
+                text: getOutgoingText()
+                anchors.left: parent.left
+                anchors.leftMargin: Theme.paddingMedium
                 anchors.right: parent.right
-
-
-                Image {
-                    id: profilpic
-                   width:150
-                   height:150
-                   anchors.right: parent.right
-                   anchors.rightMargin: Theme.paddingMedium
-                   source: user.profile_picture
-                }
-
-                Label {
-                    id: incomingRelLabel
-                    text: getOutgoingText()
-                    anchors.left: parent.left
-                    anchors.leftMargin: Theme.paddingMedium
-                    anchors.right: profilpic.left
-                    anchors.rightMargin: Theme.paddingMedium
-                    color: Theme.primaryColor
-                    truncationMode: TruncationMode.Fade
-
-                    function getOutgoingText() {
-                        if(rel_outgoing_status===null)
-                            return "";
-                        if(rel_outgoing_status==="follows")
-                            return qsTr("You follow %1").arg(user.username);
-                        if(rel_outgoing_status==="requested")
-                            return qsTr("You requested to follow %1").arg(user.username);
-                        if(rel_outgoing_status==="none")
-                            return ""
-                    }
-                }
-
-                Label {
-                    text: getIncomingText()
-                    anchors.left: parent.left
-                    anchors.leftMargin: Theme.paddingMedium
-                    anchors.right: profilpic.left
-                    anchors.rightMargin: Theme.paddingMedium
-                    anchors.top: incomingRelLabel.bottom
-                    color: Theme.primaryColor
-                    truncationMode: TruncationMode.Fade
-
-                    function getIncomingText() {
-                        if(rel_incoming_status===null)
-                            return "";
-                        if(rel_incoming_status==="followed_by")
-                            return qsTr("%1 follows you").arg(user.username);
-                        if(rel_incoming_status==="requested_by")
-                            return qsTr("%1 requested to follow you").arg(user.username);
-                        if(rel_incoming_status==="blocked_by_you")
-                            return qsTr("You blocked %1").arg(user.username)
-                        if(rel_incoming_status==="none")
-                            return ""
-
-
-                    }
+                anchors.rightMargin: Theme.paddingMedium
+                color: Theme.primaryColor
+                truncationMode: TruncationMode.Fade
+                visible: text!==""
+                function getOutgoingText() {
+                    if(rel_outgoing_status===null)
+                        return "";
+                    if(rel_outgoing_status==="follows")
+                        return qsTr("You follow %1").arg(user.username);
+                    if(rel_outgoing_status==="requested")
+                        return qsTr("You requested to follow %1").arg(user.username);
+                    if(rel_outgoing_status==="none")
+                        return ""
                 }
             }
 
+            Label {
+                text: getIncomingText()
+                anchors.left: parent.left
+                anchors.leftMargin: Theme.paddingMedium
+                anchors.right: parent.right
+                anchors.rightMargin: Theme.paddingMedium
+                color: Theme.primaryColor
+                truncationMode: TruncationMode.Fade
+                visible: text!==""
+
+                function getIncomingText() {
+                    if(rel_incoming_status===null)
+                        return "";
+                    if(rel_incoming_status==="followed_by")
+                        return qsTr("%1 follows you").arg(user.username);
+                    if(rel_incoming_status==="requested_by")
+                        return qsTr("%1 requested to follow you").arg(user.username);
+                    if(rel_incoming_status==="blocked_by_you")
+                        return qsTr("You blocked %1").arg(user.username)
+                    if(rel_incoming_status==="none")
+                        return ""
+
+
+                }
+            }
 
 
             Label {
@@ -128,39 +113,6 @@ Page {
                 visible: text!==""
                 wrapMode: Text.Wrap
 
-            }
-
-            Label {
-                text: user.counts !== undefined ? qsTr("%1 photos/videos posted").arg(user.counts.media) :""
-                anchors.left: parent.left
-                anchors.leftMargin: Theme.paddingMedium
-                anchors.right: parent.right
-                anchors.rightMargin: Theme.paddingMedium
-                color: Theme.secondaryColor
-                visible: text!==""
-            }
-
-
-            Label {
-                text: user.counts !== undefined ? qsTr("Has %1 followers").arg(user.counts.followed_by) : ""
-                anchors.left: parent.left
-                anchors.leftMargin: Theme.paddingMedium
-                anchors.right: parent.right
-                anchors.rightMargin: Theme.paddingMedium
-                color: Theme.secondaryColor
-                visible: text!==""
-            }
-
-
-
-            Label {
-                text: user.counts !== undefined ? qsTr("Following %1 users").arg(user.counts.follows) : ""
-                anchors.left: parent.left
-                anchors.leftMargin: Theme.paddingMedium
-                anchors.right: parent.right
-                anchors.rightMargin: Theme.paddingMedium
-                color: Theme.secondaryColor
-                visible: text!==""
             }
 
             Label {
@@ -208,7 +160,7 @@ Page {
                         Image {
                             opacity: mousearea.pressed ? 0.7 : 1
                             anchors.fill: parent
-                            source: images.low_resolution.url
+                            source: images.thumbnail.url
 
                             MouseArea {
                                 id: mousearea

@@ -36,7 +36,11 @@ OTHER_FILES += qml/harbour-sailgrande.qml \
     qml/pages/UserProfilPage.qml \
     qml/pages/AboutPage.qml \
     qml/pages/MediaStreamPage.qml \
-    qml/MediaStreamMode.js
+    qml/MediaStreamMode.js \
+    qml/pages/StartPage.qml \
+    qml/components/UserDetailBlock.qml \
+    qml/components/StreamPreviewBlock.qml \
+    qml/pages/TagSearchPage.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

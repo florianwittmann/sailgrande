@@ -1,10 +1,12 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import QtQuick.LocalStorage 2.0
 
 import "../Api.js" as API
 import "../Helper.js" as Helper
 import "../components"
 import "../MediaStreamMode.js" as MediaStreamMode
+import "../Storage.js" as Storage
 
 
 Page {
@@ -13,14 +15,13 @@ Page {
     property var nextMediaUrl :null
     property bool dataLoaded: false
 
-    property int mode : MediaStreamMode.MY_STREAM_MODE
+    property int mode
 
-    property string mediaStreamTitle : switch (mode) {
-                                            case MediaStreamMode.MY_STREAM_MODE:
-                                                return qsTr("My Feed");
-                                            case MediaStreamMode.POPULAR_MODE:
-                                                return qsTr("Popular");
-                                       }
+    property string streamTitle
+
+    property var streamData : null
+    property string tag : ""
+
 
 
     SilicaListView {
@@ -28,7 +29,7 @@ Page {
         model: mediaModel
         anchors.fill: parent
         header: PageHeader {
-            title: mediaStreamTitle
+            title: streamTitle
         }
         delegate: FeedItem {
             visible: dataLoaded
@@ -39,28 +40,21 @@ Page {
 
         PullDownMenu {
 
+
             MenuItem {
-                 text: qsTr("About")
-                 onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
+                 visible: mode === MediaStreamMode.TAG_MODE && tag !== ""
+                 text: qsTr("Pin this tag feed")
+                 onClicked: {
+                     Storage.set("favtag",tag);
+                     pageStack.replaceAbove(null,Qt.resolvedUrl("StartPage.qml"));
+
+                 }
 
              }
 
             MenuItem {
                  text: qsTr("Refresh")
                  onClicked: getMediaData()
-             }
-
-            MenuItem {
-                visible: mode === MediaStreamMode.MY_STREAM_MODE
-                text: qsTr("Popular")
-                onClicked: changeMode(MediaStreamMode.POPULAR_MODE);
-
-             }
-
-            MenuItem {
-                visible: mode === MediaStreamMode.POPULAR_MODE
-                text: qsTr("My Feed")
-                onClicked: changeMode(MediaStreamMode.MY_STREAM_MODE);
              }
 
            }
@@ -93,28 +87,30 @@ Page {
     }
 
     Component.onCompleted: {
-         getMediaData();
+        if(streamData!==null) {
+            mediaDataFinished(streamData);
+        } else {
+            getMediaData();
+        }
      }
 
-    function changeMode(newMode) {
-        mode = newMode;
-        getMediaData();
-    }
 
     function getMediaData() {
-        dataLoaded = false;
+        dataLoaded=false;
         mediaModel.clear();
         if(mode=== MediaStreamMode.MY_STREAM_MODE) {
             API.get_UserFeed(mediaDataFinished);
         } else if(mode === MediaStreamMode.POPULAR_MODE) {
             API.get_Popular(mediaDataFinished);
+        } else if(mode === MediaStreamMode.TAG_MODE && tag !== "") {
+            API.get_TagFeed(tag,mediaDataFinished);
         }
     }
+
 
     function getNextMediaData() {
         API.get_Url(nextMediaUrl, mediaDataFinished);
     }
-
 
     function mediaDataFinished(data) {
         if(data === undefined || data.data === undefined) {

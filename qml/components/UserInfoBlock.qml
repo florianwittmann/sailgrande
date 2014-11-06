@@ -9,7 +9,6 @@ Rectangle {
     width: parent.width
     color: "transparent"
 
-
     Rectangle {
         anchors.fill: parent
         color: Theme.highlightColor

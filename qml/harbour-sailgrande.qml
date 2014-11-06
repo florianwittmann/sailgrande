@@ -17,7 +17,7 @@ ApplicationWindow
             return Qt.resolvedUrl("pages/AuthPage.qml")
         } else {
             API.access_token = token;
-            return Qt.resolvedUrl(Qt.resolvedUrl("pages/MediaStreamPage.qml"))
+            return Qt.resolvedUrl(Qt.resolvedUrl("pages/StartPage.qml"))
 
         }
 

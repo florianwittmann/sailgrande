@@ -28,6 +28,14 @@ function get_Popular(cb) {
 function get_UserFeed(cb) {
     request('GET', '/v1/users/self/feed?access_token=' + access_token, null, cb, true)
 }
+function get_TagFeed(tag, cb) {
+    request('GET', '/v1/tags/' + tag + '/media/recent?access_token=' + access_token, null, cb, true)
+}
+
+function get_Tags(searchFor, cb) {
+    request('GET', '/v1/tags/search?q=' + searchFor + '&access_token=' + access_token, null, cb, true)
+}
+
 
 function get_MediaById(mediaId,cb) {
     request('GET', '/v1/media/' + mediaId + '?access_token=' + access_token, null, cb, true)
@@ -82,3 +90,4 @@ function get_Url(url, cb) {
 function get_RecentMediaByUserId(userID,cb) {
     request('GET', '/v1/users/' + userID + '/media/recent?access_token=' + access_token, null, cb, true)
 }
+

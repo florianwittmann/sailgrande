@@ -74,7 +74,7 @@ Page {
 
     function authentificated() {
         Storage.set("authtoken",API.access_token);
-        pageStack.replace(Qt.resolvedUrl("MediaStreamPage.qml"));
+        pageStack.replace(Qt.resolvedUrl("StartPage.qml"));
     }
 
 }
