@@ -7,8 +7,10 @@ It is currently in an early state and does not have many features.
 
 Current features:
 
-* Show own feed with pictures/videos
-* Show current popular pictures/videos
+* Show own feed with posts
+* Show current popular posts
+* Show posts for a specific tag
+* A startpage containing a preview for all three of them (own feed, popular and tag posts)
 * Show details for a picture/video : Count of likes and comments and the most recent comments.
 * Watch videos
 * Like a picture/video or remove your previous like
