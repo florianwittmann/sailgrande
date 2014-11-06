@@ -37,6 +37,11 @@ Page {
     }
 
     function refreshPopularFeedBlock() {
+        if(!startPageShowPopularFeed) {
+            refreshFavoriteTagFeedBlock()
+            return;
+        }
+
         popularFeedBlock.refreshContent(refreshPopularFeedBlockFinished)
     }
 
@@ -104,6 +109,7 @@ Page {
             }
 
             StreamPreviewBlock {
+                visible: startPageShowPopularFeed
                 id: popularFeedBlock
                 streamTitle: qsTr('Popular')
                 mode: MediaStreamMode.POPULAR_MODE
@@ -126,10 +132,18 @@ Page {
 
         PullDownMenu {
 
+
+
             MenuItem {
                 text: qsTr("About")
                 onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
             }
+
+            MenuItem {
+                text: qsTr("Settings")
+                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
+            }
+
 
             MenuItem {
                 text: qsTr("Search")

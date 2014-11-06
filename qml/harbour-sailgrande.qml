@@ -73,4 +73,14 @@ ApplicationWindow {
         API.coverUsername = username
     }
 
+    property int streamPreviewColumnCount: 3;
+    property int  streamPreviewRowCount : 2;
+
+    property bool  startPageShowPopularFeed : true;
+
+
+
+
+
+
 }

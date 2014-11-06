@@ -12,8 +12,15 @@ function request(verb, endpoint, obj, cb, includeBase) {
     xhr.onreadystatechange = function() {
         if(xhr.readyState === XMLHttpRequest.DONE) {
             if(cb) {
-                var res = JSON.parse(xhr.responseText.toString())
+                var res;
+                try {
+                    res = JSON.parse(xhr.responseText.toString())
+                } catch(err) {
+                    res = {}
+                    res['error'] = xhr.responseText.toString()
+                }
                 cb(res);
+
             }
         }
     }

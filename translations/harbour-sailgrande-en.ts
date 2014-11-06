@@ -53,6 +53,14 @@
     </message>
 </context>
 <context>
+    <name>ErrorMessageLabel</name>
+    <message>
+        <location filename="../qml/components/ErrorMessageLabel.qml" line="8"/>
+        <source>An error occurred.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MediaDetailPage</name>
     <message>
         <location filename="../qml/pages/MediaDetailPage.qml" line="22"/>
@@ -104,34 +112,82 @@
     </message>
 </context>
 <context>
+    <name>SettingsPage</name>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="17"/>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="33"/>
+        <source>Startpage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="37"/>
+        <source>Show popular feed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="44"/>
+        <source>Customize the column and row count of the feed previews on the startpage:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="55"/>
+        <source>Columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="67"/>
+        <source>Rows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="80"/>
+        <source>Shows %1 items per feed preview.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="91"/>
+        <source>Data volume</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>StartPage</name>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="63"/>
+        <location filename="../qml/pages/StartPage.qml" line="68"/>
         <source>Welcome</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="102"/>
+        <location filename="../qml/pages/StartPage.qml" line="107"/>
         <source>My Feed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="108"/>
+        <location filename="../qml/pages/StartPage.qml" line="114"/>
         <source>Popular</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="117"/>
+        <location filename="../qml/pages/StartPage.qml" line="123"/>
         <source>Tagged with %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="130"/>
+        <location filename="../qml/pages/StartPage.qml" line="138"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="135"/>
+        <location filename="../qml/pages/StartPage.qml" line="143"/>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/StartPage.qml" line="149"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
@@ -165,42 +221,42 @@
 <context>
     <name>UserProfilPage</name>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="73"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
         <source>You follow %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="75"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="78"/>
         <source>You requested to follow %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="95"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
         <source>%1 follows you</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="97"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
         <source>%1 requested to follow you</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="99"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="102"/>
         <source>You blocked %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="145"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="148"/>
         <source>This profile is private.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="192"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="196"/>
         <source>Unfollow %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="200"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="204"/>
         <source>Follow %1</source>
         <translation type="unfinished"></translation>
     </message>

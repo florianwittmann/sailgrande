@@ -41,7 +41,9 @@ OTHER_FILES += qml/harbour-sailgrande.qml \
     qml/components/UserDetailBlock.qml \
     qml/components/StreamPreviewBlock.qml \
     qml/pages/TagSearchPage.qml \
-    qml/components/SmallMediaElement.qml
+    qml/components/SmallMediaElement.qml \
+    qml/components/ErrorMessageLabel.qml \
+    qml/pages/SettingsPage.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

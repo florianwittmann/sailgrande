@@ -17,6 +17,9 @@ Page {
 
     property int recentMediaSize: (width - 2 * Theme.paddingMedium) / 3
 
+    property bool errorAtUserMediaRequestOccurred : false
+
+
     property string rel_outgoing_status : null;
     property string rel_incoming_status : null;
 
@@ -155,6 +158,7 @@ Page {
             BusyIndicator {
                 running: visible
                 visible: !recentMediaLoaded
+                anchors.horizontalCenter: parent.horizontalCenter
             }
 
 

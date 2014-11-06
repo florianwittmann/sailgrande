@@ -11,9 +11,11 @@ Item {
     anchors.right: parent.right
 
     property string streamTitle
-    property int recentMediaSize: width / 3
+    property int recentMediaSize: width / streamPreviewColumnCount
     property bool recentMediaLoaded: false
 
+    property int previewElementsCount : streamPreviewColumnCount * streamPreviewRowCount
+    property bool errorOccurred : false
     property string tag
 
     property var streamData
@@ -60,15 +62,15 @@ Item {
     }
 
     Grid {
-        height: recentMediaSize * 2
+        height: recentMediaSize * streamPreviewRowCount
         id: grid
-        columns: 3
+        columns: streamPreviewColumnCount
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: header.bottom
+        visible: recentMediaLoaded
 
         Repeater {
-            visible: recentMediaLoaded
             model: recentMediaModel
             delegate: Item {
                 width: recentMediaSize
@@ -77,13 +79,20 @@ Item {
                     mediaElement: model
                 }
             }
+
         }
+
     }
 
     BusyIndicator {
         anchors.centerIn: grid
         running: recentMediaLoaded == false
     }
+
+    ErrorMessageLabel {
+        visible: errorOccurred
+    }
+
     ListModel {
         id: recentMediaModel
     }
@@ -92,10 +101,12 @@ Item {
         streamData = data;
         if(data === undefined || data.data === undefined) {
             recentMediaLoaded=true;
+            errorOccurred=true
             return;
         }
+        errorOccurred = false
         recentMediaModel.clear();
-        var elementsCount = data.data.length > 6 ? 6 : data.data.length;
+        var elementsCount = data.data.length > previewElementsCount ? previewElementsCount : data.data.length;
         for(var i=0; i<elementsCount; i++) {
             recentMediaModel.append(data.data[i]);
         }

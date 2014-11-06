@@ -18,7 +18,7 @@ Page {
     property int mode
 
     property string streamTitle
-
+    property bool errorOccurred : false
     property var streamData : null
     property string tag : ""
 
@@ -86,6 +86,10 @@ Page {
         size: BusyIndicatorSize.Large
     }
 
+    ErrorMessageLabel {
+        visible: errorOccurred
+    }
+
     Component.onCompleted: {
         if(streamData!==null) {
             mediaDataFinished(streamData);
@@ -108,10 +112,11 @@ Page {
 
     function mediaDataFinished(data) {
         if(data === undefined || data.data === undefined) {
-            console.log("ERROR!");
-            console.log(Helper.serialize(data))
+            dataLoaded = true;
+            errorOccurred = true
             return;
         }
+        errorOccurred = false
 
         for(var i=0; i<data.data.length; i++) {
             mediaModel.append(data.data[i]);
