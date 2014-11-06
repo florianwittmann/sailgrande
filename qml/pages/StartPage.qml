@@ -9,13 +9,49 @@ import "../Helper.js" as Helper
 import "../MediaStreamMode.js" as MediaStreamMode
 import "../Storage.js" as Storage
 
-
 Page {
 
+    id: startPage
     property var user
-    property bool relationStatusLoaded : false
-    property bool recentMediaLoaded: false;
+    property bool relationStatusLoaded: false
+    property bool recentMediaLoaded: false
+    property bool updateRunning: false
 
+    onStatusChanged: {
+        if (status === PageStatus.Activating) {
+            updateAllFeeds()
+        }
+    }
+
+    function updateAllFeeds() {
+        if (updateRunning)
+            return
+
+        console.log("update...")
+        updateRunning = true
+        myFeedBlock.refreshContent(refreshMyFeedBlockFinished)
+    }
+
+    function refreshMyFeedBlockFinished() {
+        refreshPopularFeedBlock()
+    }
+
+    function refreshPopularFeedBlock() {
+        popularFeedBlock.refreshContent(refreshPopularFeedBlockFinished)
+    }
+
+    function refreshPopularFeedBlockFinished() {
+        refreshFavoriteTagFeedBlock()
+    }
+
+    function refreshFavoriteTagFeedBlock() {
+        favoriteTagFeedBlock.refreshContent(refreshDone)
+    }
+
+    function refreshDone() {
+        updateRunning = false
+        console.log("RefreshDone")
+    }
 
     SilicaFlickable {
         anchors.fill: parent
@@ -24,8 +60,8 @@ Page {
 
         PageHeader {
             id: header
-            title: "Welcome"
-            description: user.username
+            title: qsTr("Welcome")
+            description: user !== undefined ? user.username : ""
         }
 
         Column {
@@ -40,7 +76,6 @@ Page {
                 width: parent.width
                 color: "transparent"
 
-
                 Rectangle {
                     anchors.fill: parent
                     color: Theme.highlightColor
@@ -54,31 +89,37 @@ Page {
                 MouseArea {
                     anchors.fill: parent
                     id: mouseAreaMyProfile
-                    onClicked: pageStack.push(Qt.resolvedUrl("UserProfilPage.qml"),{user:user});
+                    onClicked: pageStack.push(Qt.resolvedUrl(
+                                                  "UserProfilPage.qml"), {
+                                                  user: user
+                                              })
                 }
-
             }
 
             StreamPreviewBlock {
-                streamTitle: 'My Stream'
-                mode : MediaStreamMode.MY_STREAM_MODE
+                id: myFeedBlock
+
+                streamTitle: qsTr('My Feed')
+                mode: MediaStreamMode.MY_STREAM_MODE
             }
 
             StreamPreviewBlock {
-                streamTitle: 'Popular'
-                mode : MediaStreamMode.POPULAR_MODE
+                id: popularFeedBlock
+                streamTitle: qsTr('Popular')
+                mode: MediaStreamMode.POPULAR_MODE
             }
 
             StreamPreviewBlock {
-                property string favoriteTag : loadFavoriteTag()
-                visible: favoriteTag!==""
-                streamTitle: 'Tagged with ' + favoriteTag
-                mode : MediaStreamMode.TAG_MODE
+                id: favoriteTagFeedBlock
+
+                property string favoriteTag: loadFavoriteTag()
+                visible: favoriteTag !== ""
+                streamTitle: qsTr('Tagged with %1').arg(favoriteTag)
+                mode: MediaStreamMode.TAG_MODE
                 tag: favoriteTag
 
                 function loadFavoriteTag() {
-                    return Storage.get("favtag","");
-
+                    return Storage.get("favtag", "")
                 }
             }
         }
@@ -86,56 +127,34 @@ Page {
         PullDownMenu {
 
             MenuItem {
-                 text: qsTr("About")
-                 onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
-
-             }
-
+                text: qsTr("About")
+                onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
+            }
 
             MenuItem {
-                 text: qsTr("Search")
-                 onClicked: pageStack.push(Qt.resolvedUrl("TagSearchPage.qml"))
-
-             }
+                text: qsTr("Search")
+                onClicked: pageStack.push(Qt.resolvedUrl("TagSearchPage.qml"))
+            }
         }
-
-
-
     }
 
     ListModel {
         id: recentMediaModel
     }
 
-
     Component.onCompleted: {
-        reload();
+        loadProfilePreview()
     }
 
-    function reload() {
-        API.get_UserById('self',reloadFinished);
-        //API.get_RecentMediaByUserId(user.id,recentMediaFinished)
+    function loadProfilePreview() {
+        API.get_UserById('self', loadProfilePreviewFinished)
     }
 
-    function reloadFinished(data) {
-        if(data.meta.code===200) {
-            user = data.data;
-        } else {
-            privateProfile = true;
+    function loadProfilePreviewFinished(data) {
+        if (data.meta.code === 200) {
+            user = data.data
+            API.selfId = user.id
         }
     }
-
-    function recentMediaFinished(data) {
-        if(data === undefined || data.data === undefined) {
-            recentMediaLoaded=true;
-            return;
-        }
-        for(var i=0; i<data.data.length; i++) {
-            recentMediaModel.append(data.data[i]);
-        }
-        recentMediaLoaded=true;
-
-    }
-
 
 }

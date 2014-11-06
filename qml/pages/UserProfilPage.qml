@@ -20,6 +20,8 @@ Page {
     property string rel_outgoing_status : null;
     property string rel_incoming_status : null;
 
+    property bool isSelf: false;
+
 
 
     SilicaFlickable {
@@ -40,7 +42,19 @@ Page {
             id: column
             spacing: Theme.paddingSmall
 
-            UserDetailBlock{}
+            Item {
+                width: parent.width
+                height: 150
+                Rectangle {
+                    anchors.fill: parent
+                    color: Theme.highlightColor
+                    opacity: 0.1
+                }
+                UserDetailBlock{
+
+                }
+            }
+
 
             Label {
                 id: incomingRelLabel
@@ -157,18 +171,8 @@ Page {
                     delegate: Item {
                         width: recentMediaSize
                         height: recentMediaSize
-                        Image {
-                            opacity: mousearea.pressed ? 0.7 : 1
-                            anchors.fill: parent
-                            source: images.thumbnail.url
-
-                            MouseArea {
-                                id: mousearea
-                                anchors.fill: parent
-                                onClicked: {
-                                    pageStack.push(Qt.resolvedUrl("MediaDetailPage.qml"),{item:model});
-                                }
-                            }
+                        SmallMediaElement{
+                            mediaElement: model
                         }
                     }
                 }
@@ -186,7 +190,7 @@ Page {
 
             MenuItem {
                  text:  qsTr("Unfollow %1").arg(user.username)
-                 visible:  rel_outgoing_status==="follows"
+                 visible:  rel_outgoing_status==="follows" && !isSelf
                  onClicked: {
                      API.unfollow(user.id, reloadRelationship);
                  }
@@ -194,7 +198,7 @@ Page {
 
             MenuItem {
                  text: qsTr("Follow %1").arg(user.username)
-                 visible: rel_outgoing_status==="none"
+                 visible: rel_outgoing_status==="none" && !isSelf
                  onClicked: {
                      API.follow(user.id, reloadRelationship);
                  }
@@ -213,13 +217,17 @@ Page {
 
 
     Component.onCompleted: {
+        if(user.id === API.selfId)
+            isSelf = true;
         reload();
     }
 
     function reload() {
         API.get_UserById(user.id,reloadFinished);
         API.get_RecentMediaByUserId(user.id,recentMediaFinished)
-        reloadRelationship("");
+
+        if(!isSelf)
+            reloadRelationship("");
     }
 
     function reloadRelationship(data) {

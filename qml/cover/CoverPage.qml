@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "../Api.js" as API
+import "../Helper.js" as Helper
 
 
 CoverBackground {
@@ -8,17 +9,19 @@ CoverBackground {
 
     property bool active: status == Cover.Active
 
-    property var image : null;
+    property string image : "";
+    property string username : "";
+
 
     onActiveChanged : setImage()
 
     function setImage() {
         image =  API.coverImage;
+        username = API.coverUsername
     }
 
-
     Column {
-        visible: image===null
+        visible: image===""
 
         anchors.centerIn: parent
         width:  parent.width
@@ -39,13 +42,13 @@ CoverBackground {
         anchors.top: Theme.paddingMedium
         width: parent.width
         height: width
-        source: image!==null ? image.images.thumbnail.url : ""
+        source: image
         visible: source !== ""
     }
 
     Label {
         id: label
-        text: image!==null? image.user.username : ""
+        text: username
         visible: text!==""
         anchors.left:  parent.left
         anchors.leftMargin: Theme.paddingSmall

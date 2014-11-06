@@ -13,7 +13,6 @@ Item {
        width:150
        height:150
        anchors.right: parent.right
-       anchors.rightMargin: Theme.paddingMedium
        source: user !== undefined ? user.profile_picture : ""
     }
 

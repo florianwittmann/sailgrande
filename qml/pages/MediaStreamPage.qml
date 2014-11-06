@@ -54,7 +54,7 @@ Page {
 
             MenuItem {
                  text: qsTr("Refresh")
-                 onClicked: getMediaData()
+                 onClicked: getMediaData(false)
              }
 
            }
@@ -90,21 +90,15 @@ Page {
         if(streamData!==null) {
             mediaDataFinished(streamData);
         } else {
-            getMediaData();
+            getMediaData(true);
         }
      }
 
 
-    function getMediaData() {
+    function getMediaData(cached) {
         dataLoaded=false;
         mediaModel.clear();
-        if(mode=== MediaStreamMode.MY_STREAM_MODE) {
-            API.get_UserFeed(mediaDataFinished);
-        } else if(mode === MediaStreamMode.POPULAR_MODE) {
-            API.get_Popular(mediaDataFinished);
-        } else if(mode === MediaStreamMode.TAG_MODE && tag !== "") {
-            API.get_TagFeed(tag,mediaDataFinished);
-        }
+        getFeed(mode,tag,cached,mediaDataFinished)
     }
 
 
@@ -115,6 +109,7 @@ Page {
     function mediaDataFinished(data) {
         if(data === undefined || data.data === undefined) {
             console.log("ERROR!");
+            console.log(Helper.serialize(data))
             return;
         }
 
@@ -123,7 +118,9 @@ Page {
             console.log(Helper.serialize(data.data[i]));
         }
 
-        API.coverImage = mediaModel.get(0);
+        var url =  mediaModel.get(0).images.thumbnail.url;
+        var username =  mediaModel.get(0).user.username;
+        setCoverImage(url,username)
 
         if(data.pagination !== undefined && data.pagination.next_url) {
             nextMediaUrl=data.pagination.next_url;

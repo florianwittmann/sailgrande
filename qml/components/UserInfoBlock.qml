@@ -12,7 +12,7 @@ Rectangle {
     Rectangle {
         anchors.fill: parent
         color: Theme.highlightColor
-        opacity: mousearea.pressed ? 0.6 : 0.3
+        opacity: mousearea.pressed ? 0.3 : 0.1
     }
 
     Image {

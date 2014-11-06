@@ -1,8 +1,10 @@
 .pragma library
 
-var coverImage = null;
+var coverImage = "";
+var coverUsername =""
 var BASE="https://api.instagram.com"
 var access_token = "";
+var selfId;
 
 function request(verb, endpoint, obj, cb, includeBase) {
     print('request: ' + verb + ' ' + (includeBase? BASE:'') + (endpoint? endpoint:''))

@@ -75,11 +75,19 @@ Page {
                 anchors.rightMargin: Theme.paddingMedium
                 height: image.width
                 visible: !playVideo || video.status === MediaPlayer.Loading
+                color: "transparent"
+
+                Image {
+                   anchors.fill: parent
+                   source: item.images ? item.images.thumbnail.url : ""
+                }
 
                 Image {
                    anchors.fill: parent
                    source: item.images ? item.images.standard_resolution.url : ""
                 }
+
+
 
                 BusyIndicator {
                     anchors.centerIn: parent
@@ -105,8 +113,8 @@ Page {
 
             Label {
                 id: description
-                visible: item.caption !== undefined && item.caption.text
-                text: item.caption.text
+                visible: text!==""
+                text: item.caption !== undefined ? item.caption.text : ""
                 anchors.left: parent.left
                 anchors.leftMargin: Theme.paddingMedium
                 anchors.right: parent.right
@@ -215,7 +223,12 @@ Page {
     }
 
     Component.onCompleted: {
-        API.coverImage = item;
+        var url = item.images.thumbnail.url;
+        var username = item.user.username;
+        setCoverImage(url,username)
+
+
+
         userLikedThis = item.user_has_liked;
         reload();
     }

@@ -1,3 +1,10 @@
+0.3
+- Added a startpage. You can see your profile stats and a preview of different media streams here
+- Added tag search
+- You can pin one favorite tag to your startpage
+- Fixed some bug with an empty app cover.
+- Improved user profile
+
 0.2
 - Added initial Video support
 - Added user profiles

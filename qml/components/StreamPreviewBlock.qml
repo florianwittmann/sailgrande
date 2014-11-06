@@ -3,7 +3,6 @@ import Sailfish.Silica 1.0
 import "../MediaStreamMode.js" as MediaStreamMode
 import "../Api.js" as API
 
-
 Item {
 
     height: header.height + grid.height
@@ -14,7 +13,7 @@ Item {
     property string streamTitle
     property int recentMediaSize: width / 3
     property bool recentMediaLoaded: false
-    property var funcGetData
+
     property string tag
 
     property var streamData
@@ -40,9 +39,7 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
             anchors.right: parent.right
             anchors.rightMargin: Theme.paddingLarge
-
             source:  "image://theme/icon-m-right"
-           visible: item.videos !== undefined && !playVideo
         }
 
         Label {
@@ -55,8 +52,6 @@ Item {
             anchors.rightMargin: Theme.paddingMedium
         }
 
-
-
         MouseArea {
             id: mouseAreaHeader
             anchors.fill: parent
@@ -65,6 +60,7 @@ Item {
     }
 
     Grid {
+        height: recentMediaSize * 2
         id: grid
         columns: 3
         anchors.left: parent.left
@@ -77,36 +73,19 @@ Item {
             delegate: Item {
                 width: recentMediaSize
                 height: recentMediaSize
-                Image {
-                    opacity: mousearea.pressed ? 0.7 : 1
-                    anchors.fill: parent
-                    source: images.thumbnail.url
-
-                    MouseArea {
-                        id: mousearea
-                        anchors.fill: parent
-                        onClicked: {
-                            pageStack.push(Qt.resolvedUrl("../pages/MediaDetailPage.qml"),{item:model});
-                        }
-                    }
+                SmallMediaElement{
+                    mediaElement: model
                 }
             }
         }
     }
 
+    BusyIndicator {
+        anchors.centerIn: grid
+        running: recentMediaLoaded == false
+    }
     ListModel {
         id: recentMediaModel
-
-    }
-
-    function loadStreamPreviewData() {
-        if(mode=== MediaStreamMode.MY_STREAM_MODE) {
-            API.get_UserFeed(loadStreamPreviewDataFinished);
-        } else if(mode === MediaStreamMode.POPULAR_MODE) {
-            API.get_Popular(loadStreamPreviewDataFinished);
-        } else if(mode === MediaStreamMode.TAG_MODE && tag !=="") {
-            API.get_TagFeed(tag,loadStreamPreviewDataFinished);
-        }
     }
 
     function loadStreamPreviewDataFinished(data) {
@@ -115,6 +94,7 @@ Item {
             recentMediaLoaded=true;
             return;
         }
+        recentMediaModel.clear();
         var elementsCount = data.data.length > 6 ? 6 : data.data.length;
         for(var i=0; i<elementsCount; i++) {
             recentMediaModel.append(data.data[i]);
@@ -122,10 +102,11 @@ Item {
         recentMediaLoaded=true;
     }
 
-
-
-    Component.onCompleted: {
-        loadStreamPreviewData()
+    function refreshContent(cb) {
+        getFeed(mode,tag,true,function(data) {
+            loadStreamPreviewDataFinished(data);
+            cb();
+        })
     }
 
 }
