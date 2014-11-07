@@ -47,9 +47,7 @@ Page {
             Video {
                 id: video
                 anchors.left: parent.left
-                anchors.leftMargin: Theme.paddingMedium
                 anchors.right: parent.right
-                anchors.rightMargin: Theme.paddingMedium
                 height: visible ? video.width : 0
                 visible: playVideo && video.status !== MediaPlayer.Loading
                 source: ""
@@ -70,9 +68,7 @@ Page {
             Rectangle {
                 id: image
                 anchors.left: parent.left
-                anchors.leftMargin: Theme.paddingMedium
                 anchors.right: parent.right
-                anchors.rightMargin: Theme.paddingMedium
                 height: image.width
                 visible: !playVideo || video.status === MediaPlayer.Loading
                 color: "transparent"

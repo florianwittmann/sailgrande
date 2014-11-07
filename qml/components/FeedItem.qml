@@ -16,9 +16,7 @@ BackgroundItem {
         Image {
             id: image
             anchors.left: parent.left
-            anchors.leftMargin: Theme.paddingMedium
             anchors.right: parent.right
-            anchors.rightMargin: Theme.paddingMedium
             height: image.width
             source: item.images ? item.images.low_resolution.url : ""
 

@@ -83,12 +83,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="192"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="188"/>
         <source>Remove my like</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="201"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="197"/>
         <source>Like</source>
         <translation type="unfinished"></translation>
     </message>
