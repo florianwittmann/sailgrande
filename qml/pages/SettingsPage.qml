@@ -97,6 +97,21 @@ Page {
                 font.pixelSize: Theme.fontSizeSmall
             }
 
+            SectionHeader {
+              text: qsTr("Feeds")
+            }
+
+            TextSwitch {
+                text: qsTr("Show captions")
+                onCheckedChanged: {
+                    feedsShowCaptions = checked
+                    Storage.set("feedsShowCaptions", checked ? 1 : 0);
+                }
+                Component.onCompleted: checked = feedsShowCaptions
+            }
+
+
+
 
             SectionHeader {
               text: qsTr("Data volume")
