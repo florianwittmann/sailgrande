@@ -1,3 +1,12 @@
+0.4
+- Added Settings to customize StartScreen and Feeds
+- You can now pin your often used tags, by using the pulleymenu when you are viewing a tag feed.
+- Add a pinned tags page, that is visible, when you pin tags
+- Choose a favorite tag by longpressing on a pinned tag
+- Removed margins around images
+- Some cover improvements
+- Added refresh action to StartPage
+
 0.3
 - Added a startpage. You can see your profile stats and a preview of different media streams here
 - Added tag search

@@ -176,11 +176,6 @@
         <source>Show captions</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="127"/>
-        <source>Logout</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>StartPage</name>
