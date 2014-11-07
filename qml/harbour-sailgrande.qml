@@ -89,8 +89,8 @@ ApplicationWindow {
     function init() {
         streamPreviewColumnCount = Storage.get("streamPreviewColumnCount", 3);
         streamPreviewRowCount = Storage.get("streamPreviewRowCount", 4);
-        startPageShowPopularFeed = Storage.get("startPageShowPopularFeed", 1) === 1;
-        feedsShowCaptions = Storage.get("feedsShowCaptions", 0) === 1;
+        startPageShowPopularFeed = parseInt(Storage.get("startPageShowPopularFeed", 1)) === 1;
+        feedsShowCaptions = parseInt(Storage.get("feedsShowCaptions", 0)) === 1;
 
     }
 
