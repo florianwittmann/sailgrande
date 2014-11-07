@@ -98,11 +98,6 @@ Page {
 
     }
 
-    Component.onCompleted: {
-        getTagsData();
-    }
-
-
     Timer {
          id: timerSearchTags
          interval: 600

@@ -8,6 +8,7 @@ import "../components"
 import "../MediaStreamMode.js" as MediaStreamMode
 import "../Storage.js" as Storage
 import "../CoverMode.js" as CoverMode
+import "../FavManager.js" as FavManager
 
 Page {
     id: page
@@ -43,9 +44,14 @@ Page {
                 visible: mode === MediaStreamMode.TAG_MODE && tag !== ""
                 text: qsTr("Pin this tag feed")
                 onClicked: {
-                    Storage.set("favtag", tag)
-                    pageStack.replaceAbove(null,
-                                           Qt.resolvedUrl("StartPage.qml"))
+                    FavManager.addFavTag(tag)
+                    saveFavTags()
+                    console.log("current fav: " + FavManager.favTag)
+                    if(FavManager.favTag==="")  {
+                        FavManager.favTag = tag
+                        console.log("favnow " + FavManager.favTag)
+                        Storage.set("favtag", tag)
+                    }
                 }
             }
 
@@ -118,7 +124,6 @@ Page {
 
         for (var i = 0; i < data.data.length; i++) {
             mediaModel.append(data.data[i])
-            console.log(Helper.serialize(data.data[i]))
         }
 
         var url = mediaModel.get(0).images.thumbnail.url

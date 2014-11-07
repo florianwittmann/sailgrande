@@ -80,6 +80,8 @@ Item {
                 }
             }
         }
+
+
     }
 
     BusyIndicator {
@@ -97,7 +99,7 @@ Item {
 
     function loadStreamPreviewDataFinished(data) {
         streamData = data;
-        if(data === undefined || data.data === undefined) {
+        if(data ===null || data === undefined || data.data === undefined) {
             recentMediaLoaded=true;
             errorOccurred=true
             return;

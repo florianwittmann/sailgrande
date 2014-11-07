@@ -9,6 +9,7 @@ import "../Helper.js" as Helper
 import "../MediaStreamMode.js" as MediaStreamMode
 import "../Storage.js" as Storage
 import "../CoverMode.js" as CoverMode
+import "../FavManager.js" as FavManager
 
 
 Page {
@@ -18,16 +19,29 @@ Page {
     property bool relationStatusLoaded: false
     property bool recentMediaLoaded: false
     property bool updateRunning: false
+    property string favoriteTag: ""
+
+
+//    property Item favContextMenu
+//    property string favConextMenuTag
 
     onStatusChanged: {
-        if (status === PageStatus.Activating) {
+        console.log("status1")
+
+        if (status === PageStatus.Active) {
+            console.log("status2")
+
             updateAllFeeds()
+
         }
     }
 
     function updateAllFeeds() {
-        if (updateRunning)
+        if (updateRunning) {
             return
+
+
+        }
 
         console.log("update...")
         updateRunning = true
@@ -35,16 +49,16 @@ Page {
     }
 
     function refreshMyFeedBlockFinished() {
-        getFeed(MediaStreamMode.MY_STREAM_MODE,"",true,function(data) {
-            setCover(CoverMode.SHOW_FEED,data)
+        getFeed(MediaStreamMode.MY_STREAM_MODE, "", true, function (data) {
+            setCover(CoverMode.SHOW_FEED, data)
         })
         refreshPopularFeedBlock()
     }
 
     function refreshPopularFeedBlock() {
-        if(!startPageShowPopularFeed) {
+        if (!startPageShowPopularFeed) {
             refreshFavoriteTagFeedBlock()
-            return;
+            return
         }
 
         popularFeedBlock.refreshContent(refreshPopularFeedBlockFinished)
@@ -55,6 +69,14 @@ Page {
     }
 
     function refreshFavoriteTagFeedBlock() {
+
+        if(FavManager.favTag===null) FavManager.favTag = ""
+
+        console.log("current fav " + favoriteTag + " - new " + FavManager.favTag)
+        if(favoriteTag!==FavManager.favTag) {
+            favoriteTag = FavManager.favTag
+        }
+
         favoriteTagFeedBlock.refreshContent(refreshDone)
     }
 
@@ -65,7 +87,7 @@ Page {
 
     SilicaFlickable {
         anchors.fill: parent
-        contentHeight: column.height + header.height + 10
+        contentHeight: column.height + header.height
         contentWidth: parent.width
 
         PageHeader {
@@ -123,17 +145,61 @@ Page {
             StreamPreviewBlock {
                 id: favoriteTagFeedBlock
 
-                property string favoriteTag: loadFavoriteTag()
                 visible: favoriteTag !== ""
                 streamTitle: qsTr('Tagged with %1').arg(favoriteTag)
                 mode: MediaStreamMode.TAG_MODE
                 tag: favoriteTag
 
-                function loadFavoriteTag() {
-                    return Storage.get("favtag", "")
+
+            }
+
+
+
+            Item {
+                id:allPinnedTags
+                visible: favoriteTag !== ""
+
+                height: Theme.itemSizeMedium
+                width: parent.width
+
+
+                Rectangle {
+                    anchors.fill: parent
+                    color: Theme.highlightColor
+                    opacity : mouseAreaAllPinnedTags.pressed ? 0.3 : 0
+                }
+
+                Image {
+                    id: icon
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.right: parent.right
+                    anchors.rightMargin: Theme.paddingLarge
+                    source:  "image://theme/icon-m-right"
+                }
+
+                Label {
+                    font.pixelSize: Theme.fontSizeLarge
+                    color: Theme.primaryColor
+                    text:qsTr("All pinned tags")
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.right: icon.left
+                    anchors.rightMargin: Theme.paddingMedium
+                }
+
+                MouseArea {
+                    id: mouseAreaAllPinnedTags
+                    anchors.fill: parent
+                    onClicked: pageStack.push(Qt.resolvedUrl("PinnedPage.qml"))
                 }
             }
+
+
+
         }
+
+
+
+
 
         PullDownMenu {
 
@@ -147,22 +213,23 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
             }
 
-
             MenuItem {
                 text: qsTr("Search")
                 onClicked: pageStack.push(Qt.resolvedUrl("TagSearchPage.qml"))
             }
 
             MenuItem {
-                 text: qsTr("Refresh")
-                 onClicked: updateAllFeeds()
-             }
+                text: qsTr("Refresh")
+                onClicked: updateAllFeeds()
+            }
         }
     }
 
     ListModel {
         id: recentMediaModel
     }
+
+
 
     Component.onCompleted: {
         loadProfilePreview()
@@ -178,5 +245,4 @@ Page {
             API.selfId = user.id
         }
     }
-
 }

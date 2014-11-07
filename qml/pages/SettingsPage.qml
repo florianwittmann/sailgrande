@@ -113,11 +113,24 @@ Page {
 
 
 
-            SectionHeader {
-              text: qsTr("Data volume")
+//            SectionHeader {
+//              text: qsTr("Data volume")
+//            }
+
+
+
+        }
+
+        PullDownMenu {
+
+            MenuItem {
+                text: qsTr("Logout")
+
+                onClicked: {
+                    Storage.set("authtoken","");
+                    pageStack.replaceAbove(null,Qt.resolvedUrl("AuthPage.qml"))
+                }
             }
-
-
 
         }
     }

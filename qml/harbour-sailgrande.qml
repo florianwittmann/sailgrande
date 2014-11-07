@@ -7,19 +7,19 @@ import "Storage.js" as Storage
 import "Api.js" as API
 import "MediaStreamMode.js" as MediaStreamMode
 import "Cover.js" as CoverCtl
+import "FavManager.js" as FavManager
 
 
 ApplicationWindow {
 
     property var cachedFeeds : null
-
     property var cachedFeedsTime : null
 
     initialPage: getInitialPage()
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
 
     function getInitialPage() {
-
+        loadFavTags()
         var token = Storage.get("authtoken", "")
         if (token === "") {
             return Qt.resolvedUrl("pages/AuthPage.qml")
@@ -56,7 +56,9 @@ ApplicationWindow {
                     API.get_Popular(function(data){dataFinished(cacheKey,data,cb)})
                 }  else if (mode === MediaStreamMode.TAG_MODE && tag !== "") {
                         API.get_TagFeed(tag,function(data){dataFinished(cacheKey,data,cb)})
-                    }
+                } else {
+                   cb(null)
+                }
 
             }
     }
@@ -91,7 +93,6 @@ ApplicationWindow {
         streamPreviewRowCount = Storage.get("streamPreviewRowCount", 4);
         startPageShowPopularFeed = parseInt(Storage.get("startPageShowPopularFeed", 1)) === 1;
         feedsShowCaptions = parseInt(Storage.get("feedsShowCaptions", 0)) === 1;
-
     }
 
     function setCover(coverMode, coverData) {
@@ -99,6 +100,17 @@ ApplicationWindow {
         CoverCtl.nextCoverData = coverData
         CoverCtl.nextChanged = true;
 
+    }
+
+    function saveFavTags() {
+        var favTagsList = FavManager.favTags.join(';')
+        Storage.set("favtags", favTagsList)
+    }
+
+    function loadFavTags() {
+        var favTagsList = Storage.get("favtags", "")
+        FavManager.favTags = favTagsList===""|| favTagsList===null  ? [] : favTagsList.split(";")
+        FavManager.favTag = Storage.get("favtag", "")
     }
 
 }
