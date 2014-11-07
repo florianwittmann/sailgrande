@@ -43,7 +43,9 @@ OTHER_FILES += qml/harbour-sailgrande.qml \
     qml/pages/TagSearchPage.qml \
     qml/components/SmallMediaElement.qml \
     qml/components/ErrorMessageLabel.qml \
-    qml/pages/SettingsPage.qml
+    qml/pages/SettingsPage.qml \
+    qml/CoverMode.js \
+    qml/Cover.js
 
 # to disable building translations every time, comment out the
 # following CONFIG line

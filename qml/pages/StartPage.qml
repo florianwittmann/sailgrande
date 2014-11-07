@@ -8,6 +8,8 @@ import "../Api.js" as API
 import "../Helper.js" as Helper
 import "../MediaStreamMode.js" as MediaStreamMode
 import "../Storage.js" as Storage
+import "../CoverMode.js" as CoverMode
+
 
 Page {
 
@@ -33,6 +35,9 @@ Page {
     }
 
     function refreshMyFeedBlockFinished() {
+        getFeed(MediaStreamMode.MY_STREAM_MODE,"",true,function(data) {
+            setCover(CoverMode.SHOW_FEED,data)
+        })
         refreshPopularFeedBlock()
     }
 
@@ -132,8 +137,6 @@ Page {
 
         PullDownMenu {
 
-
-
             MenuItem {
                 text: qsTr("About")
                 onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
@@ -149,6 +152,11 @@ Page {
                 text: qsTr("Search")
                 onClicked: pageStack.push(Qt.resolvedUrl("TagSearchPage.qml"))
             }
+
+            MenuItem {
+                 text: qsTr("Refresh")
+                 onClicked: updateAllFeeds()
+             }
         }
     }
 

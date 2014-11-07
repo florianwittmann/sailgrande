@@ -3,6 +3,7 @@ import Sailfish.Silica 1.0
 import QtMultimedia 5.0
 import "../components"
 import "../Api.js" as API
+import "../CoverMode.js" as CoverMode
 
 
 Page {
@@ -219,11 +220,11 @@ Page {
     }
 
     Component.onCompleted: {
-        var url = item.images.thumbnail.url;
-        var username = item.user.username;
-        setCoverImage(url,username)
+        var coverdata = {}
+        coverdata.image = item.images.thumbnail.url;
+        coverdata.username = item.user.username;
 
-
+        setCover(CoverMode.SHOW_IMAGE,coverdata)
 
         userLikedThis = item.user_has_liked;
         reload();

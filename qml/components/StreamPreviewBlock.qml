@@ -79,9 +79,7 @@ Item {
                     mediaElement: model
                 }
             }
-
         }
-
     }
 
     BusyIndicator {

@@ -6,6 +6,8 @@ import "pages"
 import "Storage.js" as Storage
 import "Api.js" as API
 import "MediaStreamMode.js" as MediaStreamMode
+import "Cover.js" as CoverCtl
+
 
 ApplicationWindow {
 
@@ -92,5 +94,11 @@ ApplicationWindow {
 
     }
 
+    function setCover(coverMode, coverData) {
+        CoverCtl.nextMode = coverMode
+        CoverCtl.nextCoverData = coverData
+        CoverCtl.nextChanged = true;
+
+    }
 
 }

@@ -8,10 +8,12 @@ Image {
     property var mediaElement;
 
     Image {
+        property int size: parent.width * 0.2
+
        anchors.centerIn: parent
        source:  "image://theme/icon-cover-play"
-       width: 40
-       height: 40
+       width: size
+       height: size
        visible: mediaElement.videos !== undefined
        opacity: 0.7
     }
