@@ -47,7 +47,6 @@ Page {
                  onClicked: {
                      Storage.set("favtag",tag);
                      pageStack.replaceAbove(null,Qt.resolvedUrl("StartPage.qml"));
-
                  }
 
              }

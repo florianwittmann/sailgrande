@@ -101,12 +101,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="56"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="55"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="65"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="64"/>
         <source>Load more</source>
         <translation type="unfinished"></translation>
     </message>
@@ -114,42 +114,42 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="17"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="19"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="33"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="35"/>
         <source>Startpage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="37"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="39"/>
         <source>Show popular feed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="44"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="51"/>
         <source>Customize the column and row count of the feed previews on the startpage:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="55"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="62"/>
         <source>Columns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="67"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="77"/>
         <source>Rows</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="80"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="93"/>
         <source>Shows %1 items per feed preview.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="91"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="104"/>
         <source>Data volume</source>
         <translation type="unfinished"></translation>
     </message>

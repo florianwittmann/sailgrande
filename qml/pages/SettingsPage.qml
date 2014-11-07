@@ -1,6 +1,9 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import QtQuick.LocalStorage 2.0
+
 import "../components"
+import "../Storage.js" as Storage
 
 Page {
 
@@ -10,8 +13,7 @@ Page {
         anchors.fill: parent
         VerticalScrollDecorator {}
 
-        contentHeight: lastLabel.y + lastLabel.height + 150
-
+        contentHeight: header.height + contentColumn.height + Theme.paddingMedium
         PageHeader {
             id: header
             title: qsTr("Settings")
@@ -35,7 +37,10 @@ Page {
 
             TextSwitch {
                 text: qsTr("Show popular feed")
-                onCheckedChanged: startPageShowPopularFeed = checked
+                onCheckedChanged: {
+                    startPageShowPopularFeed = checked
+                    Storage.set("startPageShowPopularFeed", checked ? 1 : 0);
+                }
                 Component.onCompleted: checked = startPageShowPopularFeed
             }
 
@@ -59,7 +64,10 @@ Page {
                 value: 3
                 stepSize: 1
                 valueText: value
-                onValueChanged: streamPreviewColumnCount = value
+                onValueChanged: {
+                    streamPreviewColumnCount = value
+                    Storage.set("streamPreviewColumnCount", value);
+                }
                 Component.onCompleted: value = streamPreviewColumnCount
             }
 
@@ -71,7 +79,10 @@ Page {
                 value: 2
                 stepSize: 1
                 valueText: value
-                onValueChanged: streamPreviewRowCount = value
+                onValueChanged: {
+                    streamPreviewRowCount = value
+                    Storage.set("streamPreviewRowCount", value);
+                }
                 Component.onCompleted: value = streamPreviewRowCount
             }
 

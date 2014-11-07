@@ -79,8 +79,16 @@ ApplicationWindow {
     property bool  startPageShowPopularFeed : true;
 
 
+    Component.onCompleted: {
+        init();
+    }
 
+    function init() {
+        streamPreviewColumnCount = Storage.get("streamPreviewColumnCount", 3);
+        streamPreviewRowCount = Storage.get("streamPreviewRowCount", 4);
+        startPageShowPopularFeed = Storage.get("startPageShowPopularFeed", 1) === 1;
 
+    }
 
 
 }
