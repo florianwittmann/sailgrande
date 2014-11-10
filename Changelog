@@ -1,3 +1,8 @@
+0.4.1
+- Added Followers and Following list to own profil
+- Added Logout function
+- Added more settings to customize the feeds page.
+
 0.4
 - Added Settings to customize StartScreen and Feeds
 - You can now pin your often used tags, by using the pulleymenu when you are viewing a tag feed.
