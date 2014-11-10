@@ -58,6 +58,15 @@ function get_UserRelationshipById(userID,cb) {
     request('GET', '/v1/users/' + userID + '/relationship?access_token=' + access_token, null, cb, true)
 }
 
+function get_UserFollowers(userID,cb) {
+    request('GET', '/v1/users/' + userID + '/followed-by?access_token=' + access_token, null, cb, true)
+}
+
+function get_UserFollowing(userID,cb) {
+    request('GET', '/v1/users/' + userID + '/follows?access_token=' + access_token, null, cb, true)
+}
+
+
 
 function like(mediaId,cb) {
     request('POST', '/v1/media/' + mediaId + '/likes?access_token=' + access_token, null, cb, true)

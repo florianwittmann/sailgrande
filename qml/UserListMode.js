@@ -1,0 +1,2 @@
+var FOLLOWER = 0;
+var FOLLOWING = 1;

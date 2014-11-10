@@ -4,6 +4,7 @@ import QtMultimedia 5.0
 import "../components"
 import "../Api.js" as API
 import "../Helper.js" as Helper
+import "../UserListMode.js" as UserListMode
 
 
 Page {
@@ -19,13 +20,10 @@ Page {
 
     property bool errorAtUserMediaRequestOccurred : false
 
-
-    property string rel_outgoing_status : null;
-    property string rel_incoming_status : null;
+    property string rel_outgoing_status : "";
+    property string rel_incoming_status : "";
 
     property bool isSelf: false;
-
-
 
     SilicaFlickable {
         anchors.fill: parent
@@ -190,11 +188,29 @@ Page {
 
 
         PullDownMenu {
-            visible: relationStatusLoaded
+
+
+
+
+            MenuItem {
+                visible: isSelf
+                 text:  qsTr("Followers")
+                 onClicked: {
+                     pageStack.push(Qt.resolvedUrl("UserListPage.qml"),{pageTitle:"Followers", mode: UserListMode.FOLLOWER});
+                 }
+            }
+
+            MenuItem {
+                visible: isSelf
+                 text:  qsTr("Following")
+                 onClicked: {
+                     pageStack.push(Qt.resolvedUrl("UserListPage.qml"),{pageTitle:"Following", mode: UserListMode.FOLLOWING});
+                 }
+             }
 
             MenuItem {
                  text:  qsTr("Unfollow %1").arg(user.username)
-                 visible:  rel_outgoing_status==="follows" && !isSelf
+                 visible: rel_outgoing_status==="follows" && !isSelf
                  onClicked: {
                      API.unfollow(user.id, reloadRelationship);
                  }
