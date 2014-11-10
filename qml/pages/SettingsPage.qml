@@ -121,19 +121,20 @@ Page {
 
         }
 
-//        PullDownMenu {
+        PullDownMenu {
 
-//            MenuItem {
-//                text: qsTr("Logout")
+            MenuItem {
+                text: qsTr("Logout")
 
-//                onClicked: {
-//                    Storage.set("authtoken","");
-//                    pageStack.replaceAbove(null,Qt.resolvedUrl("AuthPage.qml"))
-//                }
-//            }
+                onClicked: {
+                    Storage.set("authtoken","");
+                    pageStack.replaceAbove(null,Qt.resolvedUrl("AuthPage.qml"), {logout:true})
+                }
+            }
 
-//        }
+        }
     }
+
 }
 
 

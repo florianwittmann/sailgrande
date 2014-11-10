@@ -21,7 +21,8 @@ ApplicationWindow {
     function getInitialPage() {
         loadFavTags()
         var token = Storage.get("authtoken", "")
-        if (token === "") {
+        if (token === "" || token === null) {
+            console.log("token: " + token)
             return Qt.resolvedUrl("pages/AuthPage.qml")
         } else {
             API.access_token = token
