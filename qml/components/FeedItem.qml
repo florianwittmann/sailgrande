@@ -6,7 +6,7 @@ BackgroundItem {
     property var item
 
     id: delegate
-    height: feedItemCol.height + Theme.paddingLarge
+    height: feedItemCol.height
     width: parent.width
 
     Column {
@@ -25,10 +25,38 @@ BackgroundItem {
                 source: "image://theme/icon-cover-play"
                 visible: item.videos !== undefined
             }
+
+            Item {
+                visible: feedsShowUserDate && feedsShowUserDateInline
+
+                height: labelInline.height+Theme.paddingSmall*2
+                anchors.bottom: image.bottom
+                anchors.left: parent.left
+                anchors.right: parent.right
+
+                Rectangle {
+                    color: "black"
+                    opacity: 0.5
+                    anchors.fill: parent
+                }
+
+                Label {
+                    id: labelInline
+                    text: item.user.username + " - " + Qt.formatDateTime(
+                              new Date(parseInt(item.created_time) * 1000),
+                              "dd.MM.yy hh:mm")
+                    anchors.centerIn: parent
+                    wrapMode: Text.Wrap
+
+                    truncationMode: TruncationMode.Fade
+                    font.pixelSize: Theme.fontSizeSmall
+                    color: Theme.highlightColor
+                }
+            }
+
         }
 
         Label {
-            id: label
             text: item.user.username + " - " + Qt.formatDateTime(
                       new Date(parseInt(item.created_time) * 1000),
                       "dd.MM.yy hh:mm")
@@ -41,6 +69,7 @@ BackgroundItem {
             truncationMode: TruncationMode.Fade
             font.pixelSize: Theme.fontSizeSmall
             color: Theme.secondaryHighlightColor
+            visible: feedsShowUserDate && !feedsShowUserDateInline
         }
 
         Label {
@@ -55,6 +84,11 @@ BackgroundItem {
             wrapMode: Text.Wrap
             font.pixelSize: Theme.fontSizeSmall
             color: Theme.highlightColor
+        }
+        Item {
+            width: parent.width
+            height: Theme.paddingLarge
+            visible: (feedsShowUserDate && !feedsShowUserDateInline) || feedsShowCaptions
         }
     }
 

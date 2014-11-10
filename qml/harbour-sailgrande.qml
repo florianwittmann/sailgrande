@@ -83,6 +83,8 @@ ApplicationWindow {
 
     property bool  startPageShowPopularFeed : true;
     property bool  feedsShowCaptions : false;
+    property bool feedsShowUserDate : true;
+    property bool feedsShowUserDateInline : true;
 
 
     Component.onCompleted: {
@@ -94,6 +96,8 @@ ApplicationWindow {
         streamPreviewRowCount = Storage.get("streamPreviewRowCount", 4);
         startPageShowPopularFeed = parseInt(Storage.get("startPageShowPopularFeed", 1)) === 1;
         feedsShowCaptions = parseInt(Storage.get("feedsShowCaptions", 0)) === 1;
+        feedsShowUserDate = parseInt(Storage.get("feedsShowUserDate", 1)) === 1;
+        feedsShowUserDateInline = parseInt(Storage.get("feedsShowUserDateInline", 1)) === 1;
     }
 
     function setCover(coverMode, coverData) {

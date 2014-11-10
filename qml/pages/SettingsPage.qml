@@ -102,6 +102,27 @@ Page {
             }
 
             TextSwitch {
+                text: qsTr("Show user and date")
+                onCheckedChanged: {
+                    feedsShowUserDate = checked
+                    Storage.set("feedsShowUserDate", checked ? 1 : 0);
+                }
+                Component.onCompleted: checked = feedsShowUserDate
+            }
+
+            TextSwitch {
+                enabled: feedsShowUserDate
+                text: qsTr("Show user and date inline")
+                onCheckedChanged: {
+                    feedsShowUserDateInline = checked
+                    Storage.set("feedsShowUserDateInline", checked ? 1 : 0);
+                }
+                Component.onCompleted: checked = feedsShowUserDateInline
+            }
+
+
+
+            TextSwitch {
                 text: qsTr("Show captions")
                 onCheckedChanged: {
                     feedsShowCaptions = checked
