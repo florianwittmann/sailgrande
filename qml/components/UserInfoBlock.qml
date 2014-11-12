@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import QtGraphicalEffects 1.0
 
 Rectangle {
     id: userInfo
@@ -15,16 +16,37 @@ Rectangle {
         opacity: mousearea.pressed ? 0.3 : 0.1
     }
 
-    Image {
+
+    Item {
         id: profilpicture
         anchors.right: userInfo.right
-
         anchors.top: userInfo.top
         height: userInfo.height
         width: height
-        source: item.user.profile_picture
-    }
 
+        Image {
+            id: realprofilpicture
+            anchors.fill: parent
+            source: item.user.profile_picture
+            fillMode: Image.PreserveAspectCrop
+            visible: false
+        }
+        Rectangle {
+                id: mask
+                anchors { fill: parent }
+                //color: &quot;black&quot;
+                border.width: 3
+                border.color: white
+                radius: width*0.5
+                clip: true
+                visible: false
+            }
+        OpacityMask {
+                anchors.fill: mask
+                source: realprofilpicture
+                maskSource: mask
+            }
+    }
     Label {
         id:username
         text: item.user.username
@@ -33,7 +55,8 @@ Rectangle {
         anchors.top: userInfo.top
         anchors.topMargin: 15
         truncationMode: TruncationMode.Fade
-        font.pixelSize: Theme.fontSizeSmall
+        //font.pixelSize: Theme.fontSizeSmall
+        font.bold: true
         color: Theme.secondaryHighlightColor
     }
 

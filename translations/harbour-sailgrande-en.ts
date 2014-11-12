@@ -68,27 +68,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="37"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="103"/>
         <source>likes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="37"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="103"/>
         <source>comments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="37"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="103"/>
         <source>You liked this.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="189"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="221"/>
         <source>Remove my like</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="198"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="230"/>
         <source>Like</source>
         <translation type="unfinished"></translation>
     </message>

@@ -32,17 +32,8 @@ Page {
             id: column
             spacing: Theme.paddingSmall
 
-            Label {
-                id: likesCommentsCount
-                text: item.likes.count + " " +qsTr("likes") + " - " + item.comments.count + " " + qsTr("comments")  + (userLikedThis? " - " + qsTr("You liked this.") : "")
-                anchors.left: parent.left
-                anchors.leftMargin: Theme.paddingMedium
-                anchors.right: parent.right
-                anchors.rightMargin: Theme.paddingMedium
-                wrapMode: Text.Wrap
-                font.pixelSize: Theme.fontSizeTiny
-                color: userLikedThis? Theme.highlightColor : Theme.secondaryHighlightColor
-                visible: likeStatusLoaded
+            UserInfoBlock {
+                id:userInfo
             }
 
             Video {
@@ -107,10 +98,24 @@ Page {
                 }
             }
 
+            Label {
+                id: likesCommentsCount
+                text: item.likes.count + " " +qsTr("likes") + " - " + item.comments.count + " " + qsTr("comments")  + (userLikedThis? " - " + qsTr("You liked this.") : "")
+                font.bold: true
+                anchors.left: parent.left
+                anchors.leftMargin: Theme.paddingMedium
+                anchors.right: parent.right
+                anchors.rightMargin: Theme.paddingMedium
+                wrapMode: Text.Wrap
+                font.pixelSize: Theme.fontSizeTiny
+                color: userLikedThis? Theme.highlightColor : Theme.secondaryHighlightColor
+                visible: likeStatusLoaded
+            }
 
             Label {
                 id: description
                 visible: text!==""
+                font.bold: true
                 text: item.caption !== undefined ? item.caption.text : ""
                 anchors.left: parent.left
                 anchors.leftMargin: Theme.paddingMedium
@@ -122,9 +127,7 @@ Page {
                 color: Theme.highlightColor
             }
 
-            UserInfoBlock {
-                id:userInfo
-            }
+
 
             Repeater {
                 model: item.comments.data.length
@@ -168,6 +171,7 @@ Page {
                         color: Theme.highlightColor
                     }
 
+
                     MouseArea {
                         id: mousearea
                         anchors.fill: parent
@@ -179,7 +183,35 @@ Page {
                     }
                 }
             }
-        }
+
+           /* TextField {
+                id: postComment
+                anchors.left: parent.left
+                anchors.leftMargin: Theme.paddingMedium
+                anchors.right: parent.right
+                anchors.rightMargin: Theme.paddingMedium
+                placeholderText: qsTr("Tap here to add a comment", "Message composing tet area placeholder")
+                textRightMargin:  64
+                background: Component {
+                    Item {
+                        anchors.fill: parent
+
+                        IconButton {
+                            id: sendButton
+                            icon.source: "image://theme/icon-m-message"
+                            highlighted: enabled
+                            anchors.bottom: parent.bottom
+                            anchors.bottomMargin: - Theme.paddingSmall
+                            anchors.right: parent.right
+                            anchors.rightMargin: Theme.paddingSmall
+                            onClicked: {
+                                API.post_Comment(item.id, postComment.text)
+                            }
+                        }
+                    }
+                }
+            }
+        }*/}
 
 
         PullDownMenu {

@@ -109,3 +109,8 @@ function get_RecentMediaByUserId(userID,cb) {
     request('GET', '/v1/users/' + userID + '/media/recent?access_token=' + access_token, null, cb, true)
 }
 
+function post_Comment(mediaId,comment){
+    request('POST', '/v1/media/' + mediaId + '/comment/?access_token=' + access_token, 'comment_text= '
+            + comment, 'reload' , cb,   true)
+
+}
