@@ -12,6 +12,11 @@
 # The name of your application
 TARGET = harbour-sailgrande
 
+i18n_files.files = translations
+i18n_files.path = /usr/share/$$TARGET
+
+INSTALLS += i18n_files
+
 CONFIG += sailfishapp
 
 SOURCES += src/harbour-sailgrande.cpp
@@ -21,7 +26,7 @@ OTHER_FILES += qml/harbour-sailgrande.qml \
     qml/pages/SecondPage.qml \
     rpm/harbour-sailgrande.spec \
     rpm/harbour-sailgrande.yaml \
-    translations/*.ts \
+    translations/* \
     harbour-sailgrande.desktop \
     qml/Api.js \
     qml/Helper.js \
@@ -55,4 +60,3 @@ OTHER_FILES += qml/harbour-sailgrande.qml \
 # to disable building translations every time, comment out the
 # following CONFIG line
 CONFIG += sailfishapp_i18n
-TRANSLATIONS += translations/harbour-sailgrande-en.ts
