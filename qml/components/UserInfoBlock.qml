@@ -29,14 +29,14 @@ Rectangle {
             anchors.fill: parent
             source: item.user.profile_picture
             fillMode: Image.PreserveAspectCrop
-            visible: false
+            visible: !roundedAvatar
         }
         Rectangle {
                 id: mask
                 anchors { fill: parent }
                 //color: &quot;black&quot;
                 border.width: 3
-                border.color: white
+                //border.color: white
                 radius: width*0.5
                 clip: true
                 visible: false

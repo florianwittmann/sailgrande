@@ -4,7 +4,7 @@ import QtMultimedia 5.0
 import "../components"
 import "../Api.js" as API
 import "../CoverMode.js" as CoverMode
-
+import "../Storage.js" as Storage
 
 Page {
 

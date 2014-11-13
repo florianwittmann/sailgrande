@@ -131,9 +131,18 @@ Page {
                 Component.onCompleted: checked = feedsShowCaptions
             }
 
+            SectionHeader {
+              text: qsTr("Avatar")
+            }
 
-
-
+            TextSwitch {
+                text: qsTr("Show rounded Avatar")
+                onCheckedChanged: {
+                    roundedAvatar = checked
+                    Storage.set("roundedAvatar", checked ? 0 : 1);
+                }
+                Component.onCompleted: checked = roundedAvatar
+            }
 //            SectionHeader {
 //              text: qsTr("Data volume")
 //            }

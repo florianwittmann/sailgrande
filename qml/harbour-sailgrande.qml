@@ -85,7 +85,7 @@ ApplicationWindow {
     property bool  feedsShowCaptions : false;
     property bool feedsShowUserDate : true;
     property bool feedsShowUserDateInline : true;
-
+    property bool roundedAvatar: true;
 
     Component.onCompleted: {
         init();
@@ -98,6 +98,7 @@ ApplicationWindow {
         feedsShowCaptions = parseInt(Storage.get("feedsShowCaptions", 0)) === 1;
         feedsShowUserDate = parseInt(Storage.get("feedsShowUserDate", 1)) === 1;
         feedsShowUserDateInline = parseInt(Storage.get("feedsShowUserDateInline", 1)) === 1;
+        roundedAvatar = parseInt(Storage.get("roundedAvatar",0)) === 1
     }
 
     function setCover(coverMode, coverData) {
