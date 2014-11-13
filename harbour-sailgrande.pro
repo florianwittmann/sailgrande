@@ -55,7 +55,9 @@ OTHER_FILES += qml/harbour-sailgrande.qml \
     qml/pages/PinnedPage.qml \
     qml/pages/UserListPage.qml \
     qml/components/UserListItem.qml \
-    qml/UserListMode.js
+    qml/UserListMode.js \
+    qml/components/OpacityMask.qml \
+    qml/components/SourceProxy.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

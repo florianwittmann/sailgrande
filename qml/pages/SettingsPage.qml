@@ -139,7 +139,7 @@ Page {
                 text: qsTr("Show rounded Avatar")
                 onCheckedChanged: {
                     roundedAvatar = checked
-                    Storage.set("roundedAvatar", checked ? 0 : 1);
+                    Storage.set("roundedAvatar", checked ? 1 : 0);
                 }
                 Component.onCompleted: checked = roundedAvatar
             }
