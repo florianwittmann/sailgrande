@@ -68,17 +68,17 @@
     <message>
         <location filename="../qml/pages/MediaDetailPage.qml" line="37"/>
         <source>likes</source>
-        <translation>понравившееся </translation>
+        <translation>понравилось</translation>
     </message>
     <message>
         <location filename="../qml/pages/MediaDetailPage.qml" line="37"/>
         <source>comments</source>
-        <translation>комментарии</translation>
+        <translation>комментариев</translation>
     </message>
     <message>
         <location filename="../qml/pages/MediaDetailPage.qml" line="37"/>
         <source>You liked this.</source>
-        <translation>Понравившиеся публикации</translation>
+        <translation>Понравившаяся  публикация</translation>
     </message>
     <message>
         <location filename="../qml/pages/MediaDetailPage.qml" line="189"/>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../qml/pages/MediaStreamPage.qml" line="45"/>
         <source>Pin this tag feed</source>
-        <translation>Закрепить подписку тегов</translation>
+        <translation>Закрепить тег</translation>
     </message>
     <message>
         <location filename="../qml/pages/MediaStreamPage.qml" line="59"/>
@@ -241,12 +241,12 @@
     <message>
         <location filename="../qml/components/UserDetailBlock.qml" line="28"/>
         <source>%1 posts</source>
-        <translation>%1 сообщения</translation>
+        <translation>%1 сообщений</translation>
     </message>
     <message>
         <location filename="../qml/components/UserDetailBlock.qml" line="38"/>
         <source>%1 followers</source>
-        <translation>%1 подписчики</translation>
+        <translation>%1 подписчиков</translation>
     </message>
     <message>
         <location filename="../qml/components/UserDetailBlock.qml" line="48"/>
