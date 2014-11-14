@@ -55,7 +55,7 @@
     <message>
         <location filename="../qml/components/ErrorMessageLabel.qml" line="8"/>
         <source>An error occurred.</source>
-        <translation type="unfinished"/>
+        <translation>Tapahtui virhe.</translation>
     </message>
 </context>
 <context>
@@ -114,17 +114,17 @@
     <message>
         <location filename="../qml/pages/PinnedPage.qml" line="16"/>
         <source>Pinned tags</source>
-        <translation type="unfinished"/>
+        <translation>Tallennetut tägit</translation>
     </message>
     <message>
         <location filename="../qml/pages/PinnedPage.qml" line="57"/>
         <source>Remove</source>
-        <translation type="unfinished"/>
+        <translation>Poista</translation>
     </message>
     <message>
         <location filename="../qml/pages/PinnedPage.qml" line="78"/>
         <source>Set as favorite</source>
-        <translation type="unfinished"/>
+        <translation>Aseta suosikiksi</translation>
     </message>
 </context>
 <context>
@@ -132,52 +132,52 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="19"/>
         <source>Settings</source>
-        <translation type="unfinished"/>
+        <translation>Asetukset</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="35"/>
         <source>Startpage</source>
-        <translation type="unfinished"/>
+        <translation>Aloitussivu</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="39"/>
         <source>Show popular feed</source>
-        <translation type="unfinished"/>
+        <translation>Näytä suosittua syöte</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="49"/>
         <source>Customize the column and row count of the feed previews on the startpage:</source>
-        <translation type="unfinished"/>
+        <translation>Kustomoi sarake ja rivi määrä syötteen esikatselussa aloitussivulla:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="60"/>
         <source>Columns</source>
-        <translation type="unfinished"/>
+        <translation>Saraketta</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="75"/>
         <source>Rows</source>
-        <translation type="unfinished"/>
+        <translation>Riviä</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="91"/>
         <source>Shows %1 items per feed preview.</source>
-        <translation type="unfinished"/>
+        <translation>Näyttää %1 kohdetta syötteiden esikatselussa.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="101"/>
         <source>Feeds</source>
-        <translation type="unfinished"/>
+        <translation>Syötteet</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="105"/>
         <source>Show captions</source>
-        <translation type="unfinished"/>
+        <translation>Näytä kuvatekstit</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="125"/>
         <source>Logout</source>
-        <translation type="unfinished"/>
+        <translation>Kirjaudu ulos</translation>
     </message>
 </context>
 <context>
@@ -205,7 +205,7 @@
     <message>
         <location filename="../qml/pages/StartPage.qml" line="183"/>
         <source>All pinned tags</source>
-        <translation type="unfinished"/>
+        <translation>Kaikki tallennetut tägit</translation>
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="207"/>
@@ -215,7 +215,7 @@
     <message>
         <location filename="../qml/pages/StartPage.qml" line="212"/>
         <source>Settings</source>
-        <translation type="unfinished"/>
+        <translation>Asetukset</translation>
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="217"/>
@@ -225,7 +225,7 @@
     <message>
         <location filename="../qml/pages/StartPage.qml" line="222"/>
         <source>Refresh</source>
-        <translation type="unfinished"/>
+        <translation>Päivitä</translation>
     </message>
 </context>
 <context>
