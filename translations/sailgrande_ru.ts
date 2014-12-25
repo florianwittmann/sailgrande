@@ -40,12 +40,12 @@
 <context>
     <name>AuthPage</name>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="29"/>
+        <location filename="../qml/pages/AuthPage.qml" line="45"/>
         <source>Welcome to SailGrande, an unoffical Instagram client for Sailfish. Please press &apos;continue&apos; to login to your Instagram account.</source>
         <translation>Добро пожаловать в SailGrande, это неофициальный Instagram клиент для Sailfish. Пожалуйста нажмите &quot;продолжить&quot; чтобы войти в свой аккаунт Instagram.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="40"/>
+        <location filename="../qml/pages/AuthPage.qml" line="57"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
@@ -94,17 +94,17 @@
 <context>
     <name>MediaStreamPage</name>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="45"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="46"/>
         <source>Pin this tag feed</source>
         <translation>Закрепить тег</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="59"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="60"/>
         <source>Refresh</source>
         <translation>Обновить</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="67"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="68"/>
         <source>Load more</source>
         <translation>Загрузить ещё</translation>
     </message>
@@ -171,11 +171,21 @@
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="105"/>
+        <source>Show user and date</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="115"/>
+        <source>Show user and date inline</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="124"/>
         <source>Show captions</source>
         <translation>Показывать подпись</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="125"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="137"/>
         <source>Logout</source>
         <translation>Выход</translation>
     </message>
@@ -255,44 +265,64 @@
     </message>
 </context>
 <context>
+    <name>UserListPage</name>
+    <message>
+        <location filename="../qml/pages/UserListPage.qml" line="43"/>
+        <source>Load more</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
     <name>UserProfilPage</name>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="74"/>
         <source>You follow %1</source>
         <translation>Ваш подписчик %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="78"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
         <source>You requested to follow %1</source>
         <translation>Вы подали запрос на подписку %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="96"/>
         <source>%1 follows you</source>
         <translation>%1 подписан на вас</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
         <source>%1 requested to follow you</source>
         <translation>%1 подал запрос на ваши обновления</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="102"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
         <source>You blocked %1</source>
         <translation>Пользователь заблокирован %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="148"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="146"/>
         <source>This profile is private.</source>
         <translation>Профиль скрыт</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="196"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="197"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="199"/>
+        <source>Followers</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/pages/UserProfilPage.qml" line="205"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="207"/>
+        <source>Following</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/pages/UserProfilPage.qml" line="212"/>
         <source>Unfollow %1</source>
         <translation>Отписаться %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="204"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="220"/>
         <source>Follow %1</source>
         <translation>Подписаться %1</translation>
     </message>

@@ -40,12 +40,12 @@
 <context>
     <name>AuthPage</name>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="29"/>
+        <location filename="../qml/pages/AuthPage.qml" line="45"/>
         <source>Welcome to SailGrande, an unoffical Instagram client for Sailfish. Please press &apos;continue&apos; to login to your Instagram account.</source>
         <translation>Καλώς ορίσατε στο SailGrande, την ανεπίσημη εφαρμογή Instagram για το Sailfish. Πιέστε &apos;Συνέχεια΄ για να συνδεθείτε με το λογαριασμό σας στο Instagram</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="40"/>
+        <location filename="../qml/pages/AuthPage.qml" line="57"/>
         <source>Continue</source>
         <translation>Συνέχεια</translation>
     </message>
@@ -94,17 +94,17 @@
 <context>
     <name>MediaStreamPage</name>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="45"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="46"/>
         <source>Pin this tag feed</source>
         <translation>Καρφίτσωμα τροφοδοσίας</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="59"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="60"/>
         <source>Refresh</source>
         <translation>Ανανέωση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="67"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="68"/>
         <source>Load more</source>
         <translation>Περισσότερες δημοσιεύσεις</translation>
     </message>
@@ -171,11 +171,21 @@
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="105"/>
+        <source>Show user and date</source>
+        <translation>Εμφάνιση χρήστη και ημερομηνίας</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="115"/>
+        <source>Show user and date inline</source>
+        <translation>Εμφάνιση χρήστη και ημερομηνίας σε μια γραμμή</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="124"/>
         <source>Show captions</source>
         <translation>Προβολή λεζάντας</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="125"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="137"/>
         <source>Logout</source>
         <translation>Αποσύνδεση</translation>
     </message>
@@ -255,44 +265,64 @@
     </message>
 </context>
 <context>
+    <name>UserListPage</name>
+    <message>
+        <location filename="../qml/pages/UserListPage.qml" line="43"/>
+        <source>Load more</source>
+        <translation>Περισσότερα</translation>
+    </message>
+</context>
+<context>
     <name>UserProfilPage</name>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="74"/>
         <source>You follow %1</source>
         <translation>Ακολουθείτε το χρήστη %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="78"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
         <source>You requested to follow %1</source>
         <translation>Ζητήσατε να ακολουθήσετε το χρήστη %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="96"/>
         <source>%1 follows you</source>
         <translation>%1 σας ακολουθεί</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
         <source>%1 requested to follow you</source>
         <translation>%1 ζήτησε να σας ακολουθήσει</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="102"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
         <source>You blocked %1</source>
         <translation>Έχετε μπλοκάρει το χρήστη %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="148"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="146"/>
         <source>This profile is private.</source>
         <translation>Το προφίλ είναι κλειδωμένο</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="196"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="197"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="199"/>
+        <source>Followers</source>
+        <translation>Ακόλουθοι</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/UserProfilPage.qml" line="205"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="207"/>
+        <source>Following</source>
+        <translation>Ακοολουθείτε</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/UserProfilPage.qml" line="212"/>
         <source>Unfollow %1</source>
         <translation>Διαγραφή του χρήστη %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="204"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="220"/>
         <source>Follow %1</source>
         <translation>Ακολουθήστε το χρήστη %1</translation>
     </message>

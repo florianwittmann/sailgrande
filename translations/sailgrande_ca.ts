@@ -40,12 +40,12 @@
 <context>
     <name>AuthPage</name>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="29"/>
+        <location filename="../qml/pages/AuthPage.qml" line="45"/>
         <source>Welcome to SailGrande, an unoffical Instagram client for Sailfish. Please press &apos;continue&apos; to login to your Instagram account.</source>
         <translation>Benvinguts a SailGrande, un client no oficial d&apos;Instagram per a SailfishOS. Premeu &quot;continua&quot; per iniciar sessió al vostre compte d&apos;Instagram.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="40"/>
+        <location filename="../qml/pages/AuthPage.qml" line="57"/>
         <source>Continue</source>
         <translation>Continua</translation>
     </message>
@@ -78,7 +78,7 @@
     <message>
         <location filename="../qml/pages/MediaDetailPage.qml" line="37"/>
         <source>You liked this.</source>
-        <translation>Us havia agradat.</translation>
+        <translation>Us agrada.</translation>
     </message>
     <message>
         <location filename="../qml/pages/MediaDetailPage.qml" line="189"/>
@@ -94,17 +94,17 @@
 <context>
     <name>MediaStreamPage</name>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="45"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="46"/>
         <source>Pin this tag feed</source>
         <translation>Marca els continguts d&apos;aquesta etiqueta</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="59"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="60"/>
         <source>Refresh</source>
         <translation>Refresca</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="67"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="68"/>
         <source>Load more</source>
         <translation>Carrega&apos;n més</translation>
     </message>
@@ -171,11 +171,21 @@
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="105"/>
+        <source>Show user and date</source>
+        <translation>Mostra l&apos;usuari i la data</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="115"/>
+        <source>Show user and date inline</source>
+        <translation>Mostra l&apos;usuari i la data de connexió</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="124"/>
         <source>Show captions</source>
         <translation>Mostra els títols</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="125"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="137"/>
         <source>Logout</source>
         <translation>Tanca la sessió</translation>
     </message>
@@ -241,7 +251,7 @@
     <message>
         <location filename="../qml/components/UserDetailBlock.qml" line="28"/>
         <source>%1 posts</source>
-        <translation>% publicacions</translation>
+        <translation>%1 publicacions</translation>
     </message>
     <message>
         <location filename="../qml/components/UserDetailBlock.qml" line="38"/>
@@ -255,44 +265,64 @@
     </message>
 </context>
 <context>
+    <name>UserListPage</name>
+    <message>
+        <location filename="../qml/pages/UserListPage.qml" line="43"/>
+        <source>Load more</source>
+        <translation>Carrega&apos;n més</translation>
+    </message>
+</context>
+<context>
     <name>UserProfilPage</name>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="74"/>
         <source>You follow %1</source>
         <translation>En seguiu %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="78"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
         <source>You requested to follow %1</source>
         <translation>Heu sol·licitat seguir %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="96"/>
         <source>%1 follows you</source>
         <translation>%1 us segueix</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
         <source>%1 requested to follow you</source>
         <translation>%1 ha sol·licitat seguir-vos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="102"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
         <source>You blocked %1</source>
         <translation>Heu blocat %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="148"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="146"/>
         <source>This profile is private.</source>
         <translation>Aquest perfil és privat.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="196"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="197"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="199"/>
+        <source>Followers</source>
+        <translation>Seguidors</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/UserProfilPage.qml" line="205"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="207"/>
+        <source>Following</source>
+        <translation>Seguint-ne</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/UserProfilPage.qml" line="212"/>
         <source>Unfollow %1</source>
         <translation>Deixeu de seguir %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="204"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="220"/>
         <source>Follow %1</source>
         <translation>Seguiu %1</translation>
     </message>
