@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="sl_SI" version="2.1">
 <context>
     <name>AboutPage</name>
     <message>
@@ -42,12 +40,12 @@
 <context>
     <name>AuthPage</name>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="29"/>
+        <location filename="../qml/pages/AuthPage.qml" line="45"/>
         <source>Welcome to SailGrande, an unoffical Instagram client for Sailfish. Please press &apos;continue&apos; to login to your Instagram account.</source>
         <translation>Dobrodošli v SailGrande, neuraden klient za Instagram za Sailfish. Prosimo, pritisnite &quot;Nadaljuj&quot; za prijavo v Instagram.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="40"/>
+        <location filename="../qml/pages/AuthPage.qml" line="57"/>
         <source>Continue</source>
         <translation>Nadaljuj</translation>
     </message>
@@ -96,17 +94,17 @@
 <context>
     <name>MediaStreamPage</name>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="45"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="46"/>
         <source>Pin this tag feed</source>
         <translation>Pripni </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="59"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="60"/>
         <source>Refresh</source>
         <translation>Osveži</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="67"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="68"/>
         <source>Load more</source>
         <translation>Prikaži več</translation>
     </message>
@@ -116,7 +114,7 @@
     <message>
         <location filename="../qml/pages/PinnedPage.qml" line="16"/>
         <source>Pinned tags</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/PinnedPage.qml" line="57"/>
@@ -149,7 +147,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="49"/>
         <source>Customize the column and row count of the feed previews on the startpage:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="60"/>
@@ -164,20 +162,30 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="91"/>
         <source>Shows %1 items per feed preview.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="101"/>
         <source>Feeds</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="105"/>
-        <source>Show captions</source>
-        <translation type="unfinished"></translation>
+        <source>Show user and date</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="125"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="115"/>
+        <source>Show user and date inline</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="124"/>
+        <source>Show captions</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="137"/>
         <source>Logout</source>
         <translation>Odjava</translation>
     </message>
@@ -192,7 +200,7 @@
     <message>
         <location filename="../qml/pages/StartPage.qml" line="134"/>
         <source>My Feed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="141"/>
@@ -202,12 +210,12 @@
     <message>
         <location filename="../qml/pages/StartPage.qml" line="149"/>
         <source>Tagged with %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="183"/>
         <source>All pinned tags</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="207"/>
@@ -235,7 +243,7 @@
     <message>
         <location filename="../qml/pages/TagSearchPage.qml" line="22"/>
         <source>Search for tag</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -253,48 +261,68 @@
     <message>
         <location filename="../qml/components/UserDetailBlock.qml" line="48"/>
         <source>%1 following</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 sledi</translation>
+    </message>
+</context>
+<context>
+    <name>UserListPage</name>
+    <message>
+        <location filename="../qml/pages/UserListPage.qml" line="43"/>
+        <source>Load more</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>UserProfilPage</name>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="74"/>
         <source>You follow %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sledite  %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="78"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
         <source>You requested to follow %1</source>
         <translation>%1 ste zaprosili za dovoljenje za sledenje</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="96"/>
         <source>%1 follows you</source>
         <translation>%1 vas sledi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
         <source>%1 requested to follow you</source>
         <translation>%1 prosi za dovoljenje za sledenje</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="102"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
         <source>You blocked %1</source>
         <translation>%1 je blokiran.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="148"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="146"/>
         <source>This profile is private.</source>
         <translation>To je zasebni profil.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="196"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="197"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="199"/>
+        <source>Followers</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/pages/UserProfilPage.qml" line="205"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="207"/>
+        <source>Following</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../qml/pages/UserProfilPage.qml" line="212"/>
         <source>Unfollow %1</source>
         <translation>Prenehaj slediti %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="204"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="220"/>
         <source>Follow %1</source>
         <translation>Sledi %1</translation>
     </message>

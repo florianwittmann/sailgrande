@@ -40,12 +40,12 @@
 <context>
     <name>AuthPage</name>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="29"/>
+        <location filename="../qml/pages/AuthPage.qml" line="45"/>
         <source>Welcome to SailGrande, an unoffical Instagram client for Sailfish. Please press &apos;continue&apos; to login to your Instagram account.</source>
         <translation>Tervetuloa SailGrandeen, epäviralliseen Instagram-sovellukseen Sailfishille. Ole hyvä ja paina &apos;ǰatka&apos; kirjautuaksesi sisään Instagram-tiliisi.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="40"/>
+        <location filename="../qml/pages/AuthPage.qml" line="57"/>
         <source>Continue</source>
         <translation>Jatka</translation>
     </message>
@@ -94,17 +94,17 @@
 <context>
     <name>MediaStreamPage</name>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="45"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="46"/>
         <source>Pin this tag feed</source>
         <translation>Tallenna tämä tag-syöte</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="59"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="60"/>
         <source>Refresh</source>
         <translation>Päivitä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="67"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="68"/>
         <source>Load more</source>
         <translation>Lataa lisää</translation>
     </message>
@@ -142,12 +142,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="39"/>
         <source>Show popular feed</source>
-        <translation>Näytä suosittua syöte</translation>
+        <translation>Näytä suosittua-syöte</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="49"/>
         <source>Customize the column and row count of the feed previews on the startpage:</source>
-        <translation>Kustomoi sarake ja rivi määrä syötteen esikatselussa aloitussivulla:</translation>
+        <translation>Muokkaa sarake- ja rivimäärää syötteen esikatselussa aloitussivulla:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="60"/>
@@ -171,11 +171,21 @@
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="105"/>
+        <source>Show user and date</source>
+        <translation>Näytä käyttäjä ja päivämäärä</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="115"/>
+        <source>Show user and date inline</source>
+        <translation>Näytä käyttäjä ja päivämäärä osana kuvaa</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="124"/>
         <source>Show captions</source>
         <translation>Näytä kuvatekstit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="125"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="137"/>
         <source>Logout</source>
         <translation>Kirjaudu ulos</translation>
     </message>
@@ -255,44 +265,64 @@
     </message>
 </context>
 <context>
+    <name>UserListPage</name>
+    <message>
+        <location filename="../qml/pages/UserListPage.qml" line="43"/>
+        <source>Load more</source>
+        <translation>Lataa lisää</translation>
+    </message>
+</context>
+<context>
     <name>UserProfilPage</name>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="74"/>
         <source>You follow %1</source>
         <translation>Seuraat käyttäjää %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="78"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
         <source>You requested to follow %1</source>
         <translation>Lähetit seurauspyynnön käyttäjälle %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="96"/>
         <source>%1 follows you</source>
         <translation>%1 seuraa sinua</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
         <source>%1 requested to follow you</source>
         <translation>%1 lähetti sinulle seurauspyynnön</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="102"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
         <source>You blocked %1</source>
         <translation>Estit käyttäjän %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="148"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="146"/>
         <source>This profile is private.</source>
         <translation>Tämä profiili on yksityinen.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="196"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="197"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="199"/>
+        <source>Followers</source>
+        <translation>Seuraajat</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/UserProfilPage.qml" line="205"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="207"/>
+        <source>Following</source>
+        <translation>Seuraa</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/UserProfilPage.qml" line="212"/>
         <source>Unfollow %1</source>
         <translation>Älä seuraa käyttäjää %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="204"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="220"/>
         <source>Follow %1</source>
         <translation>Seuraa käyttäjää %1</translation>
     </message>
