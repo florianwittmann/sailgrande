@@ -18,7 +18,6 @@ Page {
         }
 
         Column {
-
             id: contentColumn
             spacing: 4
 
@@ -43,20 +42,17 @@ Page {
             }
 
             Label {
-              text : "Version: 0.4.3"
+              text : "Version: 0.4.4"
               anchors.right: parent.right
               anchors.rightMargin: Theme.paddingMedium
               anchors.left: parent.left
               anchors.leftMargin: Theme.paddingMedium
               wrapMode: Text.WordWrap
-
             }
-
 
             SectionHeader {
               text: qsTr("License")
             }
-
 
             Label {
               text : qsTr("Source code is licensed under the MIT License (MIT).")
@@ -77,7 +73,6 @@ Page {
                 anchors.left: parent.left
                 anchors.leftMargin: Theme.paddingLarge
                 height: Theme.itemSizeMedium + Theme.paddingMedium
-
 
               Button {
                   anchors.bottom: parent.bottom

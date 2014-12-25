@@ -9,7 +9,6 @@ import "MediaStreamMode.js" as MediaStreamMode
 import "Cover.js" as CoverCtl
 import "FavManager.js" as FavManager
 
-
 ApplicationWindow {
 
     property var cachedFeeds : null
