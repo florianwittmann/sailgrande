@@ -3,8 +3,6 @@ sailgrande
 
 An unoffical Instagram client for Sailfish
 
-It is currently in an early state and does not have many features.
-
 Current features:
 
 * Show own feed with posts
@@ -15,7 +13,10 @@ Current features:
 * Watch videos
 * Like a picture/video or remove your previous like
 * Open user profiles
+* Show media feed for user
 * Follow/Unfollow users
+* Show own followers or followed users
+
 
 There is no commenting and there is no upload feature yet.
 
@@ -23,4 +24,4 @@ You will need an existing account in Instagram, because you can not create a new
 
 License
 =======
-Everything is released under the terms of the MIT License (MIT).
+Sourcecode (but not the icons on AboutPage) is released under the terms of the MIT License (MIT).
