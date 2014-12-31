@@ -131,17 +131,17 @@
 <context>
     <name>MediaStreamPage</name>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="46"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="48"/>
         <source>Pin this tag feed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="60"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="62"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="68"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="70"/>
         <source>Load more</source>
         <translation type="unfinished"></translation>
     </message>
@@ -312,54 +312,54 @@
 <context>
     <name>UserProfilPage</name>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="74"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
         <source>You follow %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="78"/>
         <source>You requested to follow %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="96"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
         <source>%1 follows you</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
         <source>%1 requested to follow you</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="102"/>
         <source>You blocked %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="146"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="148"/>
         <source>This profile is private.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="192"/>
-        <location filename="../qml/pages/UserProfilPage.qml" line="194"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="234"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="236"/>
         <source>Followers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="200"/>
-        <location filename="../qml/pages/UserProfilPage.qml" line="202"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="242"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="244"/>
         <source>Following</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="207"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="249"/>
         <source>Unfollow %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="215"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="257"/>
         <source>Follow %1</source>
         <translation type="unfinished"></translation>
     </message>

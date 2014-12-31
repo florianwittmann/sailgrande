@@ -22,6 +22,7 @@ Page {
     property string streamTitle
     property bool errorOccurred: false
     property var streamData: null
+    property bool refreshStreamData : true
     property string tag: ""
 
     SilicaListView {
@@ -37,6 +38,7 @@ Page {
         }
 
         VerticalScrollDecorator {
+            id: scroll
         }
 
         PullDownMenu {
@@ -106,16 +108,19 @@ Page {
     }
 
     function mediaStreamPageRefreshCB() {
+        listView.positionViewAtBeginning()
         getMediaData(true)
     }
 
     function getMediaData(cached) {
         dataLoaded = false
         mediaModel.clear()
+        refreshStreamData = true
         getFeed(mode, tag, cached, mediaDataFinished)
     }
 
     function getNextMediaData() {
+        refreshStreamData = false
         API.get_Url(nextMediaUrl, mediaDataFinished)
     }
 
@@ -125,7 +130,11 @@ Page {
             errorOccurred = true
             return
         }
-        streamData=data
+        if(refreshStreamData) {
+            streamData=data
+            setCoverRefresh(CoverMode.SHOW_FEED, data, mode,tag)
+        }
+
         errorOccurred = false
 
         for (var i = 0; i < data.data.length; i++) {
@@ -142,9 +151,6 @@ Page {
             nextMediaUrl = null
         }
         dataLoaded = true
-
-        setCoverRefresh(CoverMode.SHOW_FEED, data, mode,tag)
-
     }
 
     onStatusChanged: {
