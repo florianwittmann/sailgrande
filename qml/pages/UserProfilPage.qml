@@ -196,7 +196,7 @@ Page {
                 visible: isSelf
                  text:  qsTr("Followers")
                  onClicked: {
-                     pageStack.push(Qt.resolvedUrl("UserListPage.qml"),{pageTitle:"Followers", mode: UserListMode.FOLLOWER});
+                     pageStack.push(Qt.resolvedUrl("UserListPage.qml"),{pageTitle:qsTr("Followers"), mode: UserListMode.FOLLOWER});
                  }
             }
 
@@ -204,7 +204,7 @@ Page {
                 visible: isSelf
                  text:  qsTr("Following")
                  onClicked: {
-                     pageStack.push(Qt.resolvedUrl("UserListPage.qml"),{pageTitle:"Following", mode: UserListMode.FOLLOWING});
+                     pageStack.push(Qt.resolvedUrl("UserListPage.qml"),{pageTitle:qsTr("Following"), mode: UserListMode.FOLLOWING});
                  }
              }
 

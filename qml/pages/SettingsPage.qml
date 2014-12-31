@@ -120,8 +120,6 @@ Page {
                 Component.onCompleted: checked = feedsShowUserDateInline
             }
 
-
-
             TextSwitch {
                 text: qsTr("Show captions")
                 onCheckedChanged: {
@@ -130,15 +128,6 @@ Page {
                 }
                 Component.onCompleted: checked = feedsShowCaptions
             }
-
-
-
-
-//            SectionHeader {
-//              text: qsTr("Data volume")
-//            }
-
-
 
         }
 
