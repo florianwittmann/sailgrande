@@ -17,6 +17,8 @@ ApplicationWindow {
     property var cachedFeedsTime : null
 
     property var refreshCallback : null
+    property bool refreshCallbackPending : false
+
 
     initialPage: getInitialPage()
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
@@ -60,6 +62,8 @@ ApplicationWindow {
                     API.get_Popular(function(data){dataFinished(cacheKey,data,cb)})
                 }  else if (mode === MediaStreamMode.TAG_MODE && tag !== "") {
                         API.get_TagFeed(tag,function(data){dataFinished(cacheKey,data,cb)})
+                } else if (mode === MediaStreamMode.USER_MODE && tag !== "") {
+                    API.get_RecentMediaByUserId(tag,function(data){dataFinished(cacheKey,data,cb)})
                 } else {
                    cb(null)
                 }
@@ -130,8 +134,11 @@ ApplicationWindow {
 
     onApplicationActiveChanged: {
         if (applicationActive === true) {
-            if(refreshCallback!==null)
+
+            if(refreshCallback!==null && refreshCallbackPending) {
+                refreshCallbackPending = false
                 refreshCallback()
+            }
         }
     }
 

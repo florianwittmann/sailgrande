@@ -128,6 +128,7 @@ CoverBackground {
         getFeed(CoverCtl.refrMode, CoverCtl.refrTag, false, function (data) {
             loadFeedMediaData(data)
             dataLoading = false
+            refreshCallbackPending = true
         })
     }
 
