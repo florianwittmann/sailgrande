@@ -95,6 +95,11 @@ Page {
         visible: errorOccurred
     }
 
+    ErrorMessageLabel {
+        visible: dataLoaded && !errorOccurred && mediaModel.count === 0
+        text: qsTr("There is no picture in this feed.")
+    }
+
     Component.onCompleted: {
         if (streamData !== null) {
             mediaDataFinished(streamData)
@@ -141,9 +146,12 @@ Page {
             mediaModel.append(data.data[i])
         }
 
-        var url = mediaModel.get(0).images.thumbnail.url
-        var username = mediaModel.get(0).user.username
-        setCoverImage(url, username)
+        if(mediaModel.count>0) {
+
+            var url = mediaModel.get(0).images.thumbnail.url
+            var username = mediaModel.get(0).user.username
+            setCoverImage(url, username)
+        }
 
         if (data.pagination !== undefined && data.pagination.next_url) {
             nextMediaUrl = data.pagination.next_url
@@ -152,6 +160,7 @@ Page {
         }
         dataLoaded = true
     }
+
 
     onStatusChanged: {
         if (status === PageStatus.Active) {
