@@ -159,7 +159,6 @@ Page {
                 anchors.horizontalCenter: parent.horizontalCenter
             }
 
-
             Grid {
                 columns: 3
                 anchors.left: parent.left
@@ -179,10 +178,6 @@ Page {
                     }
                 }
             }
-
-
-
-
 
         }
 
@@ -224,8 +219,6 @@ Page {
                  }
              }
 
-
-
            }
 
     }
@@ -237,9 +230,11 @@ Page {
 
 
     Component.onCompleted: {
+        refreshCallback = null
         if(user.id === API.selfId)
             isSelf = true;
         reload();
+
     }
 
     function reload() {

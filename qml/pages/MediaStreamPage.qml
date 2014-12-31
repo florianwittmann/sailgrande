@@ -96,13 +96,17 @@ Page {
     Component.onCompleted: {
         if (streamData !== null) {
             mediaDataFinished(streamData)
-            setCover(CoverMode.SHOW_FEED, streamData)
+            setCoverRefresh(CoverMode.SHOW_FEED, streamData,mode,tag)
         } else {
             getMediaData(true)
             getFeed(mode, tag, true, function (data) {
-                setCover(CoverMode.SHOW_FEED, data)
+                setCoverRefresh(CoverMode.SHOW_FEED, data, mode,tag)
             })
         }
+    }
+
+    function mediaStreamPageRefreshCB() {
+        getMediaData(true)
     }
 
     function getMediaData(cached) {
@@ -121,6 +125,7 @@ Page {
             errorOccurred = true
             return
         }
+        streamData=data
         errorOccurred = false
 
         for (var i = 0; i < data.data.length; i++) {
@@ -137,5 +142,16 @@ Page {
             nextMediaUrl = null
         }
         dataLoaded = true
+
+        setCoverRefresh(CoverMode.SHOW_FEED, data, mode,tag)
+
     }
+
+    onStatusChanged: {
+        if (status === PageStatus.Active) {
+            refreshCallback = mediaStreamPageRefreshCB
+            setCoverRefresh(CoverMode.SHOW_FEED, streamData, mode,tag)
+        }
+    }
+
 }

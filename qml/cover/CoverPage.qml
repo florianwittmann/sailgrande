@@ -16,6 +16,7 @@ CoverBackground {
 
     property int feedMediaSize : width/2
 
+    property bool dataLoading: false
 
     onActiveChanged: refreshCover()
 
@@ -75,7 +76,6 @@ CoverBackground {
 
     //### Mode: Feed
 
-
     Grid {
         visible: currentMode === CoverMode.SHOW_FEED
         columns: 2
@@ -87,12 +87,26 @@ CoverBackground {
             delegate: Item {
                 width: feedMediaSize
                 height: feedMediaSize
+                opacity: dataLoading? 0.3 : (index < 4 ? 1.0 : 0.6)
                 SmallMediaElement{
                     mediaElement: model
                 }
             }
         }
     }
+
+    CoverActionList {
+        id: coverAction
+
+        CoverAction {
+            iconSource: "image://theme/icon-cover-refresh"
+            onTriggered : refreshFeed()
+
+        }
+
+    }
+
+
 
     ListModel {
         id: feedMediaModel
@@ -108,6 +122,13 @@ CoverBackground {
         for(var i=0; i< coverElementsCount; i++) {
             feedMediaModel.append(data.data[i]);
         }
+    }
+    function refreshFeed() {
+        dataLoading = true
+        getFeed(CoverCtl.refrMode, CoverCtl.refrTag, false, function (data) {
+            loadFeedMediaData(data)
+            dataLoading = false
+        })
     }
 
 
