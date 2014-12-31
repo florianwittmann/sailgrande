@@ -19,16 +19,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="58"/>
-        <source>Florian Wittmann</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="87"/>
-        <source>@flwittmann</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../qml/pages/AboutPage.qml" line="115"/>
         <source>Write a mail</source>
         <translation type="unfinished"></translation>
@@ -143,6 +133,11 @@
     <message>
         <location filename="../qml/pages/MediaStreamPage.qml" line="70"/>
         <source>Load more</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="100"/>
+        <source>There is no picture in this feed.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

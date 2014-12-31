@@ -55,7 +55,7 @@ Page {
             }
 
             Label {
-              text : qsTr("Florian Wittmann")
+              text : "Florian Wittmann"
               wrapMode: Text.WordWrap
               color: Theme.primaryColor
               anchors.right: parent.right
@@ -84,7 +84,7 @@ Page {
 
               Button {
                   id: buttonTwitter
-                  text: qsTr("@flwittmann")
+                  text: "@flwittmann"
                   onClicked: Qt.openUrlExternally("https://twitter.com/flwittmann")
               }
 
