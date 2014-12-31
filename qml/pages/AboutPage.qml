@@ -10,7 +10,7 @@ Page {
         anchors.fill: parent
         VerticalScrollDecorator {}
 
-        contentHeight: lastLabel.y + lastLabel.height + 150
+        contentHeight: contentColumn.y + contentColumn.height
 
         PageHeader {
             id: header
@@ -51,6 +51,74 @@ Page {
             }
 
             SectionHeader {
+              text: qsTr("developer")
+            }
+
+            Label {
+              text : qsTr("Florian Wittmann")
+              wrapMode: Text.WordWrap
+              color: Theme.primaryColor
+              anchors.right: parent.right
+              anchors.rightMargin: Theme.paddingMedium
+              anchors.left: parent.left
+              anchors.leftMargin: Theme.paddingMedium
+            }
+
+            Row
+            {
+                anchors.right: parent.right
+                anchors.rightMargin: Theme.paddingMedium
+                anchors.left: parent.left
+                anchors.leftMargin: Theme.paddingMedium
+                height:  buttonTwitter.height
+
+                Image {
+                    id: imageTwitter
+                    width:  buttonTwitter.height
+                    height: buttonTwitter.height
+                    fillMode: Image.PreserveAspectFit
+                    smooth: true
+                    source: "twitter.png"
+
+                }
+
+              Button {
+                  id: buttonTwitter
+                  text: qsTr("@flwittmann")
+                  onClicked: Qt.openUrlExternally("https://twitter.com/flwittmann")
+              }
+
+            }
+
+
+            Row
+            {
+                anchors.right: parent.right
+                anchors.rightMargin: Theme.paddingMedium
+                anchors.left: parent.left
+                anchors.leftMargin: Theme.paddingMedium
+                height:  buttonMail.height
+
+                Image {
+                    id: imageMail
+                    width:  buttonMail.height
+                    height: buttonMail.height
+                    fillMode: Image.PreserveAspectFit
+                    smooth: true
+                    source: "mail.png"
+
+                }
+
+              Button {
+                  id: buttonMail
+
+                  text: qsTr("Write a mail")
+                  onClicked: Qt.openUrlExternally("mailto:dev@florianwittmann.de")
+              }
+
+            }
+
+            SectionHeader {
               text: qsTr("License")
             }
 
@@ -72,7 +140,7 @@ Page {
                 anchors.rightMargin: Theme.paddingLarge
                 anchors.left: parent.left
                 anchors.leftMargin: Theme.paddingLarge
-                height: Theme.itemSizeMedium + Theme.paddingMedium
+                height: button1.height
 
               Button {
                   anchors.bottom: parent.bottom
@@ -87,6 +155,44 @@ Page {
                   text: qsTr("Report bugs")
                   onClicked: Qt.openUrlExternally("https://github.com/florianwittmann/sailgrande/issues")
               }
+            }
+
+            SectionHeader {
+              text: qsTr("donating = loving")
+            }
+
+            Row
+            {
+                anchors.right: parent.right
+                anchors.rightMargin: Theme.paddingLarge
+                anchors.left: parent.left
+                anchors.leftMargin: Theme.paddingLarge
+                height:  button1.height
+              Button {
+                  id: button1
+                  anchors.bottom: parent.bottom
+                  width: parent.width/2
+                  text: qsTr("Paypal EUR")
+                  onClicked: Qt.openUrlExternally("https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=pp%40florianwittmann%2ede&item_name=SailGrande&no_note=0&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHostedGuest")
+              }
+
+              Button {
+                  anchors.bottom: parent.bottom
+                  width: parent.width/2
+                  text: qsTr("Paypal USD")
+                  onClicked: Qt.openUrlExternally("https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=pp%40florianwittmann%2ede&item_name=SailGrande&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHostedGuest")
+              }
+            }
+
+            Image {
+                id: image
+                width: 300
+                height: 300
+                fillMode: Image.PreserveAspectFit
+                smooth: true
+                source: "donate.png"
+                anchors.horizontalCenter: parent.horizontalCenter
+
             }
 
         }

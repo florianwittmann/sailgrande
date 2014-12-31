@@ -15,27 +15,62 @@
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="54"/>
-        <source>License</source>
+        <source>developer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="58"/>
-        <source>Source code is licensed under the MIT License (MIT).</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="67"/>
-        <source>Contribute</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="80"/>
-        <source>Translate</source>
+        <source>Florian Wittmann</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="87"/>
+        <source>@flwittmann</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="115"/>
+        <source>Write a mail</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="122"/>
+        <source>License</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="126"/>
+        <source>Source code is licensed under the MIT License (MIT).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="135"/>
+        <source>Contribute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="148"/>
+        <source>Translate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Report bugs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="161"/>
+        <source>donating = loving</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="175"/>
+        <source>Paypal EUR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="182"/>
+        <source>Paypal USD</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -182,11 +217,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="126"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="124"/>
         <source>Show captions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location filename="../qml/pages/SettingsPage.qml" line="135"/>
         <source>Avatar</source>
         <translation type="unfinished"></translation>
@@ -198,6 +234,9 @@
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="157"/>
+=======
+        <location filename="../qml/pages/SettingsPage.qml" line="137"/>
+>>>>>>> cb166c9... Improve aboutpage
         <source>Logout</source>
         <translation type="unfinished"></translation>
     </message>
@@ -318,11 +357,13 @@
     </message>
     <message>
         <location filename="../qml/pages/UserProfilPage.qml" line="197"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="199"/>
         <source>Followers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/UserProfilPage.qml" line="205"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="207"/>
         <source>Following</source>
         <translation type="unfinished"></translation>
     </message>

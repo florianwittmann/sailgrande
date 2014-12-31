@@ -120,8 +120,6 @@ Page {
                 Component.onCompleted: checked = feedsShowUserDateInline
             }
 
-
-
             TextSwitch {
                 text: qsTr("Show captions")
                 onCheckedChanged: {
@@ -131,6 +129,7 @@ Page {
                 Component.onCompleted: checked = feedsShowCaptions
             }
 
+<<<<<<< HEAD
             SectionHeader {
               text: qsTr("Avatar")
             }
@@ -149,6 +148,8 @@ Page {
 
 
 
+=======
+>>>>>>> cb166c9... Improve aboutpage
         }
 
         PullDownMenu {
