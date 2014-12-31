@@ -70,6 +70,8 @@ Page {
 
     Component.onCompleted: {
         getMediaData()
+        refreshCallback = null
+
     }
 
     function getMediaData() {

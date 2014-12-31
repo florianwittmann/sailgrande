@@ -197,6 +197,9 @@ Page {
 
         }
     }
+    Component.onCompleted: {
+        refreshCallback = null
+    }
 }
 
 
