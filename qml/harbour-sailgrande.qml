@@ -11,8 +11,14 @@ import "FavManager.js" as FavManager
 
 ApplicationWindow {
 
+
+    id: app
     property var cachedFeeds : null
     property var cachedFeedsTime : null
+
+    property var refreshCallback : null
+    property bool refreshCallbackPending : false
+
 
     initialPage: getInitialPage()
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
@@ -56,14 +62,14 @@ ApplicationWindow {
                     API.get_Popular(function(data){dataFinished(cacheKey,data,cb)})
                 }  else if (mode === MediaStreamMode.TAG_MODE && tag !== "") {
                         API.get_TagFeed(tag,function(data){dataFinished(cacheKey,data,cb)})
+                } else if (mode === MediaStreamMode.USER_MODE && tag !== "") {
+                    API.get_RecentMediaByUserId(tag,function(data){dataFinished(cacheKey,data,cb)})
                 } else {
                    cb(null)
                 }
 
             }
     }
-
-
 
 
     function dataFinished(cacheKey,data,cb) {
@@ -102,8 +108,15 @@ ApplicationWindow {
     function setCover(coverMode, coverData) {
         CoverCtl.nextMode = coverMode
         CoverCtl.nextCoverData = coverData
-        CoverCtl.nextChanged = true;
+        CoverCtl.nextChanged = true
+    }
 
+    function setCoverRefresh(coverMode, coverData,refreshMode, refreshTag) {
+        CoverCtl.refrMode = refreshMode
+        CoverCtl.refrTag = refreshTag
+        CoverCtl.nextMode = coverMode
+        CoverCtl.nextCoverData = coverData
+        CoverCtl.nextChanged = true
     }
 
     function saveFavTags() {
@@ -115,6 +128,17 @@ ApplicationWindow {
         var favTagsList = Storage.get("favtags", "")
         FavManager.favTags = favTagsList===""|| favTagsList===null  ? [] : favTagsList.split(";")
         FavManager.favTag = Storage.get("favtag", "")
+    }
+
+
+    onApplicationActiveChanged: {
+        if (applicationActive === true) {
+
+            if(refreshCallback!==null && refreshCallbackPending) {
+                refreshCallbackPending = false
+                refreshCallback()
+            }
+        }
     }
 
 }

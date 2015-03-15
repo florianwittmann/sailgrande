@@ -9,6 +9,7 @@ import "../Helper.js" as Helper
 import "../MediaStreamMode.js" as MediaStreamMode
 import "../Storage.js" as Storage
 import "../CoverMode.js" as CoverMode
+import "../Cover.js" as CoverCtl
 import "../FavManager.js" as FavManager
 
 
@@ -21,26 +22,17 @@ Page {
     property bool updateRunning: false
     property string favoriteTag: ""
 
-
-//    property Item favContextMenu
-//    property string favConextMenuTag
-
     onStatusChanged: {
-        console.log("status1")
 
         if (status === PageStatus.Active) {
-            console.log("status2")
-
+            refreshCallback = startPageRefreshCB
             updateAllFeeds()
-
         }
     }
 
     function updateAllFeeds() {
         if (updateRunning) {
             return
-
-
         }
 
         console.log("update...")
@@ -50,8 +42,9 @@ Page {
 
     function refreshMyFeedBlockFinished() {
         getFeed(MediaStreamMode.MY_STREAM_MODE, "", true, function (data) {
-            setCover(CoverMode.SHOW_FEED, data)
+            setCoverRefresh(CoverMode.SHOW_FEED, data,MediaStreamMode.MY_STREAM_MODE,"")
         })
+
         refreshPopularFeedBlock()
     }
 
@@ -230,9 +223,18 @@ Page {
     }
 
 
-
     Component.onCompleted: {
         loadProfilePreview()
+    }
+
+    function startPageRefreshCB() {
+
+        if (updateRunning) {
+            return
+        }
+        console.log("update...")
+        updateRunning = true
+        myFeedBlock.refreshContent(refreshDone)
     }
 
     function loadProfilePreview() {

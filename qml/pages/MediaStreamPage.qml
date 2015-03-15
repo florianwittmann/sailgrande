@@ -22,6 +22,7 @@ Page {
     property string streamTitle
     property bool errorOccurred: false
     property var streamData: null
+    property bool refreshStreamData : true
     property string tag: ""
 
     SilicaListView {
@@ -37,6 +38,7 @@ Page {
         }
 
         VerticalScrollDecorator {
+            id: scroll
         }
 
         PullDownMenu {
@@ -93,25 +95,37 @@ Page {
         visible: errorOccurred
     }
 
+    ErrorMessageLabel {
+        visible: dataLoaded && !errorOccurred && mediaModel.count === 0
+        text: qsTr("There is no picture in this feed.")
+    }
+
     Component.onCompleted: {
         if (streamData !== null) {
             mediaDataFinished(streamData)
-            setCover(CoverMode.SHOW_FEED, streamData)
+            setCoverRefresh(CoverMode.SHOW_FEED, streamData,mode,tag)
         } else {
             getMediaData(true)
             getFeed(mode, tag, true, function (data) {
-                setCover(CoverMode.SHOW_FEED, data)
+                setCoverRefresh(CoverMode.SHOW_FEED, data, mode,tag)
             })
         }
+    }
+
+    function mediaStreamPageRefreshCB() {
+        listView.positionViewAtBeginning()
+        getMediaData(true)
     }
 
     function getMediaData(cached) {
         dataLoaded = false
         mediaModel.clear()
+        refreshStreamData = true
         getFeed(mode, tag, cached, mediaDataFinished)
     }
 
     function getNextMediaData() {
+        refreshStreamData = false
         API.get_Url(nextMediaUrl, mediaDataFinished)
     }
 
@@ -121,15 +135,23 @@ Page {
             errorOccurred = true
             return
         }
+        if(refreshStreamData) {
+            streamData=data
+            setCoverRefresh(CoverMode.SHOW_FEED, data, mode,tag)
+        }
+
         errorOccurred = false
 
         for (var i = 0; i < data.data.length; i++) {
             mediaModel.append(data.data[i])
         }
 
-        var url = mediaModel.get(0).images.thumbnail.url
-        var username = mediaModel.get(0).user.username
-        setCoverImage(url, username)
+        if(mediaModel.count>0) {
+
+            var url = mediaModel.get(0).images.thumbnail.url
+            var username = mediaModel.get(0).user.username
+            setCoverImage(url, username)
+        }
 
         if (data.pagination !== undefined && data.pagination.next_url) {
             nextMediaUrl = data.pagination.next_url
@@ -138,4 +160,13 @@ Page {
         }
         dataLoaded = true
     }
+
+
+    onStatusChanged: {
+        if (status === PageStatus.Active) {
+            refreshCallback = mediaStreamPageRefreshCB
+            setCoverRefresh(CoverMode.SHOW_FEED, streamData, mode,tag)
+        }
+    }
+
 }

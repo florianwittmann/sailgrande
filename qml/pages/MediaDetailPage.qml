@@ -228,6 +228,9 @@ Page {
 
         userLikedThis = item.user_has_liked;
         reload();
+
+        refreshCallback = null
+
     }
 
     function reload() {

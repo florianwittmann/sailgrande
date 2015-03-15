@@ -106,6 +106,9 @@ Page {
          onTriggered: searchTagsData(searchField.text)
      }
 
+    Component.onCompleted: {
+        refreshCallback = null
+    }
 
 
 }

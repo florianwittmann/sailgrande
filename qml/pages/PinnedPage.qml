@@ -93,6 +93,7 @@ SilicaListView {
 
     Component.onCompleted: {
         refreshFavTags()
+        refreshCallback = null
     }
 
 

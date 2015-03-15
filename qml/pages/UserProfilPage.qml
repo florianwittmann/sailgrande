@@ -5,11 +5,13 @@ import "../components"
 import "../Api.js" as API
 import "../Helper.js" as Helper
 import "../UserListMode.js" as UserListMode
+import "../MediaStreamMode.js" as MediaStreamMode
 
 
 Page {
 
     property var user
+    property var recentMediaData
 
     property bool relationStatusLoaded : false
 
@@ -160,6 +162,45 @@ Page {
             }
 
 
+            Item {
+                id:gridHeader
+
+                height: Theme.itemSizeMedium
+                width: parent.width
+
+
+                Rectangle {
+                    anchors.fill: parent
+                    color: Theme.highlightColor
+                    opacity : mouseAreaHeader.pressed ? 0.3 : 0
+                }
+
+                Image {
+                    id: icon
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.right: parent.right
+                    anchors.rightMargin: Theme.paddingLarge
+                    source:  "image://theme/icon-m-right"
+                }
+
+                Label {
+                    font.pixelSize: Theme.fontSizeLarge
+                    color: Theme.primaryColor
+
+                    text: user.username
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.right: icon.left
+                    anchors.rightMargin: Theme.paddingMedium
+                }
+
+                MouseArea {
+                    id: mouseAreaHeader
+                    anchors.fill: parent
+                    onClicked: pageStack.push(Qt.resolvedUrl("MediaStreamPage.qml"),{mode : MediaStreamMode.USER_MODE, streamData: recentMediaData,tag: user.id, streamTitle: user.username})
+                }
+            }
+
+
             Grid {
                 columns: 3
                 anchors.left: parent.left
@@ -180,10 +221,6 @@ Page {
                 }
             }
 
-
-
-
-
         }
 
 
@@ -196,7 +233,7 @@ Page {
                 visible: isSelf
                  text:  qsTr("Followers")
                  onClicked: {
-                     pageStack.push(Qt.resolvedUrl("UserListPage.qml"),{pageTitle:"Followers", mode: UserListMode.FOLLOWER});
+                     pageStack.push(Qt.resolvedUrl("UserListPage.qml"),{pageTitle:qsTr("Followers"), mode: UserListMode.FOLLOWER});
                  }
             }
 
@@ -204,7 +241,7 @@ Page {
                 visible: isSelf
                  text:  qsTr("Following")
                  onClicked: {
-                     pageStack.push(Qt.resolvedUrl("UserListPage.qml"),{pageTitle:"Following", mode: UserListMode.FOLLOWING});
+                     pageStack.push(Qt.resolvedUrl("UserListPage.qml"),{pageTitle:qsTr("Following"), mode: UserListMode.FOLLOWING});
                  }
              }
 
@@ -224,8 +261,6 @@ Page {
                  }
              }
 
-
-
            }
 
     }
@@ -237,9 +272,11 @@ Page {
 
 
     Component.onCompleted: {
+        refreshCallback = null
         if(user.id === API.selfId)
             isSelf = true;
         reload();
+
     }
 
     function reload() {
@@ -269,6 +306,7 @@ Page {
             recentMediaLoaded=true;
             return;
         }
+        recentMediaData = data
         for(var i=0; i<data.data.length; i++) {
             recentMediaModel.append(data.data[i]);
         }
