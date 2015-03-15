@@ -7,34 +7,59 @@
         <translation>O aplikaci</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="37"/>
+        <location filename="../qml/pages/AboutPage.qml" line="36"/>
         <source>An unofficial client for Instagram.</source>
         <translation>Neoficiální klient pro Instagram.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="57"/>
+        <location filename="../qml/pages/AboutPage.qml" line="54"/>
+        <source>developer</source>
+        <translation>autor</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="115"/>
+        <source>Write a mail</source>
+        <translation>Napsat e-mail</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>License</source>
         <translation>Licence</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="62"/>
+        <location filename="../qml/pages/AboutPage.qml" line="126"/>
         <source>Source code is licensed under the MIT License (MIT).</source>
         <translation>Zdrojový kód je licencován pode licencí MIT (MIT).</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="71"/>
+        <location filename="../qml/pages/AboutPage.qml" line="135"/>
         <source>Contribute</source>
         <translation>Přispět</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="85"/>
+        <location filename="../qml/pages/AboutPage.qml" line="148"/>
         <source>Translate</source>
         <translation>Překlad</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="92"/>
+        <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Report bugs</source>
         <translation>Nahlásit chyby</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="161"/>
+        <source>donating = loving</source>
+        <translation>přispívání = milování</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="175"/>
+        <source>Paypal EUR</source>
+        <translation>Paypal EUR</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="182"/>
+        <source>Paypal USD</source>
+        <translation>Paypal USD</translation>
     </message>
 </context>
 <context>
@@ -94,19 +119,24 @@
 <context>
     <name>MediaStreamPage</name>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="46"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="48"/>
         <source>Pin this tag feed</source>
         <translation>Přišpendlit kanál této značky</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="60"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="62"/>
         <source>Refresh</source>
         <translation>Obnovit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="68"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="70"/>
         <source>Load more</source>
         <translation>Nahrát více</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="100"/>
+        <source>There is no picture in this feed.</source>
+        <translation>V tomto kanálu nejsou žádné obrázky.</translation>
     </message>
 </context>
 <context>
@@ -193,47 +223,47 @@
 <context>
     <name>StartPage</name>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="95"/>
+        <location filename="../qml/pages/StartPage.qml" line="88"/>
         <source>Welcome</source>
         <translation>Vítejte</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="134"/>
+        <location filename="../qml/pages/StartPage.qml" line="127"/>
         <source>My Feed</source>
         <translation>Můj kanál</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="141"/>
+        <location filename="../qml/pages/StartPage.qml" line="134"/>
         <source>Popular</source>
         <translation>Oblíbené</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="149"/>
+        <location filename="../qml/pages/StartPage.qml" line="142"/>
         <source>Tagged with %1</source>
         <translation>Označeno %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="183"/>
+        <location filename="../qml/pages/StartPage.qml" line="176"/>
         <source>All pinned tags</source>
         <translation>Všechny přišpendlené značky</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="207"/>
+        <location filename="../qml/pages/StartPage.qml" line="200"/>
         <source>About</source>
         <translation>O programu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="212"/>
+        <location filename="../qml/pages/StartPage.qml" line="205"/>
         <source>Settings</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="217"/>
+        <location filename="../qml/pages/StartPage.qml" line="210"/>
         <source>Search</source>
         <translation>Hledat</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="222"/>
+        <location filename="../qml/pages/StartPage.qml" line="215"/>
         <source>Refresh</source>
         <translation>Obnovit</translation>
     </message>
@@ -275,54 +305,54 @@
 <context>
     <name>UserProfilPage</name>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="74"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
         <source>You follow %1</source>
         <translation>Sledujete %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="78"/>
         <source>You requested to follow %1</source>
         <translation>Požádal jste o sledování %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="96"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
         <source>%1 follows you</source>
         <translation>%1 vás sleduje</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
         <source>%1 requested to follow you</source>
         <translation>%1 požádal o umožnění sledování</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="102"/>
         <source>You blocked %1</source>
         <translation>Blokujete %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="146"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="148"/>
         <source>This profile is private.</source>
         <translation>Tento profil je soukromý</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="197"/>
-        <location filename="../qml/pages/UserProfilPage.qml" line="199"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="234"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="236"/>
         <source>Followers</source>
         <translation>Sledováno</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="205"/>
-        <location filename="../qml/pages/UserProfilPage.qml" line="207"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="242"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="244"/>
         <source>Following</source>
         <translation>Sleduje</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="212"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="249"/>
         <source>Unfollow %1</source>
         <translation>Zastavit sledování %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="220"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="257"/>
         <source>Follow %1</source>
         <translation>Sledovat %1</translation>
     </message>
