@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[sailgrande.sailgrande]
+file_filter = translations/sailgrande_<lang>.ts
+source_lang = en
+type = QT
+
