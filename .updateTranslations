@@ -1,0 +1,2 @@
+tx pull -a --minimum-perc=90
+lrelease translations/*.ts
