@@ -340,7 +340,7 @@
         <location filename="../qml/pages/UserProfilPage.qml" line="234"/>
         <location filename="../qml/pages/UserProfilPage.qml" line="236"/>
         <source>Followers</source>
-        <translation>追随者。</translation>
+        <translation>追随者</translation>
     </message>
     <message>
         <location filename="../qml/pages/UserProfilPage.qml" line="242"/>
