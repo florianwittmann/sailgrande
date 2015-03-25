@@ -7,34 +7,59 @@
         <translation>О приложении</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="37"/>
+        <location filename="../qml/pages/AboutPage.qml" line="36"/>
         <source>An unofficial client for Instagram.</source>
         <translation>Неофициальный клиент для Instagram</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="57"/>
+        <location filename="../qml/pages/AboutPage.qml" line="54"/>
+        <source>developer</source>
+        <translation>разработчик</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="115"/>
+        <source>Write a mail</source>
+        <translation>Написать сообщение</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>License</source>
         <translation>Лицензия</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="62"/>
+        <location filename="../qml/pages/AboutPage.qml" line="126"/>
         <source>Source code is licensed under the MIT License (MIT).</source>
         <translation>Исходный код распространяется под лицензией MIT License (MIT)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="71"/>
+        <location filename="../qml/pages/AboutPage.qml" line="135"/>
         <source>Contribute</source>
         <translation>Вклад</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="85"/>
+        <location filename="../qml/pages/AboutPage.qml" line="148"/>
         <source>Translate</source>
         <translation>Перевод</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="92"/>
+        <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Report bugs</source>
         <translation>Сообщить о проблеме</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="161"/>
+        <source>donating = loving</source>
+        <translation>пожертвование=любовь</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="175"/>
+        <source>Paypal EUR</source>
+        <translation>Paypal EUR</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="182"/>
+        <source>Paypal USD</source>
+        <translation>Paypal USD</translation>
     </message>
 </context>
 <context>
@@ -94,19 +119,24 @@
 <context>
     <name>MediaStreamPage</name>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="46"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="48"/>
         <source>Pin this tag feed</source>
         <translation>Закрепить тег</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="60"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="62"/>
         <source>Refresh</source>
         <translation>Обновить</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="68"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="70"/>
         <source>Load more</source>
         <translation>Загрузить ещё</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="100"/>
+        <source>There is no picture in this feed.</source>
+        <translation>Нет изображений в этом тэге.</translation>
     </message>
 </context>
 <context>
@@ -193,47 +223,47 @@
 <context>
     <name>StartPage</name>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="95"/>
+        <location filename="../qml/pages/StartPage.qml" line="88"/>
         <source>Welcome</source>
         <translation>Добро пожаловать</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="134"/>
+        <location filename="../qml/pages/StartPage.qml" line="127"/>
         <source>My Feed</source>
         <translation>Мои подписки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="141"/>
+        <location filename="../qml/pages/StartPage.qml" line="134"/>
         <source>Popular</source>
         <translation>Популярное</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="149"/>
+        <location filename="../qml/pages/StartPage.qml" line="142"/>
         <source>Tagged with %1</source>
         <translation>С тегом %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="183"/>
+        <location filename="../qml/pages/StartPage.qml" line="176"/>
         <source>All pinned tags</source>
         <translation>Все закреплённые теги</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="207"/>
+        <location filename="../qml/pages/StartPage.qml" line="200"/>
         <source>About</source>
         <translation>О приложении</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="212"/>
+        <location filename="../qml/pages/StartPage.qml" line="205"/>
         <source>Settings</source>
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="217"/>
+        <location filename="../qml/pages/StartPage.qml" line="210"/>
         <source>Search</source>
         <translation>Поиск</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="222"/>
+        <location filename="../qml/pages/StartPage.qml" line="215"/>
         <source>Refresh</source>
         <translation>Обновить</translation>
     </message>
@@ -269,60 +299,60 @@
     <message>
         <location filename="../qml/pages/UserListPage.qml" line="43"/>
         <source>Load more</source>
-        <translation type="unfinished"/>
+        <translation>Загрузить больше</translation>
     </message>
 </context>
 <context>
     <name>UserProfilPage</name>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="74"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
         <source>You follow %1</source>
         <translation>Ваш подписчик %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="78"/>
         <source>You requested to follow %1</source>
         <translation>Вы подали запрос на подписку %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="96"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
         <source>%1 follows you</source>
         <translation>%1 подписан на вас</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
         <source>%1 requested to follow you</source>
         <translation>%1 подал запрос на ваши обновления</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="102"/>
         <source>You blocked %1</source>
         <translation>Пользователь заблокирован %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="146"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="148"/>
         <source>This profile is private.</source>
         <translation>Профиль скрыт</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="197"/>
-        <location filename="../qml/pages/UserProfilPage.qml" line="199"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="234"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="236"/>
         <source>Followers</source>
-        <translation type="unfinished"/>
+        <translation>Подписчики</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="205"/>
-        <location filename="../qml/pages/UserProfilPage.qml" line="207"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="242"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="244"/>
         <source>Following</source>
-        <translation type="unfinished"/>
+        <translation>Подписки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="212"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="249"/>
         <source>Unfollow %1</source>
         <translation>Отписаться %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="220"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="257"/>
         <source>Follow %1</source>
         <translation>Подписаться %1</translation>
     </message>

@@ -291,7 +291,7 @@
     <message>
         <location filename="../qml/components/UserDetailBlock.qml" line="48"/>
         <source>%1 following</source>
-        <translation>%1 seguiendo</translation>
+        <translation>%1 siguiendo</translation>
     </message>
 </context>
 <context>
