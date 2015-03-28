@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="es" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="es_AR" version="2.1">
 <context>
     <name>AboutPage</name>
     <message>
@@ -9,7 +9,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="36"/>
         <source>An unofficial client for Instagram.</source>
-        <translation>Un cliente no oficial de Instagram.</translation>
+        <translation>Un cliente no oficial para Instagram</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="54"/>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="115"/>
         <source>Write a mail</source>
-        <translation>Escribir un correo</translation>
+        <translation>Escribir un email</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
@@ -29,12 +29,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="126"/>
         <source>Source code is licensed under the MIT License (MIT).</source>
-        <translation>El código fuente está autorizado bajo la Licencia (MIT).</translation>
+        <translation>Código fuente licenciado bajo la Licencia MIT</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="135"/>
         <source>Contribute</source>
-        <translation>Colaborar</translation>
+        <translation>Contribuir</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="148"/>
@@ -44,22 +44,22 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Report bugs</source>
-        <translation>Informar de fallos</translation>
+        <translation>Reportar problemas</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="161"/>
         <source>donating = loving</source>
-        <translation>donar = amor</translation>
+        <translation>donar = amar</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="175"/>
         <source>Paypal EUR</source>
-        <translation>Paypal EUR</translation>
+        <translation>Paypal Euros</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="182"/>
         <source>Paypal USD</source>
-        <translation>Paypal USD</translation>
+        <translation>Paypal Dólares</translation>
     </message>
 </context>
 <context>
@@ -67,7 +67,7 @@
     <message>
         <location filename="../qml/pages/AuthPage.qml" line="45"/>
         <source>Welcome to SailGrande, an unoffical Instagram client for Sailfish. Please press &apos;continue&apos; to login to your Instagram account.</source>
-        <translation>Bienvenido a SailGrande, un cliente no oficial de Instagram para Sailfish. Por favor, pulsa en &apos;continuar&apos; para acceder a tu cuenta de Instagram.</translation>
+        <translation>Bienvenido a SailGrande, un cliente no oficial de Instragram para Sailfish. Tocá &apos;continuar&apos; para inicial sesión con tu cuenta de Instagram.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AuthPage.qml" line="57"/>
@@ -80,7 +80,7 @@
     <message>
         <location filename="../qml/components/ErrorMessageLabel.qml" line="8"/>
         <source>An error occurred.</source>
-        <translation>Ha ocurrido un error.</translation>
+        <translation>Ocurrió un error.</translation>
     </message>
 </context>
 <context>
@@ -93,7 +93,7 @@
     <message>
         <location filename="../qml/pages/MediaDetailPage.qml" line="37"/>
         <source>likes</source>
-        <translation>Me gusta</translation>
+        <translation>likes</translation>
     </message>
     <message>
         <location filename="../qml/pages/MediaDetailPage.qml" line="37"/>
@@ -103,17 +103,17 @@
     <message>
         <location filename="../qml/pages/MediaDetailPage.qml" line="37"/>
         <source>You liked this.</source>
-        <translation>A ti te gusta esto.</translation>
+        <translation>Likeaste esto.</translation>
     </message>
     <message>
         <location filename="../qml/pages/MediaDetailPage.qml" line="189"/>
         <source>Remove my like</source>
-        <translation>Eliminar &apos;Me gusta&apos;</translation>
+        <translation>Remover mi like</translation>
     </message>
     <message>
         <location filename="../qml/pages/MediaDetailPage.qml" line="198"/>
         <source>Like</source>
-        <translation>Me gusta</translation>
+        <translation>Likear</translation>
     </message>
 </context>
 <context>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../qml/pages/MediaStreamPage.qml" line="48"/>
         <source>Pin this tag feed</source>
-        <translation>Marcar contenido de esta etiqueta</translation>
+        <translation>Pinear el feed de esta etiqueta</translation>
     </message>
     <message>
         <location filename="../qml/pages/MediaStreamPage.qml" line="62"/>
@@ -136,7 +136,7 @@
     <message>
         <location filename="../qml/pages/MediaStreamPage.qml" line="100"/>
         <source>There is no picture in this feed.</source>
-        <translation>No hay fotos en este feed.</translation>
+        <translation>No hay imágenes en este feed.</translation>
     </message>
 </context>
 <context>
@@ -144,7 +144,7 @@
     <message>
         <location filename="../qml/pages/PinnedPage.qml" line="16"/>
         <source>Pinned tags</source>
-        <translation>Etiquetas marcadas</translation>
+        <translation>Etiquetas pinneadas</translation>
     </message>
     <message>
         <location filename="../qml/pages/PinnedPage.qml" line="57"/>
@@ -162,22 +162,22 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="19"/>
         <source>Settings</source>
-        <translation>Ajustes</translation>
+        <translation>Configuración</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="35"/>
         <source>Startpage</source>
-        <translation>Página de inicio</translation>
+        <translation>Inicio</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="39"/>
         <source>Show popular feed</source>
-        <translation>Mostrar feed popular</translation>
+        <translation>Mostrar feeds populares</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="49"/>
         <source>Customize the column and row count of the feed previews on the startpage:</source>
-        <translation>Personaliza el número de columnas y filas de la previsualización del feed en la pagina de inicio:</translation>
+        <translation>Personalizar la cantidad de columnas y filas de la vista previa en el inicio:</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="60"/>
@@ -192,7 +192,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="91"/>
         <source>Shows %1 items per feed preview.</source>
-        <translation>Muestra %1 artículos por previsualización del feed.</translation>
+        <translation>Mostrar %1 items por cada feed.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="101"/>
@@ -212,7 +212,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="124"/>
         <source>Show captions</source>
-        <translation>Mostrar capturas</translation>
+        <translation>Mostrar leyenda</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="137"/>
@@ -230,7 +230,7 @@
     <message>
         <location filename="../qml/pages/StartPage.qml" line="127"/>
         <source>My Feed</source>
-        <translation>Mi Feed</translation>
+        <translation>Mis feeds</translation>
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="134"/>
@@ -245,7 +245,7 @@
     <message>
         <location filename="../qml/pages/StartPage.qml" line="176"/>
         <source>All pinned tags</source>
-        <translation>Todas las etiquetas marcadas</translation>
+        <translation>Todas las etiquetas pineadas</translation>
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="200"/>
@@ -255,7 +255,7 @@
     <message>
         <location filename="../qml/pages/StartPage.qml" line="205"/>
         <source>Settings</source>
-        <translation>Ajustes</translation>
+        <translation>Configuración</translation>
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="210"/>
@@ -273,7 +273,7 @@
     <message>
         <location filename="../qml/pages/TagSearchPage.qml" line="22"/>
         <source>Search for tag</source>
-        <translation>Buscar por etiqueta</translation>
+        <translation>Buscar etiqueta</translation>
     </message>
 </context>
 <context>
@@ -281,7 +281,7 @@
     <message>
         <location filename="../qml/components/UserDetailBlock.qml" line="28"/>
         <source>%1 posts</source>
-        <translation>%1 publicaciones</translation>
+        <translation>%1 posts</translation>
     </message>
     <message>
         <location filename="../qml/components/UserDetailBlock.qml" line="38"/>
@@ -307,27 +307,27 @@
     <message>
         <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
         <source>You follow %1</source>
-        <translation>Sigues a %1</translation>
+        <translation>Seguís %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/UserProfilPage.qml" line="78"/>
         <source>You requested to follow %1</source>
-        <translation>Has solicitado seguir a %1</translation>
+        <translation>Solicistaste seguir a %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
         <source>%1 follows you</source>
-        <translation>%1 seguidores</translation>
+        <translation>%1 te sigue</translation>
     </message>
     <message>
         <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
         <source>%1 requested to follow you</source>
-        <translation>%1 ha solicitado seguirte</translation>
+        <translation>%1 solicitó seguirte</translation>
     </message>
     <message>
         <location filename="../qml/pages/UserProfilPage.qml" line="102"/>
         <source>You blocked %1</source>
-        <translation>Has bloqueado a %1</translation>
+        <translation>Bloqueaste a %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/UserProfilPage.qml" line="148"/>
