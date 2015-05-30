@@ -202,7 +202,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="105"/>
         <source>Show user and date</source>
-        <translation type="unfinished"/>
+        <translation>Показать пользователя и данные</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="115"/>
