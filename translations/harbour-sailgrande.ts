@@ -4,21 +4,22 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="17"/>
+        <location filename="../qml/pages/AboutPage.qml" line="18"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="36"/>
+        <location filename="../qml/pages/AboutPage.qml" line="37"/>
         <source>An unofficial client for Instagram.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="54"/>
+        <location filename="../qml/pages/AboutPage.qml" line="55"/>
         <source>developer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location filename="../qml/pages/AboutPage.qml" line="58"/>
         <source>Florian Wittmann</source>
         <translation type="unfinished"></translation>
@@ -30,46 +31,49 @@
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="115"/>
+=======
+        <location filename="../qml/pages/AboutPage.qml" line="116"/>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
         <source>Write a mail</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="122"/>
+        <location filename="../qml/pages/AboutPage.qml" line="123"/>
         <source>License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="126"/>
+        <location filename="../qml/pages/AboutPage.qml" line="127"/>
         <source>Source code is licensed under the MIT License (MIT).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="135"/>
+        <location filename="../qml/pages/AboutPage.qml" line="136"/>
         <source>Contribute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="148"/>
+        <location filename="../qml/pages/AboutPage.qml" line="149"/>
         <source>Translate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="155"/>
+        <location filename="../qml/pages/AboutPage.qml" line="156"/>
         <source>Report bugs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="161"/>
+        <location filename="../qml/pages/AboutPage.qml" line="162"/>
         <source>donating = loving</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="175"/>
+        <location filename="../qml/pages/AboutPage.qml" line="176"/>
         <source>Paypal EUR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="182"/>
+        <location filename="../qml/pages/AboutPage.qml" line="183"/>
         <source>Paypal USD</source>
         <translation type="unfinished"></translation>
     </message>
@@ -98,32 +102,52 @@
 <context>
     <name>MediaDetailPage</name>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="23"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="26"/>
         <source>Details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location filename="../qml/pages/MediaDetailPage.qml" line="103"/>
+=======
+        <location filename="../qml/pages/MediaDetailPage.qml" line="40"/>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
         <source>likes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location filename="../qml/pages/MediaDetailPage.qml" line="103"/>
+=======
+        <location filename="../qml/pages/MediaDetailPage.qml" line="40"/>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
         <source>comments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location filename="../qml/pages/MediaDetailPage.qml" line="103"/>
+=======
+        <location filename="../qml/pages/MediaDetailPage.qml" line="40"/>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
         <source>You liked this.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location filename="../qml/pages/MediaDetailPage.qml" line="221"/>
+=======
+        <location filename="../qml/pages/MediaDetailPage.qml" line="192"/>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
         <source>Remove my like</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
         <location filename="../qml/pages/MediaDetailPage.qml" line="230"/>
+=======
+        <location filename="../qml/pages/MediaDetailPage.qml" line="201"/>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
         <source>Like</source>
         <translation type="unfinished"></translation>
     </message>
@@ -131,35 +155,43 @@
 <context>
     <name>MediaStreamPage</name>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="48"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="51"/>
         <source>Pin this tag feed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="62"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="65"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="70"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="73"/>
         <source>Load more</source>
         <translation type="unfinished"></translation>
     </message>
+<<<<<<< HEAD
+=======
+    <message>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="103"/>
+        <source>There is no picture in this feed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
 </context>
 <context>
     <name>PinnedPage</name>
     <message>
-        <location filename="../qml/pages/PinnedPage.qml" line="16"/>
+        <location filename="../qml/pages/PinnedPage.qml" line="18"/>
         <source>Pinned tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PinnedPage.qml" line="57"/>
+        <location filename="../qml/pages/PinnedPage.qml" line="59"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PinnedPage.qml" line="78"/>
+        <location filename="../qml/pages/PinnedPage.qml" line="80"/>
         <source>Set as favorite</source>
         <translation type="unfinished"></translation>
     </message>
@@ -167,61 +199,62 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="19"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="22"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="35"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="38"/>
         <source>Startpage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="39"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="42"/>
         <source>Show popular feed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="49"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="52"/>
         <source>Customize the column and row count of the feed previews on the startpage:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="60"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="63"/>
         <source>Columns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="75"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="78"/>
         <source>Rows</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="91"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="94"/>
         <source>Shows %1 items per feed preview.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="101"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="104"/>
         <source>Feeds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="105"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="108"/>
         <source>Show user and date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="115"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="118"/>
         <source>Show user and date inline</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="124"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="127"/>
         <source>Show captions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <location filename="../qml/pages/SettingsPage.qml" line="135"/>
         <source>Avatar</source>
@@ -237,6 +270,9 @@
 =======
         <location filename="../qml/pages/SettingsPage.qml" line="137"/>
 >>>>>>> cb166c9... Improve aboutpage
+=======
+        <location filename="../qml/pages/SettingsPage.qml" line="140"/>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
         <source>Logout</source>
         <translation type="unfinished"></translation>
     </message>
@@ -244,47 +280,47 @@
 <context>
     <name>StartPage</name>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="88"/>
+        <location filename="../qml/pages/StartPage.qml" line="90"/>
         <source>Welcome</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="127"/>
+        <location filename="../qml/pages/StartPage.qml" line="129"/>
         <source>My Feed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="134"/>
+        <location filename="../qml/pages/StartPage.qml" line="136"/>
         <source>Popular</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="142"/>
+        <location filename="../qml/pages/StartPage.qml" line="144"/>
         <source>Tagged with %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="176"/>
+        <location filename="../qml/pages/StartPage.qml" line="178"/>
         <source>All pinned tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="200"/>
+        <location filename="../qml/pages/StartPage.qml" line="202"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="205"/>
+        <location filename="../qml/pages/StartPage.qml" line="207"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="210"/>
+        <location filename="../qml/pages/StartPage.qml" line="212"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="215"/>
+        <location filename="../qml/pages/StartPage.qml" line="217"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
@@ -292,7 +328,7 @@
 <context>
     <name>TagSearchPage</name>
     <message>
-        <location filename="../qml/pages/TagSearchPage.qml" line="22"/>
+        <location filename="../qml/pages/TagSearchPage.qml" line="25"/>
         <source>Search for tag</source>
         <translation type="unfinished"></translation>
     </message>
@@ -318,7 +354,7 @@
 <context>
     <name>UserListPage</name>
     <message>
-        <location filename="../qml/pages/UserListPage.qml" line="43"/>
+        <location filename="../qml/pages/UserListPage.qml" line="46"/>
         <source>Load more</source>
         <translation type="unfinished"></translation>
     </message>
@@ -326,54 +362,54 @@
 <context>
     <name>UserProfilPage</name>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="76"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="79"/>
         <source>You follow %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="78"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="81"/>
         <source>You requested to follow %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="98"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="101"/>
         <source>%1 follows you</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="100"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="103"/>
         <source>%1 requested to follow you</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="102"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="105"/>
         <source>You blocked %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="148"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="151"/>
         <source>This profile is private.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="234"/>
-        <location filename="../qml/pages/UserProfilPage.qml" line="236"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="237"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="239"/>
         <source>Followers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="242"/>
-        <location filename="../qml/pages/UserProfilPage.qml" line="244"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="245"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="247"/>
         <source>Following</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="249"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="252"/>
         <source>Unfollow %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="257"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="260"/>
         <source>Follow %1</source>
         <translation type="unfinished"></translation>
     </message>

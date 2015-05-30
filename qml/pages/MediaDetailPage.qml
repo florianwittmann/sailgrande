@@ -8,6 +8,9 @@ import "../Storage.js" as Storage
 
 Page {
 
+    allowedOrientations:  Orientation.All
+
+
     property var item
     property bool playVideo : false
     property bool userLikedThis : false

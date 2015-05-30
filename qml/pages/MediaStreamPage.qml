@@ -14,6 +14,9 @@ import "../FavManager.js" as FavManager
 Page {
     id: page
 
+    allowedOrientations:  Orientation.All
+
+
     property var nextMediaUrl: null
     property bool dataLoaded: false
 
