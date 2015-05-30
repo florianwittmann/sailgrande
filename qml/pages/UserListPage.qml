@@ -12,6 +12,9 @@ import "../UserListMode.js" as UserListMode
 
 Page {
     id: page
+    allowedOrientations:  Orientation.All
+
+
 
     property var nextMediaUrl: null
     property bool dataLoaded: false

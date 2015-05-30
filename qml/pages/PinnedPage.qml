@@ -7,10 +7,12 @@ import "../MediaStreamMode.js" as MediaStreamMode
 import "../Storage.js" as Storage
 
 Page {
+    allowedOrientations:  Orientation.All
 
 SilicaListView {
 
     anchors.fill: parent
+
 
     header: PageHeader {
         title: qsTr("Pinned tags")

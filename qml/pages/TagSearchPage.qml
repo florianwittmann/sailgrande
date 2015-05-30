@@ -6,6 +6,9 @@ import "../MediaStreamMode.js" as MediaStreamMode
 
 Page {
 
+    allowedOrientations:  Orientation.All
+
+
     property bool dataLoaded : false
     property bool loadingMore : false
 

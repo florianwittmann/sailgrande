@@ -10,6 +10,9 @@ import "../MediaStreamMode.js" as MediaStreamMode
 
 Page {
 
+
+    allowedOrientations:  Orientation.All
+
     property var user
     property var recentMediaData
 

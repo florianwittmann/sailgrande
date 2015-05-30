@@ -15,6 +15,8 @@ import "../FavManager.js" as FavManager
 
 Page {
 
+
+    allowedOrientations:  Orientation.All
     id: startPage
     property var user
     property bool relationStatusLoaded: false

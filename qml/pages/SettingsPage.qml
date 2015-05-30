@@ -8,6 +8,9 @@ import "../Storage.js" as Storage
 Page {
 
     id: aboutPage
+    allowedOrientations:  Orientation.All
+
+
 
     SilicaFlickable {
         anchors.fill: parent

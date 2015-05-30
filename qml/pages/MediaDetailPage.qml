@@ -8,6 +8,9 @@ import "../CoverMode.js" as CoverMode
 
 Page {
 
+    allowedOrientations:  Orientation.All
+
+
     property var item
     property bool playVideo : false
     property bool userLikedThis : false
