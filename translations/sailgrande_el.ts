@@ -19,7 +19,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="115"/>
         <source>Write a mail</source>
-        <translation type="unfinished"/>
+        <translation>Γράψτε ένα e-mail</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="161"/>
         <source>donating = loving</source>
-        <translation type="unfinished"/>
+        <translation>δωρεά = αγάπη</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="175"/>
