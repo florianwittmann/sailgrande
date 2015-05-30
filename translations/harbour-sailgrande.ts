@@ -20,6 +20,7 @@
     </message>
     <message>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <location filename="../qml/pages/AboutPage.qml" line="58"/>
         <source>Florian Wittmann</source>
         <translation type="unfinished"></translation>
@@ -31,6 +32,9 @@
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="115"/>
+=======
+        <location filename="../qml/pages/AboutPage.qml" line="116"/>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
 =======
         <location filename="../qml/pages/AboutPage.qml" line="116"/>
 >>>>>>> e2060a3... Add landscape orientation [first pass on #5]
@@ -108,7 +112,11 @@
     </message>
     <message>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <location filename="../qml/pages/MediaDetailPage.qml" line="103"/>
+=======
+        <location filename="../qml/pages/MediaDetailPage.qml" line="40"/>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
 =======
         <location filename="../qml/pages/MediaDetailPage.qml" line="40"/>
 >>>>>>> e2060a3... Add landscape orientation [first pass on #5]
@@ -117,7 +125,11 @@
     </message>
     <message>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <location filename="../qml/pages/MediaDetailPage.qml" line="103"/>
+=======
+        <location filename="../qml/pages/MediaDetailPage.qml" line="40"/>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
 =======
         <location filename="../qml/pages/MediaDetailPage.qml" line="40"/>
 >>>>>>> e2060a3... Add landscape orientation [first pass on #5]
@@ -126,7 +138,11 @@
     </message>
     <message>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <location filename="../qml/pages/MediaDetailPage.qml" line="103"/>
+=======
+        <location filename="../qml/pages/MediaDetailPage.qml" line="40"/>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
 =======
         <location filename="../qml/pages/MediaDetailPage.qml" line="40"/>
 >>>>>>> e2060a3... Add landscape orientation [first pass on #5]
@@ -135,7 +151,11 @@
     </message>
     <message>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <location filename="../qml/pages/MediaDetailPage.qml" line="221"/>
+=======
+        <location filename="../qml/pages/MediaDetailPage.qml" line="192"/>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
 =======
         <location filename="../qml/pages/MediaDetailPage.qml" line="192"/>
 >>>>>>> e2060a3... Add landscape orientation [first pass on #5]
@@ -144,7 +164,11 @@
     </message>
     <message>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <location filename="../qml/pages/MediaDetailPage.qml" line="230"/>
+=======
+        <location filename="../qml/pages/MediaDetailPage.qml" line="201"/>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
 =======
         <location filename="../qml/pages/MediaDetailPage.qml" line="201"/>
 >>>>>>> e2060a3... Add landscape orientation [first pass on #5]
@@ -256,6 +280,7 @@
     <message>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <location filename="../qml/pages/SettingsPage.qml" line="135"/>
         <source>Avatar</source>
         <translation type="unfinished"></translation>
@@ -270,6 +295,9 @@
 =======
         <location filename="../qml/pages/SettingsPage.qml" line="137"/>
 >>>>>>> cb166c9... Improve aboutpage
+=======
+        <location filename="../qml/pages/SettingsPage.qml" line="140"/>
+>>>>>>> e2060a3... Add landscape orientation [first pass on #5]
 =======
         <location filename="../qml/pages/SettingsPage.qml" line="140"/>
 >>>>>>> e2060a3... Add landscape orientation [first pass on #5]
