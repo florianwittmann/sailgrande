@@ -207,9 +207,7 @@ Page {
             Grid {
                 columns: 3
                 anchors.left: parent.left
-                anchors.leftMargin: Theme.paddingMedium
                 anchors.right: parent.right
-                anchors.rightMargin: Theme.paddingMedium
 
                 Repeater {
                     visible: recentMediaLoaded

@@ -16,7 +16,6 @@ Page {
 
     allowedOrientations:  Orientation.All
 
-
     property var nextMediaUrl: null
     property bool dataLoaded: false
 

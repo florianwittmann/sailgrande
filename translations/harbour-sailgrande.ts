@@ -121,22 +121,22 @@
 <context>
     <name>MediaStreamPage</name>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="51"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="50"/>
         <source>Pin this tag feed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="65"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="64"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="73"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="72"/>
         <source>Load more</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="103"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="102"/>
         <source>There is no picture in this feed.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -337,24 +337,24 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/UserProfilPage.qml" line="235"/>
         <location filename="../qml/pages/UserProfilPage.qml" line="237"/>
-        <location filename="../qml/pages/UserProfilPage.qml" line="239"/>
         <source>Followers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/UserProfilPage.qml" line="243"/>
         <location filename="../qml/pages/UserProfilPage.qml" line="245"/>
-        <location filename="../qml/pages/UserProfilPage.qml" line="247"/>
         <source>Following</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="252"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="250"/>
         <source>Unfollow %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/UserProfilPage.qml" line="260"/>
+        <location filename="../qml/pages/UserProfilPage.qml" line="258"/>
         <source>Follow %1</source>
         <translation type="unfinished"></translation>
     </message>
