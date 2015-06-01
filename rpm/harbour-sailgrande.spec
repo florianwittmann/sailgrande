@@ -14,7 +14,11 @@ Name:       harbour-sailgrande
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    An unofficial client for Instagram
 <<<<<<< HEAD
+<<<<<<< HEAD
 Version:    0.5.0
+=======
+Version:    0.5.2
+>>>>>>> a55a368... version bump to 0.5.2
 =======
 Version:    0.5.2
 >>>>>>> a55a368... version bump to 0.5.2

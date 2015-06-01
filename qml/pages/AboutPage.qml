@@ -44,7 +44,11 @@ Page {
 
             Label {
 <<<<<<< HEAD
+<<<<<<< HEAD
               text : "Version: 0.5.0"
+=======
+              text : "Version: 0.5.2"
+>>>>>>> a55a368... version bump to 0.5.2
 =======
               text : "Version: 0.5.2"
 >>>>>>> a55a368... version bump to 0.5.2
