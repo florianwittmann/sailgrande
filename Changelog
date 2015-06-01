@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+0.5.2
+- New landscape mode
+- Added Chinese translation
+- Added Spanish (Argentina) translation
+- Updated translations
+
+0.5.1
+- Updated translations
+
+0.5.0
+- Improved about page, added donation links (yes I'm more than happy about donations :-) )
+- Added cover action to refresh feeds
+- Added user feed to view media of a specific user
+- Fixed bug that still showed single picture on cover when already back on feedpage
+
+>>>>>>> a55a368... version bump to 0.5.2
 0.4.4
 - Updated translations
 
