@@ -1,7 +1,9 @@
 sailgrande
 ==========
 
-An unoffical Instagram client for Sailfish
+'As a response to the development of jolla, I left sailfish os development. Feel free to fork SailGrande.'
+
+An unoffical Instagram client for Sailfish currently broken due nonfunctional client id.
 
 Current features:
 
