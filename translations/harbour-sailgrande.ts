@@ -99,32 +99,32 @@
 <context>
     <name>MediaDetailPage</name>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="26"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="25"/>
         <source>Details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="40"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="43"/>
         <source>likes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="40"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="43"/>
         <source>comments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="40"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="43"/>
         <source>You liked this.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="192"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="190"/>
         <source>Remove my like</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="201"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="199"/>
         <source>Like</source>
         <translation type="unfinished"></translation>
     </message>

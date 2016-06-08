@@ -32,8 +32,8 @@ ApplicationWindow {
 
     function getInitialPage() {
         loadFavTags()
-        var username = Storage.get("username", "");
-        var password = Storage.get("password", "")
+        var username = Storage.get("username");
+        var password = Storage.get("password")
         if (username == "" ||  password == "") {
             console.log("Not logined")
             return Qt.resolvedUrl("pages/AuthPage.qml")

@@ -1,7 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "../MediaStreamMode.js" as MediaStreamMode
-import "../Api.js" as API
 
 Item {
 
@@ -99,25 +98,36 @@ Item {
 
     function loadStreamPreviewDataFinished(data) {
         streamData = data;
-        if(data ===null || data === undefined || data.data === undefined) {
+        if(data ===null || data === undefined || data.items.length === 0)
+        {
             recentMediaLoaded=true;
             errorOccurred=true
             return;
         }
         errorOccurred = false
         recentMediaModel.clear();
-        var elementsCount = data.data.length > previewElementsCount ? previewElementsCount : data.data.length;
+        var elementsCount = data.items.length > previewElementsCount ? previewElementsCount : data.items.length;
         for(var i=0; i<elementsCount; i++) {
-            recentMediaModel.append(data.data[i]);
+            recentMediaModel.append(data.items[i]);
         }
         recentMediaLoaded=true;
     }
 
     function refreshContent(cb) {
         getFeed(mode,tag,true,function(data) {
-            loadStreamPreviewDataFinished(data);
-            cb();
+            if(mode === 0)
+            {
+                instagram.getTimeLine();
+            }
         })
     }
 
+    Connections{
+        target: instagram
+        onTimeLineDataReady: {
+            console.log(answer)
+            var data = JSON.parse(answer);
+            loadStreamPreviewDataFinished(data);
+        }
+    }
 }

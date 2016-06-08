@@ -22,12 +22,12 @@ Rectangle {
         anchors.top: userInfo.top
         height: userInfo.height
         width: height
-        source: item.user.profile_picture
+        source: item.caption.user.profile_pic_url
     }
 
     Label {
         id:username
-        text: item.user.username
+        text: item.caption.user.username
         anchors.right: profilpicture.left
         anchors.rightMargin: Theme.paddingMedium
         anchors.top: userInfo.top
