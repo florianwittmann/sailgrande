@@ -25,7 +25,6 @@ Page {
     property string favoriteTag: ""
 
     onStatusChanged: {
-
         if (status === PageStatus.Active) {
             refreshCallback = startPageRefreshCB
             updateAllFeeds()
@@ -226,7 +225,7 @@ Page {
 
 
     Component.onCompleted: {
-        loadProfilePreview()
+
     }
 
     function startPageRefreshCB() {
@@ -239,14 +238,28 @@ Page {
         myFeedBlock.refreshContent(refreshDone)
     }
 
-    function loadProfilePreview() {
-        API.get_UserById('self', loadProfilePreviewFinished)
+    Connections{
+        target: instagram
+        onProfileConnected:{
+            var username_id = instagram.getUsernameId();
+            instagram.getUsernameInfo(username_id)
+
+            console.log("PROFILE"+answer)
+        }
     }
 
-    function loadProfilePreviewFinished(data) {
-        if (data.meta.code === 200) {
-            user = data.data
-            API.selfId = user.id
+    Connections{
+        target: instagram
+        onUsernameDataReady: {
+            var obj = JSON.parse(answer)
+            user = obj.user
+        }
+    }
+
+    Connections{
+        target: instagram
+        onProfileConnectedFail:{
+            app.cover = Qt.resolvedUrl("AuthPage.qml")
         }
     }
 }

@@ -61,7 +61,17 @@ Item {
     }
 
     Grid {
-        height: recentMediaSize * streamPreviewRowCount
+        height: {
+            if(recentMediaModel.count >= streamPreviewColumnCount*streamPreviewColumnCount)
+            {
+                recentMediaSize*streamPreviewColumnCount
+            }
+            else
+            {
+                recentMediaSize*(Math.ceil(recentMediaModel.count/streamPreviewColumnCount))
+            }
+        }
+
         id: grid
         columns: streamPreviewColumnCount
         anchors.left: parent.left
@@ -125,7 +135,6 @@ Item {
     Connections{
         target: instagram
         onTimeLineDataReady: {
-            console.log(answer)
             var data = JSON.parse(answer);
             loadStreamPreviewDataFinished(data);
         }

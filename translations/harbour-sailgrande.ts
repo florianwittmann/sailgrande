@@ -236,47 +236,47 @@
 <context>
     <name>StartPage</name>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="90"/>
+        <location filename="../qml/pages/StartPage.qml" line="89"/>
         <source>Welcome</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="129"/>
+        <location filename="../qml/pages/StartPage.qml" line="128"/>
         <source>My Feed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="136"/>
+        <location filename="../qml/pages/StartPage.qml" line="135"/>
         <source>Popular</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="144"/>
+        <location filename="../qml/pages/StartPage.qml" line="143"/>
         <source>Tagged with %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="178"/>
+        <location filename="../qml/pages/StartPage.qml" line="177"/>
         <source>All pinned tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="202"/>
+        <location filename="../qml/pages/StartPage.qml" line="201"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="207"/>
+        <location filename="../qml/pages/StartPage.qml" line="206"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="212"/>
+        <location filename="../qml/pages/StartPage.qml" line="211"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="217"/>
+        <location filename="../qml/pages/StartPage.qml" line="216"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>

@@ -182,10 +182,9 @@ Page {
     Connections{
         target: instagram
         onProfileConnected:{
-            Storage.get("password", passwordField.text);
+            Storage.set("password", passwordField.text);
             Storage.set("username",loginField.text)
-
-            console.log("Login ok!")
+            app.cover = Qt.resolvedUrl("StartPage.qml")
         }
     }
 

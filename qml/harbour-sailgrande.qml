@@ -12,9 +12,6 @@ import "Cover.js" as CoverCtl
 import "FavManager.js" as FavManager
 
 ApplicationWindow {
-
-
-
     id: app
     property var cachedFeeds : null
     property var cachedFeedsTime : null
@@ -34,14 +31,13 @@ ApplicationWindow {
         loadFavTags()
         var username = Storage.get("username");
         var password = Storage.get("password")
-        if (username == "" ||  password == "") {
+        if (username === "" ||  password === "" || username === undefined || password === undefined) {
             console.log("Not logined")
             return Qt.resolvedUrl("pages/AuthPage.qml")
         } else {
             instagram.setUsername(username);
             instagram.setPassword(password);
-            instagram.login();
-
+            instagram.login(true);
             return Qt.resolvedUrl(Qt.resolvedUrl("pages/StartPage.qml"))
         }
     }
