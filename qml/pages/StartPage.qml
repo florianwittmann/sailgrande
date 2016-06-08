@@ -245,6 +245,7 @@ Page {
         onUsernameDataReady: {
             var obj = JSON.parse(answer)
             user = obj.user
+            app.user = obj.user
         }
     }
 

@@ -68,7 +68,7 @@ Item {
             }
             else
             {
-                recentMediaSize*(Math.ceil(recentMediaModel.count/streamPreviewRowCount))
+                recentMediaSize*(Math.ceil(recentMediaModel.count/streamPreviewRowCount)+1)
             }
         }
 

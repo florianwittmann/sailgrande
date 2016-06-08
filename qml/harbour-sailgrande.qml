@@ -19,6 +19,8 @@ ApplicationWindow {
     property var refreshCallback : null
     property bool refreshCallbackPending : false
 
+    property var user
+
 
     initialPage: getInitialPage()
     cover: Qt.resolvedUrl("cover/CoverPage.qml")

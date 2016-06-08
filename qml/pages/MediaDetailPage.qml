@@ -9,7 +9,6 @@ Page {
 
     allowedOrientations:  Orientation.All
 
-
     property var item
     property bool playVideo : false
     property bool userLikedThis : false
@@ -185,6 +184,29 @@ Page {
 
 
         PullDownMenu {
+
+            MenuItem {
+                id: followMenu
+                text: qsTr("Follow")
+                visible: item.user.pk != app.user.pk && item.user.friendship_status
+                onClicked: {
+                    instagram.follow(item.user.pk)
+                    followMenu.visible = false
+                    unFollowMenu.visible = true
+                }
+            }
+
+            MenuItem {
+                id: unFollowMenu
+                text: qsTr("Un Follow")
+                visible: item.user.pk != app.user.pk && !item.user.friendship_status
+                onClicked: {
+                    instagram.unFollow(item.user.pk)
+                    unFollowMenu.visible = false
+                    followMenu.visible = true
+                }
+            }
+
             MenuItem {
                 id: unLikeMenu
                 text: qsTr("Remove my like")

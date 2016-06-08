@@ -83,7 +83,7 @@ BackgroundItem {
 
                 id: description
                 visible: feedsShowCaptions && text !== "" && !landscapeMode
-                text: item.caption !== undefined ? item.caption.text : ""
+                text: item.caption.text !== undefined ? item.caption.text : ""
                 anchors.left: parent.left
                 anchors.leftMargin: Theme.paddingMedium
                 anchors.right: parent.right

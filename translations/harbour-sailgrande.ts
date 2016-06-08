@@ -99,33 +99,43 @@
 <context>
     <name>MediaDetailPage</name>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="25"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="24"/>
         <source>Details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="43"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="42"/>
         <source>likes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="43"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="42"/>
         <source>comments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="43"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="42"/>
         <source>You liked this.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="190"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="201"/>
+        <source>Un Follow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="212"/>
         <source>Remove my like</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="199"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="221"/>
         <source>Like</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="190"/>
+        <source>Follow</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
