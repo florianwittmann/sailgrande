@@ -132,7 +132,7 @@ Page {
     }
 
     function mediaDataFinished(data) {
-        if (data === undefined || data.data === undefined) {
+        if (data === undefined || data.items === undefined) {
             dataLoaded = true
             errorOccurred = true
             return
@@ -144,13 +144,13 @@ Page {
 
         errorOccurred = false
 
-        for (var i = 0; i < data.data.length; i++) {
-            mediaModel.append(data.data[i])
+        for (var i = 0; i < data.items.length; i++) {
+            mediaModel.append(data.items[i])
         }
 
         if(mediaModel.count>0) {
 
-            var url = mediaModel.get(0).images.thumbnail.url
+            var url = mediaModel.get(0).image_versions2.candidates[mediaModel.get(0).image_versions2.candidates.length-1].url
             var username = mediaModel.get(0).user.username
             setCoverImage(url, username)
         }

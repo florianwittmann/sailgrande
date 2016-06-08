@@ -22,7 +22,7 @@ BackgroundItem {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 height: image.width
-                source: item.images ? item.images.low_resolution.url : ""
+                source: image_versions2.candidates[0].url
 
                 Image {
                     anchors.centerIn: parent
