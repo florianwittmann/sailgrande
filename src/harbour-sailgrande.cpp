@@ -8,6 +8,8 @@
 #include <QQuickView>
 #include <QTranslator>
 
+#include "api/instagram.h"
+
 int main(int argc, char *argv[])
 {
    QGuiApplication* app = SailfishApp::application(argc, argv);
@@ -28,6 +30,7 @@ int main(int argc, char *argv[])
 
    view->setTitle("SailGrande");
 
+   qmlRegisterType<Instagram>("instagram",1,0,"Instagram");
 
    QUrl pageSource = SailfishApp::pathTo("qml/harbour-sailgrande.qml");
    view->setSource(pageSource);

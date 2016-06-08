@@ -6,24 +6,12 @@ import "../Storage.js" as Storage
 import "../Api.js" as API
 
 Page {
-
-    property string client_id: "b1c42c7d03924317a19c5dc603c727e3"
-    property string redirect_uri: "http://localhost:3850/Home/Auth"
-
-    property string auth_url: "https://instagram.com/oauth/authorize/?client_id=" + client_id
-                              + "&scope=likes+comments+relationships&redirect_uri="
-                              + redirect_uri + "&response_type=token"
-    property string logout_url: "https://instagram.com/accounts/logout"
-    property string loggedOut_url: "http://instagram.com/"
-
-    property bool showWebview: false
-
     property bool logout: false
 
     Column {
         id: col
         spacing: 15
-        visible: !showWebview
+        visible: !loginArea.visible
         anchors.fill: parent
         PageHeader {
             title: "SailGrande"
@@ -56,64 +44,155 @@ Page {
             anchors.horizontalCenter: parent.horizontalCenter
             text: qsTr("Continue")
             onClicked: {
-                webview.url = auth_url
-                webview.visible = true
-                showWebview = true
+                loginArea.visible = true
             }
         }
     }
 
-    SilicaWebView {
-        id: webview
-        visible: showWebview
-        anchors.fill: parent
-        onUrlChanged: {
-            console.log("Auth: " + url)
-            if (url.toString() === "")
-                return
-
-            if (url.toString().indexOf(redirect_uri) == 0) {
-                //Success
-                console.log(url)
-                var extracted = url.toString().substring(
-                            redirect_uri.length + 14)
-                var posExpire = extracted.indexOf("&expires=")
-                if (posExpire != -1) {
-                    extracted = extracted.slice(0, posExpire)
-                }
-                API.access_token = extracted
-
-                authentificated()
-            } else {
-
-            }
-
-        }
-    }
-
-    SilicaWebView {
-        id: logOutWebview
+    Rectangle{
+        id: loginArea
         visible: false
-        onUrlChanged: {
-           console.log("Logout: " + url)
-            if (url.toString() === "")
-                return
-            if (logout) {
-                if (url.toString() === loggedOut_url) {
-                    logout = false
+
+        width: parent.width
+        height: parent.height
+
+        Image{
+            id: backImage
+            width: parent.width
+            height: parent.height
+
+            source: "../images/cover.jpg"
+
+            fillMode: Image.PreserveAspectCrop
+
+            clip: true
+        }
+
+        Rectangle{
+            id: entherAction
+            color: "white"
+            clip: true
+            radius: 5
+
+            width: parent.width-0.25*parent.width
+            height: Theme.itemSizeMedium*3
+
+            anchors{
+                bottom: parent.bottom
+                bottomMargin: 0.125*parent.width
+                left: parent.left
+                leftMargin: 0.125*parent.width
+            }
+
+            TextField{
+                id: loginField
+                width: parent.width-10
+                height: Theme.itemSizeMedium
+
+                placeholderText: qsTr("Login")
+
+                anchors{
+                    top: parent.top
+                    left: parent.left
+                    leftMargin: 5
+                }
+            }
+
+            TextField{
+                id: passwordField
+                width: parent.width-10
+                height: Theme.itemSizeMedium
+
+                placeholderText: qsTr("Password")
+                echoMode: TextInput.Password
+
+                anchors{
+                    top: loginField.bottom
+                    left: parent.left
+                    leftMargin: 5
+                }
+            }
+
+            Rectangle{
+                id: loginButton
+                width: parent.width
+                height: Theme.itemSizeMedium
+                radius: 5
+
+                color: "#5caa15"
+
+                anchors{
+                    bottom: parent.bottom
+                    left: parent.left
+                }
+
+                Text{
+                    text: qsTr("Login")
+                    color: "white"
+                    width: parent.width
+                    height: parent.height/3*2
+
+                    fontSizeMode: Text.Fit
+                    minimumPixelSize: 10
+                    font.pixelSize: 72
+
+                    anchors{
+                        verticalCenter: parent.verticalCenter
+                    }
+
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+
+                Rectangle{
+                    color: parent.color
+                    width: parent.radius
+                    height: parent.radius
+                    anchors{
+                        top: parent.top
+                        left: parent.left
+                    }
+                }
+
+                Rectangle{
+                    color: parent.color
+                    width: parent.radius
+                    height: parent.radius
+                    anchors{
+                        top: parent.top
+                        right: parent.right
+                    }
+                }
+
+                MouseArea{
+                    anchors.fill: parent
+                    onClicked: {
+                        if(loginField.text && passwordField.text)
+                        {
+                            instagram.setUsername(loginField.text);
+                            instagram.setPassword(passwordField.text);
+                            instagram.login(true);
+                        }
+                    }
                 }
             }
         }
     }
 
-    function authentificated() {
-        Storage.set("authtoken", API.access_token)
-        pageStack.replace(Qt.resolvedUrl("StartPage.qml"))
+    Connections{
+        target: instagram
+        onProfileConnected:{
+            Storage.get("password", passwordField.text);
+            Storage.set("username",loginField.text)
+
+            console.log("Login ok!")
+        }
     }
 
-    Component.onCompleted: {
-        if (logout) {
-            logOutWebview.url = logout_url
+    Connections{
+        target: instagram
+        onProfileConnectedFail:{
+            console.log(answer)
         }
     }
 }

@@ -67,13 +67,24 @@
 <context>
     <name>AuthPage</name>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="45"/>
+        <location filename="../qml/pages/AuthPage.qml" line="33"/>
         <source>Welcome to SailGrande, an unoffical Instagram client for Sailfish. Please press &apos;continue&apos; to login to your Instagram account.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="57"/>
+        <location filename="../qml/pages/AuthPage.qml" line="45"/>
         <source>Continue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AuthPage.qml" line="92"/>
+        <location filename="../qml/pages/AuthPage.qml" line="130"/>
+        <source>Login</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AuthPage.qml" line="106"/>
+        <source>Password</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -19,7 +19,10 @@ INSTALLS += i18n_files
 
 CONFIG += sailfishapp
 
-SOURCES += src/harbour-sailgrande.cpp
+SOURCES += src/harbour-sailgrande.cpp \
+    src/api/instagramrequest.cpp \
+    src/api/instagram.cpp \
+    src/cripto/hmacsha.cpp
 
 OTHER_FILES += qml/harbour-sailgrande.qml \
     qml/cover/CoverPage.qml \
@@ -60,3 +63,8 @@ OTHER_FILES += qml/harbour-sailgrande.qml \
 # to disable building translations every time, comment out the
 # following CONFIG line
 CONFIG += sailfishapp_i18n
+
+HEADERS += \
+    src/api/instagram.h \
+    src/api/instagramrequest.h \
+    src/cripto/hmacsha.h

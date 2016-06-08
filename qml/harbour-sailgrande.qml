@@ -2,6 +2,8 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
 
+import instagram 1.0
+
 import "pages"
 import "Storage.js" as Storage
 import "Api.js" as API
@@ -10,6 +12,7 @@ import "Cover.js" as CoverCtl
 import "FavManager.js" as FavManager
 
 ApplicationWindow {
+
 
 
     id: app
@@ -23,14 +26,22 @@ ApplicationWindow {
     initialPage: getInitialPage()
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
 
+    Instagram{
+        id: instagram
+    }
+
     function getInitialPage() {
         loadFavTags()
-        var token = Storage.get("authtoken", "")
-        if (token === "" || token === null) {
-            console.log("token: " + token)
+        var username = Storage.get("username", "");
+        var password = Storage.get("password", "")
+        if (username == "" ||  password == "") {
+            console.log("Not logined")
             return Qt.resolvedUrl("pages/AuthPage.qml")
         } else {
-            API.access_token = token
+            instagram.setUsername(username);
+            instagram.setPassword(password);
+            instagram.login();
+
             return Qt.resolvedUrl(Qt.resolvedUrl("pages/StartPage.qml"))
         }
     }
