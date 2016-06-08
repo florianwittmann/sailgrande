@@ -214,7 +214,7 @@ Page {
 
     Component.onCompleted: {
         var coverdata = {}
-        coverdata.image = item.image_versions2.candidates[7].url
+        coverdata.image = item.image_versions2.candidates[item.image_versions2.candidates.length-1].url
         coverdata.username = item.user.username;
 
         setCover(CoverMode.SHOW_IMAGE,coverdata)

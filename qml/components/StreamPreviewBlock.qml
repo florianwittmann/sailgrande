@@ -3,7 +3,7 @@ import Sailfish.Silica 1.0
 import "../MediaStreamMode.js" as MediaStreamMode
 
 Item {
-
+    id: streamPreviewDlock
     height: header.height + grid.height
     width: parent.width
 
@@ -62,13 +62,13 @@ Item {
 
     Grid {
         height: {
-            if(recentMediaModel.count >= streamPreviewColumnCount*streamPreviewColumnCount)
+            if(recentMediaModel.count >= streamPreviewColumnCount*streamPreviewRowCount)
             {
-                recentMediaSize*streamPreviewColumnCount
+                recentMediaSize*streamPreviewRowCount
             }
             else
             {
-                recentMediaSize*(Math.ceil(recentMediaModel.count/streamPreviewColumnCount))
+                recentMediaSize*(Math.ceil(recentMediaModel.count/streamPreviewRowCount))
             }
         }
 
@@ -123,20 +123,36 @@ Item {
         recentMediaLoaded=true;
     }
 
-    function refreshContent(cb) {
-        getFeed(mode,tag,true,function(data) {
-            if(mode === 0)
-            {
-                instagram.getTimeLine();
-            }
-        })
+    Component.onCompleted: {
+        if(streamPreviewDlock.mode === 0)
+        {
+            instagram.getTimeLine();
+        }
+        else if(streamPreviewDlock.mode === 1)
+        {
+            instagram.getPopularFeed();
+        }
     }
 
     Connections{
         target: instagram
         onTimeLineDataReady: {
             var data = JSON.parse(answer);
-            loadStreamPreviewDataFinished(data);
+            if(streamPreviewDlock.mode === 0)
+            {
+                loadStreamPreviewDataFinished(data);
+            }
+        }
+    }
+
+    Connections{
+        target: instagram
+        onPopularFeedDataReady: {
+            var data = JSON.parse(answer);
+            if(streamPreviewDlock.mode === 1)
+            {
+                loadStreamPreviewDataFinished(data);
+            }
         }
     }
 }

@@ -426,6 +426,14 @@ void Instagram::getUsernameFeed(QString usernameID, QString maxid, QString minTi
     QObject::connect(getUserTimeLineRequest,SIGNAL(replySrtingReady(QVariant)),this,SIGNAL(userTimeLineDataReady(QVariant)));
 }
 
+void Instagram::getPopularFeed()
+{
+    InstagramRequest *getPopularFeedRequest = new InstagramRequest();
+    getPopularFeedRequest->request("feed/popular/?people_teaser_supported=1&rank_token="+this->m_rank_token+"&ranked_content=true&",NULL);
+    QObject::connect(getPopularFeedRequest,SIGNAL(replySrtingReady(QVariant)),this,SIGNAL(popularFeedDataReady(QVariant)));
+
+}
+
 void Instagram::getMediaLikers(QString mediaId)
 {
     InstagramRequest *getMediaLikersRequest = new InstagramRequest();

@@ -45,6 +45,7 @@ public slots:
     void tagFeed(QString tag);
     void getTimeLine();
     void getUsernameFeed(QString usernameID, QString maxid, QString minTimestamp);
+    void getPopularFeed();
 
     void getMediaLikers(QString mediaId);
     void getMediaComments(QString mediaId);
@@ -105,6 +106,7 @@ signals:
     void tagFeedDataReady(QVariant answer);
     void timeLineDataReady(QVariant answer);
     void userTimeLineDataReady(QVariant answer);
+    void popularFeedDataReady(QVariant answer);
 
     void mediaLikersDataReady(QVariant answer);
     void mediaCommentsDataReady(QVariant answer);

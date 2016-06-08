@@ -124,30 +124,24 @@ Page {
 
             StreamPreviewBlock {
                 id: myFeedBlock
-
                 streamTitle: qsTr('My Feed')
                 mode: MediaStreamMode.MY_STREAM_MODE
             }
 
             StreamPreviewBlock {
-                visible: startPageShowPopularFeed
                 id: popularFeedBlock
+                visible: startPageShowPopularFeed
                 streamTitle: qsTr('Popular')
                 mode: MediaStreamMode.POPULAR_MODE
             }
 
             StreamPreviewBlock {
                 id: favoriteTagFeedBlock
-
                 visible: favoriteTag !== ""
                 streamTitle: qsTr('Tagged with %1').arg(favoriteTag)
                 mode: MediaStreamMode.TAG_MODE
                 tag: favoriteTag
-
-
             }
-
-
 
             Item {
                 id:allPinnedTags
@@ -243,8 +237,6 @@ Page {
         onProfileConnected:{
             var username_id = instagram.getUsernameId();
             instagram.getUsernameInfo(username_id)
-
-            console.log("PROFILE"+answer)
         }
     }
 

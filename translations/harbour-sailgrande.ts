@@ -241,42 +241,42 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="128"/>
+        <location filename="../qml/pages/StartPage.qml" line="127"/>
         <source>My Feed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="135"/>
+        <location filename="../qml/pages/StartPage.qml" line="134"/>
         <source>Popular</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="143"/>
+        <location filename="../qml/pages/StartPage.qml" line="141"/>
         <source>Tagged with %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="177"/>
+        <location filename="../qml/pages/StartPage.qml" line="171"/>
         <source>All pinned tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="201"/>
+        <location filename="../qml/pages/StartPage.qml" line="195"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="206"/>
+        <location filename="../qml/pages/StartPage.qml" line="200"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="211"/>
+        <location filename="../qml/pages/StartPage.qml" line="205"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="216"/>
+        <location filename="../qml/pages/StartPage.qml" line="210"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
