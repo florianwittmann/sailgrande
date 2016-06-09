@@ -69,4 +69,5 @@ HEADERS += \
     src/cripto/hmacsha.h
 
 DISTFILES += \
-    qml/harbour-prostogram.qml
+    qml/harbour-prostogram.qml \
+    qml/components/Banner.qml

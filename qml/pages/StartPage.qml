@@ -191,7 +191,6 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                visible: app.user
                 text: qsTr("Logout")
                 onClicked: {
                     Storage.set("password","");

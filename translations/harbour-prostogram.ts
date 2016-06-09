@@ -67,24 +67,34 @@
 <context>
     <name>AuthPage</name>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="33"/>
+        <location filename="../qml/pages/AuthPage.qml" line="35"/>
         <source>Welcome to Prostogram, an unoffical Instagram client for Sailfish. Please press &apos;continue&apos; to login to your Instagram account.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="45"/>
+        <location filename="../qml/pages/AuthPage.qml" line="47"/>
         <source>Continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="92"/>
-        <location filename="../qml/pages/AuthPage.qml" line="135"/>
+        <location filename="../qml/pages/AuthPage.qml" line="94"/>
+        <location filename="../qml/pages/AuthPage.qml" line="137"/>
         <source>Login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="108"/>
+        <location filename="../qml/pages/AuthPage.qml" line="110"/>
         <source>Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AuthPage.qml" line="183"/>
+        <source>Entering...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AuthPage.qml" line="203"/>
+        <source>Login fail!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

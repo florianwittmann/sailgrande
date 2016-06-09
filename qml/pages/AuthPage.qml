@@ -5,8 +5,13 @@ import QtQuick.LocalStorage 2.0
 import "../Storage.js" as Storage
 import "../Api.js" as API
 
+import "../components/"
+
 Page {
-    property bool logout: false
+    Banner{
+        id: banner
+        z: 1000
+    }
 
     Column {
         id: col
@@ -21,15 +26,12 @@ Page {
         }
 
         BusyIndicator {
+            id: bisy
             anchors.horizontalCenter: parent.horizontalCenter
-
-            visible: logout
-            running: logout
             size: BusyIndicatorSize.Large
         }
 
         Label {
-            visible: !logout
             text: qsTr("Welcome to Prostogram, an unoffical Instagram client for Sailfish. Please press 'continue' to login to your Instagram account.")
             anchors.left: parent.left
             anchors.leftMargin: Theme.paddingLarge
@@ -90,7 +92,7 @@ Page {
                 height: Theme.itemSizeMedium
 
                 placeholderText: qsTr("Login")
-                placeholderColor: "black"
+                placeholderColor: "gray"
                 color: "black"
 
                 anchors{
@@ -106,7 +108,7 @@ Page {
                 height: Theme.itemSizeMedium
 
                 placeholderText: qsTr("Password")
-                placeholderColor: "black"
+                placeholderColor: "gray"
                 color: "black"
 
                 echoMode: TextInput.Password
@@ -177,6 +179,8 @@ Page {
                             instagram.setUsername(loginField.text);
                             instagram.setPassword(passwordField.text);
                             instagram.login(true);
+
+                            banner.notify(qsTr("Entering..."))
                         }
                     }
                 }
@@ -196,7 +200,7 @@ Page {
     Connections{
         target: instagram
         onProfileConnectedFail:{
-            console.log(answer)
+            banner.notify(qsTr("Login fail!"))
         }
     }
 }
