@@ -37,9 +37,6 @@ ApplicationWindow {
             console.log("Not logined")
             return Qt.resolvedUrl("pages/AuthPage.qml")
         } else {
-
-            console.log(username+" - "+password)
-
             instagram.setUsername(username);
             instagram.setPassword(password);
             instagram.login(true);

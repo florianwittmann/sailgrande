@@ -273,8 +273,10 @@ Page {
 
 
     Component.onCompleted: {
+        instagram.getUsernameFeed(user.pk)
+
         refreshCallback = null
-        if(user.id === API.selfId)
+        if(app.user.pk === user.pk)
             isSelf = true;
         reload();
 
@@ -320,6 +322,22 @@ Page {
             rel_outgoing_status = data.data.outgoing_status
             rel_incoming_status = data.data.incoming_status
             relationStatusLoaded = true;
+        }
+    }
+
+    Connections{
+        target: instagram
+        onUserTimeLineDataReady:{
+            var data = JSON.parse(answer);
+            if(data === undefined || data.items === undefined) {
+                recentMediaLoaded=true;
+                return;
+            }
+            recentMediaData = data
+            for(var i=0; i<data.items.length; i++) {
+                recentMediaModel.append(data.items[i]);
+            }
+            recentMediaLoaded=true;
         }
     }
 }
