@@ -10,7 +10,7 @@
 #   - translation filenames have to be changed
 
 # The name of your application
-TARGET = harbour-sailgrande
+TARGET = harbour-prostogram
 
 i18n_files.files = translations
 i18n_files.path = /usr/share/$$TARGET
@@ -19,24 +19,23 @@ INSTALLS += i18n_files
 
 CONFIG += sailfishapp
 
-SOURCES += src/harbour-sailgrande.cpp \
+SOURCES += src/harbour-prostogram.cpp \
     src/api/instagramrequest.cpp \
     src/api/instagram.cpp \
     src/cripto/hmacsha.cpp
 
-OTHER_FILES += qml/harbour-sailgrande.qml \
+OTHER_FILES += qml/harbour-prostogram.qml \
     qml/cover/CoverPage.qml \
     qml/pages/SecondPage.qml \
-    rpm/harbour-sailgrande.spec \
-    rpm/harbour-sailgrande.yaml \
+    rpm/harbour-prostogram.spec \
+    rpm/harbour-prostogram.yaml \
     translations/* \
-    harbour-sailgrande.desktop \
+    harbour-prostogram.desktop \
     qml/Api.js \
     qml/Helper.js \
     qml/Storage.js \
     qml/components/FeedItem.qml \
     qml/components/UserInfoBlock.qml \
-    qml/harbour-sailgrande.qml \
     LICENSE \
     Changelog \
     qml/pages/AuthPage.qml \
@@ -68,3 +67,6 @@ HEADERS += \
     src/api/instagram.h \
     src/api/instagramrequest.h \
     src/cripto/hmacsha.h
+
+DISTFILES += \
+    qml/harbour-prostogram.qml

@@ -1,18 +1,18 @@
-Name: harbour-sailgrande
-Summary: An unofficial client for Instagram
-Version: 0.5.2
+Name: harbour-prostogram
+Summary: An unofficial client for Instagram. Alpha release.
+Version: 0.5.9
 Release: 1
 # The contents of the Group field should be one of the groups listed here:
 # http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
 Group: Qt/Qt
-URL: https://openrepos.net/content/forgrimm/sailgrande
+URL: https://github.com/neochapay/sailgrande
 License: MIT License
 # This must be generated before uploading a package to a remote build service.
 # Usually this line does not need to be modified.
 Sources:
 - '%{name}-%{version}.tar.bz2'
 Description: |
-  SailGrande is an unofficial client for Instagram
+  Prostogram is an unofficial client for Instagram
 Configure: none
 # The qtc5 builder inserts macros to allow QtCreator to have fine
 # control over qmake/make execution

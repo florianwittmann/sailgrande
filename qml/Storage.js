@@ -1,5 +1,5 @@
 function getDatabase() {
-     return LocalStorage.openDatabaseSync("SailGrande", "0.1", "SettingsDatabase", 100000);
+     return LocalStorage.openDatabaseSync("Prostogram", "0.1", "SettingsDatabase", 100000);
 }
 
 function set(setting, value) {

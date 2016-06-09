@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
 X-Nemo-Application-Type=silica-qt5
-Icon=harbour-sailgrande
-Exec=harbour-sailgrande
-Name=SailGrande
+Icon=harbour-prostogram
+Exec=harbour-prostogram
+Name=Prostogram

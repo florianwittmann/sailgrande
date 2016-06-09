@@ -14,7 +14,7 @@ Page {
         visible: !loginArea.visible
         anchors.fill: parent
         PageHeader {
-            title: "SailGrande"
+            title: "Prostogram"
         }
         Image {
             source: "../images/header_logo.png"
@@ -30,7 +30,7 @@ Page {
 
         Label {
             visible: !logout
-            text: qsTr("Welcome to SailGrande, an unoffical Instagram client for Sailfish. Please press 'continue' to login to your Instagram account.")
+            text: qsTr("Welcome to Prostogram, an unoffical Instagram client for Sailfish. Please press 'continue' to login to your Instagram account.")
             anchors.left: parent.left
             anchors.leftMargin: Theme.paddingLarge
             anchors.right: parent.right
