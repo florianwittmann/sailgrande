@@ -2,7 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
 
-import instagram 1.0
+import harbour.prostogram 1.0
 
 import "pages"
 import "Storage.js" as Storage

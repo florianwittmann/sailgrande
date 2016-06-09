@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
    view->setTitle("Prostogram");
 
-   qmlRegisterType<Instagram>("instagram",1,0,"Instagram");
+   qmlRegisterType<Instagram>("harbour.prostogram",1,0,"Instagram");
 
    QUrl pageSource = SailfishApp::pathTo("qml/harbour-prostogram.qml");
    view->setSource(pageSource);
