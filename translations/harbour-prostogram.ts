@@ -78,12 +78,12 @@
     </message>
     <message>
         <location filename="../qml/pages/AuthPage.qml" line="92"/>
-        <location filename="../qml/pages/AuthPage.qml" line="130"/>
+        <location filename="../qml/pages/AuthPage.qml" line="135"/>
         <source>Login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AuthPage.qml" line="106"/>
+        <location filename="../qml/pages/AuthPage.qml" line="108"/>
         <source>Password</source>
         <translation type="unfinished"></translation>
     </message>
@@ -272,21 +272,26 @@
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="195"/>
+        <source>Logout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/StartPage.qml" line="207"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="200"/>
+        <location filename="../qml/pages/StartPage.qml" line="212"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="205"/>
+        <location filename="../qml/pages/StartPage.qml" line="217"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="210"/>
+        <location filename="../qml/pages/StartPage.qml" line="222"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>

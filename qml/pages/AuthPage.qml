@@ -90,6 +90,8 @@ Page {
                 height: Theme.itemSizeMedium
 
                 placeholderText: qsTr("Login")
+                placeholderColor: "black"
+                color: "black"
 
                 anchors{
                     top: parent.top
@@ -104,6 +106,9 @@ Page {
                 height: Theme.itemSizeMedium
 
                 placeholderText: qsTr("Password")
+                placeholderColor: "black"
+                color: "black"
+
                 echoMode: TextInput.Password
 
                 anchors{
@@ -184,7 +189,7 @@ Page {
         onProfileConnected:{
             Storage.set("password", passwordField.text);
             Storage.set("username",loginField.text)
-            app.cover = Qt.resolvedUrl("StartPage.qml")
+            pageStack.push(Qt.resolvedUrl("StartPage.qml"));
         }
     }
 

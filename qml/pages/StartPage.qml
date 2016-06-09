@@ -190,6 +190,18 @@ Page {
 
 
         PullDownMenu {
+            MenuItem {
+                visible: app.user
+                text: qsTr("Logout")
+                onClicked: {
+                    Storage.set("password","");
+                    Storage.set("username","");
+
+                    instagram.logout();
+
+                    pageStack.push(Qt.resolvedUrl("AuthPage.qml"))
+                }
+            }
 
             MenuItem {
                 text: qsTr("About")

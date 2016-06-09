@@ -93,6 +93,14 @@ void Instagram::login(bool forse)
 
 void Instagram::logout()
 {
+    QFile f_cookie(m_data_path.absolutePath()+"/cookies.dat");
+    QFile f_userId(m_data_path.absolutePath()+"/userId.dat");
+    QFile f_token(m_data_path.absolutePath()+"/token.dat");
+
+    f_cookie.remove();
+    f_userId.remove();
+    f_token.remove();
+
     InstagramRequest *looutRequest = new InstagramRequest();
     looutRequest->request("accounts/logout/",NULL);
     QObject::connect(looutRequest,SIGNAL(replySrtingReady(QVariant)),this,SIGNAL(doLogout(QVariant)));

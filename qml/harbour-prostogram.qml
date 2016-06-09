@@ -33,10 +33,13 @@ ApplicationWindow {
         loadFavTags()
         var username = Storage.get("username");
         var password = Storage.get("password")
-        if (username === "" ||  password === "" || username === undefined || password === undefined) {
+        if (username === "" ||  password === "" || username === undefined || password === undefined || username === null || password === null ) {
             console.log("Not logined")
             return Qt.resolvedUrl("pages/AuthPage.qml")
         } else {
+
+            console.log(username+" - "+password)
+
             instagram.setUsername(username);
             instagram.setPassword(password);
             instagram.login(true);
