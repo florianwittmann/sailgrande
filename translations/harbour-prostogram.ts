@@ -129,22 +129,22 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="190"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="222"/>
         <source>Follow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="201"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="233"/>
         <source>Un Follow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="212"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="244"/>
         <source>Remove my like</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="221"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="253"/>
         <source>Like</source>
         <translation type="unfinished"></translation>
     </message>

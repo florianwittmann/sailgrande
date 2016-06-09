@@ -123,6 +123,38 @@ Page {
                 id:userInfo
             }
 
+            Rectangle{
+                id: doComment
+                width: parent.width
+                height: childrenRect.height
+                color: "transparent"
+
+                IconButton{
+                    id: sendCommentButton
+                    icon.source: "image://theme/icon-m-bubble-universal?" + (pressed
+                                     ? Theme.highlightColor
+                                     : Theme.primaryColor)
+                    anchors.right: parent.right
+
+                    onClicked: {
+                        commentBody.readOnly = true
+                        if(commentBody.text.length > 0)
+                        {
+                            instagram.postComment(item.id, commentBody.text)
+                        }
+                    }
+                }
+
+                TextField{
+                    id: commentBody
+                    width: parent.width-sendCommentButton.width
+                    anchors{
+                        verticalCenter: sendCommentButton.verticalCenter
+                        left: parent.left
+                    }
+                }
+            }
+
             Repeater {
                 id: commentsRepeater
                 model: commentsModel
@@ -279,6 +311,15 @@ Page {
             out.comments.forEach(function(comment){
                 commentsModel.append(comment)
             })
+        }
+    }
+
+    Connections{
+        target: instagram
+        onCommentPosted:{
+            instagram.getMediaComments(item.id);
+            commentBody.readOnly = false
+            commentBody.text = "";
         }
     }
 }
