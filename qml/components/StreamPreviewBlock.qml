@@ -123,7 +123,8 @@ Item {
         recentMediaLoaded=true;
     }
 
-    Component.onCompleted: {
+    function refresh()
+    {
         if(streamPreviewDlock.mode === 0)
         {
             instagram.getTimeLine();
@@ -132,6 +133,10 @@ Item {
         {
             instagram.getPopularFeed();
         }
+    }
+
+    Component.onCompleted: {
+        refresh();
     }
 
     Connections{

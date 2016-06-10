@@ -31,37 +31,6 @@ Page {
         }
     }
 
-    function updateAllFeeds() {
-        if (updateRunning) {
-            return
-        }
-
-        console.log("update...")
-        updateRunning = true
-        myFeedBlock.refreshContent(refreshMyFeedBlockFinished)
-    }
-
-    function refreshMyFeedBlockFinished() {
-        getFeed(MediaStreamMode.MY_STREAM_MODE, "", true, function (data) {
-            setCoverRefresh(CoverMode.SHOW_FEED, data,MediaStreamMode.MY_STREAM_MODE,"")
-        })
-
-        refreshPopularFeedBlock()
-    }
-
-    function refreshPopularFeedBlock() {
-        if (!startPageShowPopularFeed) {
-            refreshFavoriteTagFeedBlock()
-            return
-        }
-
-        popularFeedBlock.refreshContent(refreshPopularFeedBlockFinished)
-    }
-
-    function refreshPopularFeedBlockFinished() {
-        refreshFavoriteTagFeedBlock()
-    }
-
     function refreshFavoriteTagFeedBlock() {
 
         if(FavManager.favTag===null) FavManager.favTag = ""
@@ -72,11 +41,6 @@ Page {
         }
 
         favoriteTagFeedBlock.refreshContent(refreshDone)
-    }
-
-    function refreshDone() {
-        updateRunning = false
-        console.log("RefreshDone")
     }
 
     SilicaFlickable {
