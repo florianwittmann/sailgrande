@@ -21,7 +21,7 @@ BackgroundItem {
                 id: image
                 anchors.left: parent.left
                 anchors.right: parent.right
-                height: image.width
+                height: parent.width/item.image_versions2.candidates[0].width*item.image_versions2.candidates[0].height
                 source: image_versions2.candidates[0].url
 
                 Image {
