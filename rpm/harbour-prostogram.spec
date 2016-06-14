@@ -13,7 +13,7 @@ Name:       harbour-prostogram
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    An unofficial client for Instagram. Alpha release.
-Version:    0.5.9
+Version:    0.5.10
 Release:    1
 Group:      Qt/Qt
 License:    MIT License

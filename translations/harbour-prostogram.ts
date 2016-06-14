@@ -167,7 +167,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="101"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="100"/>
         <source>There is no picture in this feed.</source>
         <translation type="unfinished"></translation>
     </message>
