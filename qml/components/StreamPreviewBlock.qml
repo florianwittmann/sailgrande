@@ -155,8 +155,6 @@ Item {
         target: instagram
         onTimeLineDataReady: {
 
-            console.log(answer)
-
             var data = JSON.parse(answer);
             if(streamPreviewDlock.mode === 0)
             {
