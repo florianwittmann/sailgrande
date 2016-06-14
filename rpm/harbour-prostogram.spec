@@ -14,10 +14,10 @@ Name:       harbour-prostogram
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    An unofficial client for Instagram. Alpha release.
 Version:    0.5.10
-Release:    1
+Release:    2
 Group:      Qt/Qt
 License:    MIT License
-URL:        https://github.com/neochapay/sailgrande
+URL:        https://github.com/neochapay/prostogram
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-prostogram.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9

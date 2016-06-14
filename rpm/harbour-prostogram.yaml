@@ -1,11 +1,11 @@
 Name: harbour-prostogram
 Summary: An unofficial client for Instagram. Alpha release.
 Version: 0.5.10
-Release: 1
+Release: 2
 # The contents of the Group field should be one of the groups listed here:
 # http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
 Group: Qt/Qt
-URL: https://github.com/neochapay/sailgrande
+URL: https://github.com/neochapay/prostogram
 License: MIT License
 # This must be generated before uploading a package to a remote build service.
 # Usually this line does not need to be modified.

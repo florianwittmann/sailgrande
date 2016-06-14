@@ -115,7 +115,7 @@ Item {
             return;
         }
         errorOccurred = false
-        var elementsCount = data.items.length > previewElementsCount ? previewElementsCount : data.items.length;
+        var elementsCount = data.items.length > previewElementsCount-recentMediaModel.count ? previewElementsCount-recentMediaModel.count : data.items.length;
         for(var i=0; i<elementsCount; i++) {
             recentMediaModel.append(data.items[i]);
         }
