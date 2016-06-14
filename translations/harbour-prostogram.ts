@@ -152,22 +152,22 @@
 <context>
     <name>MediaStreamPage</name>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="50"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="49"/>
         <source>Pin this tag feed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="64"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="63"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="72"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="71"/>
         <source>Load more</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaStreamPage.qml" line="102"/>
+        <location filename="../qml/pages/MediaStreamPage.qml" line="101"/>
         <source>There is no picture in this feed.</source>
         <translation type="unfinished"></translation>
     </message>

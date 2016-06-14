@@ -53,6 +53,16 @@ SilicaListView {
 
         }
 
+            PullDownMenu{
+                id: dwnMenu
+                MenuItem{
+                    text: qsTr("Load more")
+                    onClicked: {
+
+                    }
+                }
+            }
+
             ContextMenu {
                 id: favContextMenu
                 MenuItem {

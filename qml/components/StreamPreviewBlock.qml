@@ -115,16 +115,28 @@ Item {
             return;
         }
         errorOccurred = false
-        recentMediaModel.clear();
         var elementsCount = data.items.length > previewElementsCount ? previewElementsCount : data.items.length;
         for(var i=0; i<elementsCount; i++) {
             recentMediaModel.append(data.items[i]);
         }
         recentMediaLoaded=true;
+
+        if(data.items.length < streamPreviewColumnCount*streamPreviewRowCount && data.more_available)
+        {
+            if(streamPreviewDlock.mode === 0)
+            {
+                instagram.getTimeLine(data.next_max_id);
+            }
+            else if(streamPreviewDlock.mode === 1)
+            {
+                instagram.getPopularFeed(data.next_max_id);
+            }
+        }
     }
 
     function refresh()
     {
+        recentMediaModel.clear();
         if(streamPreviewDlock.mode === 0)
         {
             instagram.getTimeLine();
@@ -142,6 +154,9 @@ Item {
     Connections{
         target: instagram
         onTimeLineDataReady: {
+
+            console.log(answer)
+
             var data = JSON.parse(answer);
             if(streamPreviewDlock.mode === 0)
             {

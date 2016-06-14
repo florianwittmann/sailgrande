@@ -31,6 +31,24 @@ Page {
         }
     }
 
+    function updateAllFeeds() {
+        if (updateRunning) {
+            return
+        }
+
+        myFeedBlock.refresh();
+        if(popularFeedBlock.visible)
+        {
+            popularFeedBlock.refresh();
+        }
+
+        if(favoriteTagFeedBlock.refresh())
+        {
+            favoriteTagFeedBlock.refresh();
+        }
+    }
+
+
     function refreshFavoriteTagFeedBlock() {
 
         if(FavManager.favTag===null) FavManager.favTag = ""

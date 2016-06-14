@@ -3,7 +3,6 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
 
-import "../Api.js" as API
 import "../Helper.js" as Helper
 import "../components"
 import "../MediaStreamMode.js" as MediaStreamMode
@@ -62,7 +61,7 @@ Page {
 
             MenuItem {
                 text: qsTr("Refresh")
-                onClicked: getMediaData(false)
+                onClicked: parent.refresh()
             }
         }
 

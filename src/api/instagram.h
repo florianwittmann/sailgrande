@@ -43,7 +43,7 @@ public slots:
 
     void getUserTags(QString usernameId);
     void tagFeed(QString tag);
-    void getTimeLine();
+    void getTimeLine(QString max_id = "");
     void getUsernameFeed(QString usernameID, QString maxid = "", QString minTimestamp = "");
     void getPopularFeed();
 

@@ -408,10 +408,17 @@ void Instagram::tagFeed(QString tag)
     QObject::connect(getTagFeedRequest,SIGNAL(replySrtingReady(QVariant)),this,SIGNAL(tagFeedDataReady(QVariant)));
 }
 
-void Instagram::getTimeLine()
+void Instagram::getTimeLine(QString max_id)
 {
+    QString target ="feed/timeline/?rank_token="+this->m_rank_token+"&ranked_content=true&";
+
+    if(max_id.length() > 0)
+    {
+        target += "&max_id="+max_id;
+    }
+
     InstagramRequest *getTimeLineRequest = new InstagramRequest();
-    getTimeLineRequest->request("feed/timeline/?rank_token="+this->m_rank_token+"&ranked_content=true&",NULL);
+    getTimeLineRequest->request(target,NULL);
     QObject::connect(getTimeLineRequest,SIGNAL(replySrtingReady(QVariant)),this,SIGNAL(timeLineDataReady(QVariant)));
 }
 
