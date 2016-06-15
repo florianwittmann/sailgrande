@@ -108,7 +108,7 @@ Page {
             Label {
                 id: description
                 visible: text!==""
-                text: item.caption !== undefined ? item.caption.text : ""
+                text: item.caption ? item.caption.text : ""
                 anchors.left: parent.left
                 anchors.leftMargin: Theme.paddingMedium
                 anchors.right: parent.right
@@ -220,7 +220,7 @@ Page {
             MenuItem {
                 id: followMenu
                 text: qsTr("Follow")
-                visible: item.user.pk != app.user.pk && item.user.friendship_status
+                visible: item.user.pk != app.user.pk && item.user.friendship_status.following
                 onClicked: {
                     instagram.follow(item.user.pk)
                     followMenu.visible = false
@@ -231,7 +231,7 @@ Page {
             MenuItem {
                 id: unFollowMenu
                 text: qsTr("Un Follow")
-                visible: item.user.pk != app.user.pk && !item.user.friendship_status
+                visible: item.user.pk != app.user.pk && !item.user.friendship_status.following
                 onClicked: {
                     instagram.unFollow(item.user.pk)
                     unFollowMenu.visible = false

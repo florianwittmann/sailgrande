@@ -290,11 +290,6 @@ Page {
             reloadRelationship("");
     }
 
-    function reloadRelationship(data) {
-        console.log(Helper.serialize(data))
-        API.get_UserRelationshipById(user.id,userRelationshipFinished);
-    }
-
 
     function reloadFinished(data) {
         if(data.meta.code===200) {
@@ -317,13 +312,6 @@ Page {
 
     }
 
-    function userRelationshipFinished(data) {
-        if(data.meta.code===200) {
-            rel_outgoing_status = data.data.outgoing_status
-            rel_incoming_status = data.data.incoming_status
-            relationStatusLoaded = true;
-        }
-    }
 
     Connections{
         target: instagram

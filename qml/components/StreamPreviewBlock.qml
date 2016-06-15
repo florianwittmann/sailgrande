@@ -154,7 +154,6 @@ Item {
     Connections{
         target: instagram
         onTimeLineDataReady: {
-
             var data = JSON.parse(answer);
             if(streamPreviewDlock.mode === 0)
             {
