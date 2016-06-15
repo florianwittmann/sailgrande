@@ -630,10 +630,3 @@ void Instagram::searchUsername(QString username)
     searchUsernameRequest->request("users/"+username+"/usernameinfo/", NULL);
     QObject::connect(searchUsernameRequest,SIGNAL(replySrtingReady(QVariant)), this, SIGNAL(searchUsernameDataReady(QVariant)));
 }
-
-void Instagram::tagFeed(QString tag)
-{
-    InstagramRequest *tagFeedRequest = new InstagramRequest();
-    tagFeedRequest->request("feed/tag/"+tag+"/?rank_token="+this->m_rank_token+"&ranked_content=true&", NULL);
-    QObject::connect(tagFeedRequest,SIGNAL(replySrtingReady(QVariant)), this, SIGNAL(tagFeedDataReady(QVariant)));
-}
