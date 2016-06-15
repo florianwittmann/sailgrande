@@ -109,42 +109,42 @@
 <context>
     <name>MediaDetailPage</name>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="24"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="25"/>
         <source>Details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="42"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="43"/>
         <source>likes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="42"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="43"/>
         <source>comments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="42"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="43"/>
         <source>You liked this.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="235"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="236"/>
         <source>Follow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="246"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="247"/>
         <source>Un Follow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="257"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="258"/>
         <source>Remove my like</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="266"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="267"/>
         <source>Like</source>
         <translation type="unfinished"></translation>
     </message>

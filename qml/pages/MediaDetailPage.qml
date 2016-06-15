@@ -3,6 +3,7 @@ import Sailfish.Silica 1.0
 import QtMultimedia 5.0
 import "../components"
 import "../CoverMode.js" as CoverMode
+import "../MediaStreamMode.js" as  MediaStreamMode
 import "../Helper.js" as Helper
 
 Page {
@@ -291,6 +292,7 @@ Page {
         if(result[0] === "tag")
         {
             console.log("Load tag "+result[1])
+            pageStack.push(Qt.resolvedUrl("../pages/MediaStreamPage.qml"),{tag: result[1], mode:  MediaStreamMode.TAG_MODE, streamTitle: 'Tagged with ' + "#"+result[1] });
         }
     }
 
