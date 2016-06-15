@@ -623,3 +623,10 @@ void Instagram::createAccount(QString username, QString password, QString email)
     createAccountRequest->request("accounts/create/",signature.toUtf8());
     QObject::connect(createAccountRequest,SIGNAL(replySrtingReady(QVariant)),this,SIGNAL(createAccountDataReady(QVariant)));
 }
+
+void Instagram::searchUsername(QString username)
+{
+    InstagramRequest *searchUsernameRequest = new InstagramRequest();
+    searchUsernameRequest->request("users/"+username+"/usernameinfo/", NULL);
+    QObject::connect(searchUsernameRequest,SIGNAL(replySrtingReady(QVariant)), this, SIGNAL(searchUsernameDataReady(QVariant)));
+}

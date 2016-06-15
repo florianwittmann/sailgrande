@@ -281,7 +281,17 @@ Page {
 
     function linkClick(link)
     {
-        console.log("LINK:"+link)
+        var result = link.split("://");
+        if(result[0] === "user")
+        {
+            console.log("Load user "+result[1])
+            instagram.searchUsername(result[1]);
+        }
+
+        if(result[0] === "tag")
+        {
+            console.log("Load tag "+result[1])
+        }
     }
 
     Component.onCompleted: {
@@ -338,6 +348,17 @@ Page {
             instagram.getMediaComments(item.id);
             commentBody.readOnly = false
             commentBody.text = "";
+        }
+    }
+
+    Connections{
+        target: instagram
+        onSearchUsernameDataReady:{
+            var data = JSON.parse(answer)
+            if(data.status === "ok")
+            {
+                pageStack.push(Qt.resolvedUrl("../pages/UserProfilPage.qml"),{user: data.user});
+            }
         }
     }
 }
