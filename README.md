@@ -14,10 +14,9 @@ Current features:
 * Show media feed for user
 * Follow/Unfollow users
 * Post comments
-
+* Show posts for a specific tag
 
 Broken features:
-* Show posts for a specific tag
 * Watch videos
 * Show own followers or followed users
 * Block and unblock users

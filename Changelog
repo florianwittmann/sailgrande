@@ -1,3 +1,9 @@
+0.5.11
+- Fix flash when back on startpage
+- Fix broken username in some pictures
+- Highlight hashtags and usernames on media description
+- Show tag feed
+
 0.5.10
 - Fix height on stream page
 - Read more on stream work fine

@@ -1,7 +1,7 @@
 Name: harbour-prostogram
 Summary: An unofficial client for Instagram. Alpha release.
-Version: 0.5.10
-Release: 2
+Version: 0.5.11
+Release: 1
 # The contents of the Group field should be one of the groups listed here:
 # http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
 Group: Qt/Qt
@@ -44,3 +44,15 @@ Files:
 # For more information about yaml and what's supported in Sailfish OS
 # build system, please see https://wiki.merproject.org/wiki/Spectacle
 
+Changelog:
+ 0.5.11
+ - Fix flash when back on startpage
+ - Fix broken username in some pictures
+ - Highlight hashtags and usernames on media description
+ - Show tag feed
+
+ 0.5.10
+ - Fix height on stream page
+ - Read more on stream work fine
+ - Can reload media stream
+ - More other little fixes
