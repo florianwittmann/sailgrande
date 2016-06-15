@@ -129,22 +129,22 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="222"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="235"/>
         <source>Follow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="233"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="246"/>
         <source>Un Follow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="244"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="257"/>
         <source>Remove my like</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MediaDetailPage.qml" line="253"/>
+        <location filename="../qml/pages/MediaDetailPage.qml" line="266"/>
         <source>Like</source>
         <translation type="unfinished"></translation>
     </message>
@@ -256,52 +256,52 @@
 <context>
     <name>StartPage</name>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="71"/>
+        <location filename="../qml/pages/StartPage.qml" line="70"/>
         <source>Welcome</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="109"/>
+        <location filename="../qml/pages/StartPage.qml" line="108"/>
         <source>My Feed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="116"/>
+        <location filename="../qml/pages/StartPage.qml" line="115"/>
         <source>Popular</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="123"/>
+        <location filename="../qml/pages/StartPage.qml" line="122"/>
         <source>Tagged with %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="153"/>
+        <location filename="../qml/pages/StartPage.qml" line="152"/>
         <source>All pinned tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="176"/>
+        <location filename="../qml/pages/StartPage.qml" line="175"/>
         <source>Logout</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="188"/>
+        <location filename="../qml/pages/StartPage.qml" line="187"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="193"/>
+        <location filename="../qml/pages/StartPage.qml" line="192"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="198"/>
+        <location filename="../qml/pages/StartPage.qml" line="197"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="203"/>
+        <location filename="../qml/pages/StartPage.qml" line="202"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>

@@ -3,7 +3,7 @@ import Sailfish.Silica 1.0
 import QtMultimedia 5.0
 import "../components"
 import "../CoverMode.js" as CoverMode
-
+import "../Helper.js" as Helper
 
 Page {
 
@@ -108,7 +108,7 @@ Page {
             Label {
                 id: description
                 visible: text!==""
-                text: item.caption ? item.caption.text : ""
+                text: item.caption ? Helper.formatString(item.caption.text) : ""
                 anchors.left: parent.left
                 anchors.leftMargin: Theme.paddingMedium
                 anchors.right: parent.right
@@ -117,6 +117,13 @@ Page {
                 wrapMode: Text.Wrap
                 font.pixelSize: Theme.fontSizeSmall
                 color: Theme.highlightColor
+                linkColor: Theme.highlightColor
+
+                textFormat: Text.StyledText
+
+                onLinkActivated: {
+                    linkClick(link);
+                }
             }
 
             UserInfoBlock {
@@ -171,7 +178,7 @@ Page {
                     }
 
                     Component.onCompleted: {
-                        labelComment.text = text;
+                        labelComment.text = Helper.formatString(text);
                     }
 
                     Label {
@@ -199,6 +206,12 @@ Page {
                         wrapMode: Text.Wrap
                         font.pixelSize: Theme.fontSizeSmall
                         color: Theme.highlightColor
+
+                        linkColor: Theme.highlightColor
+
+                        onLinkActivated: {
+                            linkClick(link);
+                        }
                     }
 
                     MouseArea {
@@ -264,6 +277,11 @@ Page {
         video.source=item.videos.low_bandwidth.url;
         video.play();
         playVideo=true;
+    }
+
+    function linkClick(link)
+    {
+        console.log("LINK:"+link)
     }
 
     Component.onCompleted: {
