@@ -148,7 +148,10 @@ Item {
     }
 
     Component.onCompleted: {
-        refresh();
+        if(recentMediaModel.count === 0)
+        {
+            refresh();
+        }
     }
 
     Connections{

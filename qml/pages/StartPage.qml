@@ -27,7 +27,6 @@ Page {
     onStatusChanged: {
         if (status === PageStatus.Active) {
             refreshCallback = startPageRefreshCB
-            updateAllFeeds()
         }
     }
 
