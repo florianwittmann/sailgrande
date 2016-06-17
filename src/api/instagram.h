@@ -20,7 +20,7 @@ public slots:
 
     QString getUsernameId(){return this->m_username_id;}
 
-    void postImage(QFile *image, QString caption, QString upload_id);
+    void postImage(QString path, QString caption, QString upload_id = "");
     void postVideo(QFile *video);
 
     void editMedia(QString mediaId, QString captionText = "");
@@ -78,6 +78,9 @@ private:
     QString m_rank_token;
     QString m_IGDataPath;
 
+    QString m_caption;
+    QString m_image_path;
+
     QDir m_data_path;
 
     bool m_isLoggedIn = false;
@@ -90,6 +93,8 @@ signals:
 
     void mediaEdited(QVariant answer);
     void mediaDeleted(QVariant answer);
+
+    void imageConfigureDataReady(QVariant answer);
 
     void removeSelftagDone(QVariant answer);
     void commentPosted(QVariant answer);
@@ -137,6 +142,7 @@ private slots:
     void doLogin();
     void syncFeatures();
     void profileConnect(QVariant profile);
+    void configurePhoto(QVariant answer);
 };
 
 #endif // INSTAGRAM_H

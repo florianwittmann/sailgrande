@@ -13,6 +13,7 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 #include <QJsonArray>
+#include <QImage>
 
 #include <QDataStream>
 
@@ -186,15 +187,120 @@ void Instagram::syncFeatures()
 }
 
 //FIXME: uploadImage is not public yeat. Give me few weeks to optimize code
-void Instagram::postImage(QFile *image, QString caption, QString upload_id)
+void Instagram::postImage(QString path, QString caption, QString upload_id)
 {
-    QByteArray dataStrem = image->readAll();
+    this->m_caption = caption;
+    this->m_image_path = path;
+
+    QFile image(path);
+    image.open(QIODevice::ReadOnly);
+    QByteArray dataStream = image.readAll();
+
+    QFileInfo info(image.fileName());
+    QString ext = info.completeSuffix();
+
     QString boundary = this->m_uuid;
 
-    if(upload_id.length() == 0)
+    if(upload_id.size() == 0)
     {
-        upload_id = QDateTime::currentMSecsSinceEpoch();
+        upload_id =QString::number(QDateTime::currentMSecsSinceEpoch());
     }
+/*Body build*/
+    QByteArray body = "";
+    body += "--"+boundary+"\r\n";
+    body += "Content-Disposition: form-data; name=\"upload_id\"\r\n\r\n";
+    body += upload_id+"\r\n";
+
+    body += "--"+boundary+"\r\n";
+    body += "Content-Disposition: form-data; name=\"_uuid\"\r\n\r\n";
+    body += this->m_uuid.replace("{","").replace("}","")+"\r\n";
+
+    body += "--"+boundary+"\r\n";
+    body += "Content-Disposition: form-data; name=\"_csrftoken\"\r\n\r\n";
+    body += this->m_token+"\r\n";
+
+    body += "--"+boundary+"\r\n";
+    body += "Content-Disposition: form-data; name=\"image_compression\"\r\n\r\n";
+    body += "{\"lib_name\":\"jt\",\"lib_version\":\"1.3.0\",\"quality\":\"70\"}\r\n";
+
+    body += "--"+boundary+"\r\n";
+    body += "Content-Disposition: form-data; name=\"photo\"; filename=\"pending_media_"+upload_id+"."+ext+"\"\r\n";
+    body += "Content-Transfer-Encoding: binary\r\n";
+    body += "Content-Type: application/octet-stream\r\n\r\n";
+
+    body += dataStream+"\r\n";
+    body += "--"+boundary+"--";
+
+    InstagramRequest *putPhotoReqest = new InstagramRequest();
+    putPhotoReqest->fileRquest("upload/photo/",boundary, body);
+
+    QObject::connect(putPhotoReqest,SIGNAL(replySrtingReady(QVariant)),this,SLOT(configurePhoto(QVariant)));
+}
+
+void Instagram::configurePhoto(QVariant answer)
+{
+    qDebug() << "conf";
+
+    QJsonDocument jsonResponse = QJsonDocument::fromJson(answer.toByteArray());
+    QJsonObject jsonObject = jsonResponse.object();
+    if(jsonObject["status"].toString() != QString("ok"))
+    {
+        emit error(jsonObject["message"].toString());
+    }
+    else
+    {
+        QString upload_id = jsonObject["upload_id"].toString();
+        if(upload_id.length() == 0)
+        {
+            emit error("Wrong UPLOAD_ID:"+upload_id);
+        }
+        else
+        {
+            QImage image = QImage(this->m_image_path);
+            InstagramRequest *configureImageRequest = new InstagramRequest();
+
+            QJsonObject device;
+                device.insert("manufacturer",   QString("Xiaomi"));
+                device.insert("model",          QString("HM 1SW"));
+                device.insert("android_version",18);
+                device.insert("android_release",QString("4.3"));
+            QJsonObject extra;
+                extra.insert("source_width",    image.width());
+                extra.insert("source_height",   image.height());
+
+            QJsonArray crop_original_size;
+                crop_original_size.append(image.width());
+                crop_original_size.append(image.height());
+            QJsonArray crop_center;
+                crop_center.append(0.0);
+                crop_center.append(-0.0);
+
+            QJsonObject edits;
+                edits.insert("crop_original_size", crop_original_size);
+                edits.insert("crop_zoom",          1.3333334);
+                edits.insert("crop_center",        crop_center);
+
+            QJsonObject data;
+                data.insert("upload_id",            upload_id);
+                data.insert("camera_model",         QString("HM1S"));
+                data.insert("source_type",          3);
+                data.insert("date_time_original",   QDateTime::currentDateTime().toString("yyyy:MM:dd HH:mm:ss"));
+                data.insert("camera_make",          QString("XIAOMI"));
+                data.insert("edits",                edits);
+                data.insert("extra",                extra);
+                data.insert("device",               device);
+                data.insert("caption",              this->m_caption);
+                data.insert("_uuid",                this->m_uuid);
+                data.insert("_uid",                 this->m_username_id);
+                data.insert("_csrftoken",           "Set-Cookie: csrftoken="+this->m_token);
+
+            QString signature = configureImageRequest->generateSignature(data);
+            configureImageRequest->request("media/configure/",signature.toUtf8());
+            QObject::connect(configureImageRequest,SIGNAL(replySrtingReady(QVariant)),this,SIGNAL(imageConfigureDataReady(QVariant)));
+        }
+    }
+    this->m_caption = "";
+    this->m_image_path = "";
 }
 
 //FIXME: uploadImage is not public yeat. Give me few weeks to optimize code
