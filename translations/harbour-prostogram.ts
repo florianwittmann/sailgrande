@@ -107,6 +107,19 @@
     </message>
 </context>
 <context>
+    <name>GalleryPage</name>
+    <message>
+        <location filename="../qml/pages/GalleryPage.qml" line="19"/>
+        <source>Select picture</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GalleryPage.qml" line="39"/>
+        <source>Back</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MediaDetailPage</name>
     <message>
         <location filename="../qml/pages/MediaDetailPage.qml" line="25"/>
@@ -302,6 +315,16 @@
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="202"/>
+        <source>Send photo from phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/StartPage.qml" line="207"/>
+        <source>Set photo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/StartPage.qml" line="212"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>

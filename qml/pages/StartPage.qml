@@ -199,6 +199,16 @@ Page {
             }
 
             MenuItem {
+                text: qsTr("Send photo from phone")
+                onClicked: pageStack.push(Qt.resolvedUrl("GalleryPage.qml"))
+            }
+
+            MenuItem {
+                text: qsTr("Set photo")
+                //onClicked: pageStack.push(Qt.resolvedUrl("CameraPage.qml"))
+            }
+
+            MenuItem {
                 text: qsTr("Refresh")
                 onClicked: updateAllFeeds()
             }

@@ -70,4 +70,5 @@ HEADERS += \
 
 DISTFILES += \
     qml/harbour-prostogram.qml \
-    qml/components/Banner.qml
+    qml/components/Banner.qml \
+    qml/pages/GalleryPage.qml
