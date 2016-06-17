@@ -204,6 +204,14 @@
     </message>
 </context>
 <context>
+    <name>SendPhotoPage</name>
+    <message>
+        <location filename="../qml/pages/SendPhotoPage.qml" line="19"/>
+        <source>Send picture</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SettingsPage</name>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="22"/>

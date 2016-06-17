@@ -69,6 +69,13 @@ Page {
                             anchors.fill: parent;
                             fillMode: Image.PreserveAspectCrop
                             source: (!fileIsDir) ? filePath : ""
+
+                            MouseArea{
+                                anchors.fill: parent
+                                onClicked: {
+                                    pageStack.push(Qt.resolvedUrl("SendPhotoPage.qml"),{image_url:filePath});
+                                }
+                            }
                         }
                         IconButton {
                             visible: fileIsDir
