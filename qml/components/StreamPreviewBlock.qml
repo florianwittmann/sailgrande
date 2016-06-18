@@ -1,10 +1,9 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "../MediaStreamMode.js" as MediaStreamMode
-import "../Api.js" as API
 
 Item {
-
+    id: streamPreviewDlock
     height: header.height + grid.height
     width: parent.width
 
@@ -62,7 +61,17 @@ Item {
     }
 
     Grid {
-        height: recentMediaSize * streamPreviewRowCount
+        height: {
+            if(recentMediaModel.count >= streamPreviewColumnCount*streamPreviewRowCount)
+            {
+                recentMediaSize*streamPreviewRowCount
+            }
+            else
+            {
+                recentMediaSize*(Math.ceil(recentMediaModel.count/streamPreviewRowCount)+1)
+            }
+        }
+
         id: grid
         columns: streamPreviewColumnCount
         anchors.left: parent.left
@@ -99,25 +108,71 @@ Item {
 
     function loadStreamPreviewDataFinished(data) {
         streamData = data;
-        if(data ===null || data === undefined || data.data === undefined) {
+        if(data ===null || data === undefined || data.items.length === 0)
+        {
             recentMediaLoaded=true;
             errorOccurred=true
             return;
         }
         errorOccurred = false
-        recentMediaModel.clear();
-        var elementsCount = data.data.length > previewElementsCount ? previewElementsCount : data.data.length;
+        var elementsCount = data.items.length > previewElementsCount-recentMediaModel.count ? previewElementsCount-recentMediaModel.count : data.items.length;
         for(var i=0; i<elementsCount; i++) {
-            recentMediaModel.append(data.data[i]);
+            recentMediaModel.append(data.items[i]);
         }
         recentMediaLoaded=true;
+
+        if(data.items.length < streamPreviewColumnCount*streamPreviewRowCount && data.more_available)
+        {
+            if(streamPreviewDlock.mode === 0)
+            {
+                instagram.getTimeLine(data.next_max_id);
+            }
+            else if(streamPreviewDlock.mode === 1)
+            {
+                instagram.getPopularFeed(data.next_max_id);
+            }
+        }
     }
 
-    function refreshContent(cb) {
-        getFeed(mode,tag,true,function(data) {
-            loadStreamPreviewDataFinished(data);
-            cb();
-        })
+    function refresh()
+    {
+        recentMediaModel.clear();
+        if(streamPreviewDlock.mode === 0)
+        {
+            instagram.getTimeLine();
+        }
+        else if(streamPreviewDlock.mode === 1)
+        {
+            instagram.getPopularFeed();
+        }
     }
 
+    Component.onCompleted: {
+        if(recentMediaModel.count === 0)
+        {
+            refresh();
+        }
+    }
+
+    Connections{
+        target: instagram
+        onTimeLineDataReady: {
+            var data = JSON.parse(answer);
+            if(streamPreviewDlock.mode === 0)
+            {
+                loadStreamPreviewDataFinished(data);
+            }
+        }
+    }
+
+    Connections{
+        target: instagram
+        onPopularFeedDataReady: {
+            var data = JSON.parse(answer);
+            if(streamPreviewDlock.mode === 1)
+            {
+                loadStreamPreviewDataFinished(data);
+            }
+        }
+    }
 }

@@ -25,10 +25,8 @@ Page {
     property string favoriteTag: ""
 
     onStatusChanged: {
-
         if (status === PageStatus.Active) {
             refreshCallback = startPageRefreshCB
-            updateAllFeeds()
         }
     }
 
@@ -37,31 +35,18 @@ Page {
             return
         }
 
-        console.log("update...")
-        updateRunning = true
-        myFeedBlock.refreshContent(refreshMyFeedBlockFinished)
-    }
-
-    function refreshMyFeedBlockFinished() {
-        getFeed(MediaStreamMode.MY_STREAM_MODE, "", true, function (data) {
-            setCoverRefresh(CoverMode.SHOW_FEED, data,MediaStreamMode.MY_STREAM_MODE,"")
-        })
-
-        refreshPopularFeedBlock()
-    }
-
-    function refreshPopularFeedBlock() {
-        if (!startPageShowPopularFeed) {
-            refreshFavoriteTagFeedBlock()
-            return
+        myFeedBlock.refresh();
+        if(popularFeedBlock.visible)
+        {
+            popularFeedBlock.refresh();
         }
 
-        popularFeedBlock.refreshContent(refreshPopularFeedBlockFinished)
+        if(favoriteTagFeedBlock.refresh())
+        {
+            favoriteTagFeedBlock.refresh();
+        }
     }
 
-    function refreshPopularFeedBlockFinished() {
-        refreshFavoriteTagFeedBlock()
-    }
 
     function refreshFavoriteTagFeedBlock() {
 
@@ -73,11 +58,6 @@ Page {
         }
 
         favoriteTagFeedBlock.refreshContent(refreshDone)
-    }
-
-    function refreshDone() {
-        updateRunning = false
-        console.log("RefreshDone")
     }
 
     SilicaFlickable {
@@ -125,30 +105,24 @@ Page {
 
             StreamPreviewBlock {
                 id: myFeedBlock
-
                 streamTitle: qsTr('My Feed')
                 mode: MediaStreamMode.MY_STREAM_MODE
             }
 
             StreamPreviewBlock {
-                visible: startPageShowPopularFeed
                 id: popularFeedBlock
+                visible: startPageShowPopularFeed
                 streamTitle: qsTr('Popular')
                 mode: MediaStreamMode.POPULAR_MODE
             }
 
             StreamPreviewBlock {
                 id: favoriteTagFeedBlock
-
                 visible: favoriteTag !== ""
                 streamTitle: qsTr('Tagged with %1').arg(favoriteTag)
                 mode: MediaStreamMode.TAG_MODE
                 tag: favoriteTag
-
-
             }
-
-
 
             Item {
                 id:allPinnedTags
@@ -197,6 +171,17 @@ Page {
 
 
         PullDownMenu {
+            MenuItem {
+                text: qsTr("Logout")
+                onClicked: {
+                    Storage.set("password","");
+                    Storage.set("username","");
+
+                    instagram.logout();
+
+                    pageStack.push(Qt.resolvedUrl("AuthPage.qml"))
+                }
+            }
 
             MenuItem {
                 text: qsTr("About")
@@ -214,6 +199,16 @@ Page {
             }
 
             MenuItem {
+                text: qsTr("Send photo from phone")
+                onClicked: pageStack.push(Qt.resolvedUrl("GalleryPage.qml"))
+            }
+
+            MenuItem {
+                text: qsTr("Set photo")
+                //onClicked: pageStack.push(Qt.resolvedUrl("CameraPage.qml"))
+            }
+
+            MenuItem {
                 text: qsTr("Refresh")
                 onClicked: updateAllFeeds()
             }
@@ -226,7 +221,7 @@ Page {
 
 
     Component.onCompleted: {
-        loadProfilePreview()
+
     }
 
     function startPageRefreshCB() {
@@ -239,14 +234,27 @@ Page {
         myFeedBlock.refreshContent(refreshDone)
     }
 
-    function loadProfilePreview() {
-        API.get_UserById('self', loadProfilePreviewFinished)
+    Connections{
+        target: instagram
+        onProfileConnected:{
+            var username_id = instagram.getUsernameId();
+            instagram.getUsernameInfo(username_id)
+        }
     }
 
-    function loadProfilePreviewFinished(data) {
-        if (data.meta.code === 200) {
-            user = data.data
-            API.selfId = user.id
+    Connections{
+        target: instagram
+        onUsernameDataReady: {
+            var obj = JSON.parse(answer)
+            user = obj.user
+            app.user = obj.user
+        }
+    }
+
+    Connections{
+        target: instagram
+        onProfileConnectedFail:{
+            app.cover = Qt.resolvedUrl("AuthPage.qml")
         }
     }
 }

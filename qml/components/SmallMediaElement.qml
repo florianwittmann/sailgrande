@@ -3,7 +3,7 @@ import QtQuick 2.0
 Image {
     opacity: mousearea.pressed ? 0.7 : 1
     anchors.fill: parent
-    source: mediaElement.images.thumbnail.url
+    source: mediaElement.image_versions2.candidates[mediaElement.image_versions2.candidates.length-1].url
 
     property var mediaElement;
 

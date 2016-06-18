@@ -22,7 +22,7 @@ Rectangle {
         anchors.top: userInfo.top
         height: userInfo.height
         width: height
-        source: item.user.profile_picture
+        source: item.user.profile_pic_url
     }
 
     Label {

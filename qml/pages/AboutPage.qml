@@ -43,7 +43,7 @@ Page {
             }
 
             Label {
-              text : "Version: 0.5.2"
+              text : "Version: 0.6.0-alpha1"
               anchors.right: parent.right
               anchors.rightMargin: Theme.paddingMedium
               anchors.left: parent.left

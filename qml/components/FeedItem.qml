@@ -21,8 +21,8 @@ BackgroundItem {
                 id: image
                 anchors.left: parent.left
                 anchors.right: parent.right
-                height: image.width
-                source: item.images ? item.images.low_resolution.url : ""
+                height: parent.width/item.image_versions2.candidates[0].width*item.image_versions2.candidates[0].height
+                source: image_versions2.candidates[0].url
 
                 Image {
                     anchors.centerIn: parent
@@ -83,7 +83,7 @@ BackgroundItem {
 
                 id: description
                 visible: feedsShowCaptions && text !== "" && !landscapeMode
-                text: item.caption !== undefined ? item.caption.text : ""
+                text: item.caption.text !== undefined ? item.caption.text : ""
                 anchors.left: parent.left
                 anchors.leftMargin: Theme.paddingMedium
                 anchors.right: parent.right

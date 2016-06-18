@@ -6,7 +6,10 @@
 #include <QtGui/QGuiApplication>
 #include <QQmlContext>
 #include <QQuickView>
+#include <QtQml>
 #include <QTranslator>
+
+#include "api/instagram.h"
 
 int main(int argc, char *argv[])
 {
@@ -14,22 +17,23 @@ int main(int argc, char *argv[])
    QString translationPath(SailfishApp::pathTo("translations").toLocalFile());
 
    QTranslator engineeringEnglish;
-   engineeringEnglish.load("sailgrande", translationPath);
+   engineeringEnglish.load("prostogram", translationPath);
    qApp->installTranslator(&engineeringEnglish);
 
    QTranslator translator;
-   translator.load(QLocale(), "sailgrande", "_", translationPath);
+   translator.load(QLocale(), "prostogram", "_", translationPath);
    qApp->installTranslator(&translator);
 
    QScopedPointer <QQuickView> view(SailfishApp::createView());
-   app->setApplicationName("harbour-sailgrande");
-   app->setOrganizationDomain("harbour-sailgrande");
-   app->setOrganizationName("harbour-sailgrande");
+   app->setApplicationName("harbour-prostogram");
+   app->setOrganizationDomain("harbour-prostogram");
+   app->setOrganizationName("harbour-prostogram");
 
-   view->setTitle("SailGrande");
+   view->setTitle("Prostogram");
 
+   qmlRegisterType<Instagram>("harbour.prostogram",1,0,"Instagram");
 
-   QUrl pageSource = SailfishApp::pathTo("qml/harbour-sailgrande.qml");
+   QUrl pageSource = SailfishApp::pathTo("qml/harbour-prostogram.qml");
    view->setSource(pageSource);
 
 

@@ -41,11 +41,11 @@ CoverBackground {
 
         Image {
             anchors.horizontalCenter: parent.horizontalCenter
-            source: "/usr/share/icons/hicolor/86x86/apps/harbour-sailgrande.png"
+            source: "/usr/share/icons/hicolor/86x86/apps/harbour-prostogram.png"
         }
         Label {
             anchors.horizontalCenter: parent.horizontalCenter
-            text: "SailGrande"
+            text: "Prostogram"
         }
     }
 

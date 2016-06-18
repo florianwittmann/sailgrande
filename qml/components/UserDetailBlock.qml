@@ -13,7 +13,7 @@ Item {
        width:150
        height:150
        anchors.right: parent.right
-       source: user !== undefined ? user.profile_picture : ""
+       source: user.profile_pic_url
     }
 
     Column {
@@ -25,7 +25,7 @@ Item {
         anchors.topMargin: 10
 
         Label {
-            text: user !== undefined && user.counts !== undefined ? qsTr("%1 posts").arg(user.counts.media) :""
+            text: user !== undefined && user.media_count !== undefined ? qsTr("%1 posts").arg(user.media_count) :""
             anchors.left: parent.left
             anchors.right: parent.right
             color: Theme.secondaryColor
@@ -35,7 +35,7 @@ Item {
 
 
         Label {
-            text: user !== undefined && user.counts !== undefined ? qsTr("%1 followers").arg(user.counts.followed_by) : ""
+            text: user !== undefined && user.follower_count !== undefined ? qsTr("%1 followers").arg(user.follower_count) : ""
             anchors.left: parent.left
             anchors.right: parent.right
             color: Theme.secondaryColor
